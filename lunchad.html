@@ -5,10 +5,19 @@
 </head>
 <body>
 <style>
-html, body {width:100%;height:100%;margin:0;padding:0;}
+html, body {width:100%;height:100%;margin:0;padding:0;background-color: #FFF1E0;}
 </style>
 
+
 <style>
+.o-htmlad-container.ad300x250 {
+	width: 300px;
+	height: 250px;
+	background-image: url('http://i.ftimg.net/picture/1/000051151_piclink.jpg');
+}
+.o-htmlad-container div {
+	display:none;
+}
 .o-htmlad-container {
 	width:100%;
 	height:100%;
@@ -17,114 +26,23 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 	font-size: 18px;
 	color: black;
 	font-family: "Helvetica Neue",Verdana,Arial,"Hiragino Sans GB","WenQuanYi Micro Hei","Heiti SC",STHeiti,"微软雅黑",SimSun,sans-serif;
-}
-.o-htmlad-container span {
-	font-size: 32px;
-}
-.o-htmlad-container span.o-font-middle {
-	font-size: 27px;
-}
-.o-sprite {
-	background-image: url(http://i.ftimg.net/picture/0/000051110_piclink.jpg);
 	background-repeat: no-repeat;
-	position: absolute;
-	background-size: 296px 142px;
-}
-.o-text {
-	position: absolute;
-	white-space: nowrap;
-	text-align: center;
-}
-.o-top-logo {
-	top: 9px;
-	left: 9px;
-	width: 46px;
-	height: 46px;
-}
-.o-main-image {
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 296px;
-	height: 100px;
-	background-position: 0 -44px;
-	margin: 0 auto;
-}
-.o-slogan-container {
-	position: absolute;
-	left:0;
-	right:0;
-	top: 55px;
-	bottom: 100px;
-}
-.o-slogan {
-	left:0;
-	top:0;
-	right:0;
-	bottom:0;
-	margin: auto;
-}
-.o-slogan-1 {
-	width: 182px;
-	height: 30px;
-	line-height: 30px;
-	background-position: 0 -163px;
-}
-.o-slogan-2 {
-	width: 193px;
-	height: 30px;
-	background-position: 0 -200px;
-}
-.o-slogan-3 {
-	width: 238px;
-	height: 30px;
-	background-position: 0 -240px;
-}
-.o-slogan-4 {
-	width: 150px;
-	height: 70px;
-	background-position: 0 -280px;
-}
-
-.o-slogan-double {
-	position: absolute;
-	width: 216px;
-	height: 85px;
-}
-.o-slogan-double-1 {
-
-}
-.o-slogan-double-2 {
-
-}
-.o-slogan-5 {
-	background-position: 0 -360px;
-	width: 100%;
-	height: 30px;
-
-}
-.o-slogan-6 {
-	background-position: 0 -400px;
-	width: 192px;
-	height: 27px;
-	bottom: 10px;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-.o-slogan-7 {
-	background-position: -54px 0;
-	width: 203px;
-	height: 43px;
-	bottom: 0;
-	left: 5px;
 }
 .animated {
   -webkit-animation-duration: 36s;
+  -moz-animation-duration: 36s;
+  -o-animation-duration: 36s;
+  -ms-animation-duration: 36s;
           animation-duration: 36s;
   -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 @-webkit-keyframes fadeInOut {
@@ -132,7 +50,21 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
   2%, 6% {opacity: 1;}
   8%, 100% {opacity: 0;}
 }
-
+@-moz-keyframes fadeInOut {
+  0% {opacity: 0;}
+  2%, 6% {opacity: 1;}
+  8%, 100% {opacity: 0;}
+}
+@-o-keyframes fadeInOut {
+  0% {opacity: 0;}
+  2%, 6% {opacity: 1;}
+  8%, 100% {opacity: 0;}
+}
+@-ms-keyframes fadeInOut {
+  0% {opacity: 0;}
+  2%, 6% {opacity: 1;}
+  8%, 100% {opacity: 0;}
+}
 @keyframes fadeInOut {
   0% {opacity: 0;}
   2%, 6% {opacity: 1;}
@@ -141,9 +73,27 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 
 .fadeInOut {
   -webkit-animation-name: fadeInOut;
+  -moz-animation-name: fadeInOut;
+  -o-animation-name: fadeInOut;
+  -ms-animation-name: fadeInOut;
           animation-name: fadeInOut;
 }
 @-webkit-keyframes fadeInOutKeep {
+  0% {opacity: 0;}
+  2%, 52% {opacity: 1;}
+  54%, 100% {opacity: 0;}
+}
+@-moz-keyframes fadeInOutKeep {
+  0% {opacity: 0;}
+  2%, 52% {opacity: 1;}
+  54%, 100% {opacity: 0;}
+}
+@-o-keyframes fadeInOutKeep {
+  0% {opacity: 0;}
+  2%, 52% {opacity: 1;}
+  54%, 100% {opacity: 0;}
+}
+@-ms-keyframes fadeInOutKeep {
   0% {opacity: 0;}
   2%, 52% {opacity: 1;}
   54%, 100% {opacity: 0;}
@@ -155,36 +105,180 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 }
 .fadeInOutKeep {
   -webkit-animation-name: fadeInOutKeep;
+  -moz-animation-name: fadeInOutKeep;
+  -o-animation-name: fadeInOutKeep;
+  -ms-animation-name: fadeInOutKeep;
           animation-name: fadeInOutKeep;
 }
 
 .animated.delay-3 {
   -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  -ms-animation-delay: 3s;
           animation-delay: 3s;
 }
 .animated.delay-6 {
   -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  -ms-animation-delay: 6s;
           animation-delay: 6s;
 }
 .animated.delay-9 {
   -webkit-animation-delay: 9s;
+  -moz-animation-delay: 9s;
+  -o-animation-delay: 9s;
+  -ms-animation-delay: 9s;
           animation-delay: 9s;
 }
 .animated.delay-12 {
   -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  -ms-animation-delay: 12s;
           animation-delay: 12s;
 }
 .animated.delay-15 {
   -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s;
+  -ms-animation-delay: 15s;
           animation-delay: 15s;
 }
 .animated.delay-18 {
   -webkit-animation-delay: 18s;
+  -moz-animation-delay: 18s;
+  -o-animation-delay: 18s;
+  -ms-animation-delay: 18s;
           animation-delay: 18s;
 }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+	.o-sprite {
+		background-image: url(http://i.ftimg.net/picture/0/000051110_piclink.jpg);
+	}
+}
+
+@media only screen and (min-width: 100px) {
+	.o-htmlad-container.ad300x250, .o-htmlad-container.ad728x90, .o-htmlad-container.ad590x90 {
+		background-image: none;
+	}
+	.o-htmlad-container div {
+		display: block;
+	}
+	.o-htmlad-container span {
+		font-size: 32px;
+	}
+	.o-htmlad-container span.o-font-middle {
+		font-size: 27px;
+	}
+	.o-sprite {
+		background-image: url(http://i.ftimg.net/picture/9/000051149_piclink.jpg);
+		background-repeat: no-repeat;
+		position: absolute;
+		background-size: 296px 142px;
+	}
+	.o-text {
+		position: absolute;
+		white-space: nowrap;
+		text-align: center;
+	}
+	.o-top-logo {
+		top: 9px;
+		left: 9px;
+		width: 46px;
+		height: 46px;
+	}
+	.o-main-image {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 296px;
+		height: 98px;
+		background-position: 0 -46px;
+		margin: 0 auto;
+	}
+	.o-slogan-container {
+		position: absolute;
+		left:0;
+		right:0;
+		top: 55px;
+		bottom: 100px;
+	}
+	.o-slogan {
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+	}
+	.o-slogan-1 {
+		width: 182px;
+		height: 30px;
+		line-height: 30px;
+		background-position: 0 -163px;
+	}
+	.o-slogan-2 {
+		width: 193px;
+		height: 30px;
+		background-position: 0 -200px;
+	}
+	.o-slogan-3 {
+		width: 238px;
+		height: 30px;
+		background-position: 0 -240px;
+	}
+	.o-slogan-4 {
+		width: 150px;
+		height: 70px;
+		background-position: 0 -280px;
+	}
+
+	.o-slogan-double {
+		position: absolute;
+		width: 216px;
+		height: 85px;
+	}
+	.o-slogan-double-1 {
+
+	}
+	.o-slogan-double-2 {
+
+	}
+	.o-slogan-5 {
+		background-position: 0 -360px;
+		width: 100%;
+		height: 30px;
+
+	}
+	.o-slogan-6 {
+		background-position: 0 -400px;
+		width: 192px;
+		height: 27px;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	.o-slogan-7 {
+		background-position: -54px 0;
+		width: 203px;
+		height: 43px;
+		bottom: 0;
+		left: 5px;
+	}
+}
+
 </style>
 <a href="" target=_blank>
-<div class="o-htmlad-container">
+<div class="o-htmlad-container ad300x250">
 	<div class="o-top-logo o-sprite"></div>
 	<div class="o-main-image o-sprite"></div>
 	<div class="o-slogan-container">
@@ -203,6 +297,7 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 	</div>
 </div>
 </a>
+
 
 </body>
 </html>
