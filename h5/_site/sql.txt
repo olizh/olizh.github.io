@@ -1,0 +1,28 @@
+<div id="o-more-setting" style="display: block;">
+<h3>日期设置</h3>
+<div class="o-section-setting">
+<div>开始日期：<input type="text" name="startdate" value="2015/01/24" placeholder="YYYY/MM/DD"></div>
+<div>截至日期：<input type="text" name="enddate" value="" placeholder="YYYY/MM/DD"></div>
+</div>
+<br>
+<h3>过滤条件</h3>
+<div class="o-section-setting">
+<div><input type="text" class="o-section-condition" name="customFilter" value="ebody != " ''="" placeholder="输入MySQL条件"></div>
+</div>
+<br>
+<h3>板块设置</h3>
+<div class="o-section-setting">
+<div>名称：<input type="text" name="section1" value="希腊危机"> 搜索条件：<input class="o-section-condition" type="text" name="condition1" value="希腊"></div>
+<div>名称：<input type="text" name="section2" value="人物"> 搜索条件：<input class="o-section-condition" type="text" name="condition2" value="people"></div>
+<div>名称：<input type="text" name="section3" value="经济"> 搜索条件：<input class="o-section-condition" type="text" name="condition3" value="economy"></div>
+<div>名称：<input type="text" name="section4" value="商业"> 搜索条件：<input class="o-section-condition" type="text" name="condition4" value="business"></div>
+<div>名称：<input type="text" name="section5" value="管理"> 搜索条件：<input class="o-section-condition" type="text" name="condition5" value="management"></div>
+<div>名称：<input type="text" name="section6" value="金融市场"> 搜索条件：<input class="o-section-condition" type="text" name="condition6" value="markets"></div>
+<div>名称：<input type="text" name="section7" value="生活时尚"> 搜索条件：<input class="o-section-condition" type="text" name="condition7" value="lifestyle"></div>
+<div>名称：<input type="text" name="section8" value="读书"> 搜索条件：<input class="o-section-condition" type="text" name="condition8" value="book"></div>
+<div>名称：<input type="text" name="section9" value="中国"> 搜索条件：<input class="o-section-condition" type="text" name="condition9" value="china"></div>
+<div>名称：<input type="text" name="section10" value="国际"> 搜索条件：<input class="o-section-condition" type="text" name="condition10" value="politics,society"></div>
+<div>名称：<input type="text" name="section11" value=""> 搜索条件：<input class="o-section-condition" type="text" name="condition11" value=""></div>
+<div>名称：<input type="text" name="section12" value=""> 搜索条件：<input class="o-section-condition" type="text" name="condition12" value=""></div>
+</div>
+</div>

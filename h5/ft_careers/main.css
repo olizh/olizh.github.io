@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/* Animation */
+
+
+
+.is-current .animated, .running.animated {
+  -webkit-animation-play-state: running;
+          animation-fill-mode: running;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
+          animation-fill-mode: paused;
+}
+.animated.delay-1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.animated.delay-2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.animated.delay-3 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.animated.delay-4 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.animated.delay-5 {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.animated.delay-6 {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+.animated.slow {
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}
+.animated.speed-medium {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+}
+
+@-webkit-keyframes wave {
+  from{
+      background-position:0 5px;
+  }
+  to{
+      background-position:47px 5px;
+  }
+}
+@keyframes wave {
+  from{
+      background-position:0 5px;
+  }
+  to{
+      background-position:47px 5px;
+  }
+}
+.animated.wave {
+    -webkit-animation-name: wave;
+            animation-name: wave;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+}
+
+@-webkit-keyframes drift {
+  from{-webkit-transform:translateX(-300px);}
+  to{-webkit-transform:translateX(1600px);}
+}
+@keyframes drift {
+  from{-webkit-transform:translateX(-300px);}
+  to{-webkit-transform:translateX(1600px);}
+}
+@-webkit-keyframes rotate {
+  0%    { -webkit-transform: rotate(0deg); }
+  100%  { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@-webkit-keyframes scroll {
+  from{
+      background-position:0 0;
+  }
+  to{
+      background-position:0 -300px;
+  }
+}
+@keyframes scroll {
+  from{
+      background-position:0 0;
+  }
+  to{
+      background-position:0 -300px;
+  }
+}
+@-webkit-keyframes flick {
+  0%, 60%, 100%{
+      opacity: 0.3;
+  }
+  30%{
+      opacity: 1;
+  }
+}
+@keyframes flick {
+  0%, 60%, 100%{
+      opacity: 0.3;
+  }
+  30%{
+      opacity: 1;
+  }
+}
+/* Animation */
+
+/* http://registry.origami.ft.com/components/o-colors@2.4.4 */
+
+/* Background and Color  */
+#gamecontent {background:#777777 !important;}
+.blue-tint5.slide {background-color:#bcd7e5;}
+.green.slide {background-color:#458b00;color:white;}
+.transparent.slide {background:transparent;}
+
+.white.slide {background-color:white;}
+.o-blue.slide {background-color:#cbf0ff;}
+.o-yellow.slide {background-color:#f7f4e6;}
+.o-green.slide {background-color:#e8f7e6;}
+/* Background and Color */
+
+
+/*objects*/
+.cloud {background-image:url(../ft_careers/cloud.png);}
+.cloud-1 {
+    top:10%;left:50px;width:106px;height:29px;background-size:106px 29px;
+    -webkit-animation:drift 60s linear infinite both;
+}
+.cloud-2 {
+    top:3%;left:150px;width:64px;height:23px;background-size:64px 23px;
+    -webkit-animation:drift 120s linear 3s infinite both;
+}
+.cloud-3 {
+    top:1%;left:80px;width:64px;height:23px;background-size:64px 23px;
+    -webkit-animation:drift 120s linear 60s infinite both;
+}
+
+.arrow-container {
+  bottom: 10px;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+.arrow-1, .arrow-2, .arrow-3 {
+  height: 25px;
+  width: 12px;
+  display: inline-block;
+  background-image: url(../ft_careers/arrow.png);
+  background-size: auto 100%;
+}
+.arrow-1 {
+  -webkit-animation: flick 1.4s 0.4s infinite;
+  animation: flick 1.4s linear 0.4s infinite;
+}
+.arrow-2 {
+  -webkit-animation: flick 1.4s 0.2s infinite;
+  animation: flick 1.4s 0.2s infinite;
+}
+.arrow-3 {
+  -webkit-animation: flick 1.4s infinite;
+  animation: flick 1.4s infinite;
+}
+.baloon {background-size:100% 100%;}
+.baloon-1 {
+    background-image:url(../ft_careers/baloon1.png);
+    top:10%;right:50%;width:95px;height:200px;
+}
+.baloon-2 {
+    background-image:url(../ft_careers/baloon2.png);
+    top:5%;right:15%;width:85px;height:178px;
+}
+
+.water {top:90%;bottom:0;left:0;right:0;background-color:#cbf0ff;}
+.boat {bottom:10%;left:0;right:0;margin:0 auto;width:295px;height:126px;background-image:url(../ft_careers/boat.png);background-size:295px 126px;}
+.boat-container {bottom:10%;left:0;right:0;margin:0 auto;width:295px;height:126px;}
+.boat-inner {width:295px;height:126px;background-image:url(../ft_careers/boat.png);background-size:295px 126px;}
+.wave {bottom:10%;left:0;right:0;background-image:url(../ft_careers/wave.png);background-size:47px 18px;height:18px;background-position:0 5px;background-repeat:repeat-x;}
+.slogans {left:0;right:0;top:0;bottom:10%;margin:auto;}
+.slogans.top {top:5%;bottom:auto;}
+.slogans-inner {width:100%;height:100%;position:relative;display:table;}
+.slogans-inner-cell {display:table-cell;vertical-align:middle;text-align:center;}
+.slogans-cell-block {display:inline-block;}
+.slogan {line-height:168.1%;text-align:left;font-size:20px;color:#333;white-space:nowrap;}
+.slide .slogan h2 {font-size:22px;font-weight:bold;}
+
+.middle-object {left:0;right:0;top:0;bottom:0;margin:auto;background-size:100% 100%;background-repeat:no-repeat;}
+.work-place.middle-object {width:310px;height:233px;background-image:url(../ft_careers/workplace.png);-webkit-transform:translate3d(18px,36px,0);}
+.gear1 {position:absolute;left:105px;top:110px;width:15px;height:15px;background-image:url(../ft_careers/w1.png);background-size:100% 100%;  -webkit-animation: rotate 3s infinite linear;animation: rotate 3s infinite linear;}
+.gear2 {position:absolute;left:135px;top:125px;width:40px;height:40px;background-image:url(../ft_careers/w2.png);background-size:100% 100%;-webkit-animation: rotate 3s infinite linear reverse;animation: rotate 3s infinite linear reverse;}
+.perks.middle-object {width:290px;height:181px;background-image:url(../ft_careers/perks.png);}
+.people.middle-object {width:275px;height:107px;background-image:url(../ft_careers/people.png);-webkit-transform:translate3d(25px,0,0);}
+.hacker-screen {left:81px;top:3px;width:95px;height:33px;background-image:url(../ft_careers/code.jpg);background-size:100% 100%;background-color:black;-webkit-animation:scroll 3s infinite linear;}
+/*objects*/
+
+/*recruit page layout*/
+.o-center {text-align: center;height:60px;}
+button.big {font-size: 20px;height: 44px;border:medium none;padding: 0 14px;text-shadow:0 0 0 #FFF;}
+button.blue {background:#cbf0ff;color:black;}
+button.orange {background:#eda45e;}
+button.green {background: #09a25c;color:white;}
+button.purple {background: #92288f;}
+button.pink {background:#FFF1E0;color:black;}
+.slide div.o-header-title {top:0;width:100%;height:44px;line-height:44px;font-size:20px;text-align:center;font-weight:bold;border-bottom: 8px solid #9E2F50;background:#333;}
+.right-bottom-slogan {
+background-image: url(http://s.ftimg.net/img/slogan.png);
+right: 0;
+bottom: 0;
+width: 210px;
+height: 61px;
+background-size: 100% 100%;
+}
+
+/*share icon for wechat*/
+#share-icon {display:none;}
+
+/*shared objects*/
+.wheel-container {position:absolute;bottom:-90px;left:0;right:0;margin:auto;width:200px;height:200px;}
+.wheel {width:100%;height:100%;background-image:url(../ft_careers/wheel.png);background-size:100% 100%;}
+.fadeInUpToggle {-webkit-animation-name: fadeOutDown;animation-name: fadeOutDown;}
+.article-1 .fadeInUpToggle,.article-2 .fadeInUpToggle,.article-3 .fadeInUpToggle {-webkit-animation-name: fadeInUp;animation-name: fadeInUp;}
+
+/*spinner */
+.spinner {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  text-align: center;
+  top:85px;
+  left:140px;
+  -webkit-animation: rotate 3.0s infinite linear;
+  animation: rotate 3.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  border-radius: 100%;
+  -webkit-animation: bounce 3.0s infinite ease-in-out;
+  animation: bounce 3.0s infinite ease-in-out;
+}
+.dot1 {
+  background-color: #9E2F50;
+}
+.dot2 {
+  top: auto;
+  bottom: 0px;
+  background-color:#598caf;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+
+
+/*media query*/
+@media only screen and (max-height: 450px) {
+    .slogans {top:14px;bottom:auto;}
+    .water {top:95%;}
+    .boat {bottom:5%;}
+    .wave {bottom:5%;}
+    .slogans.top {top:5px;left:14px;right:auto;}
+}
+/*media query*/
