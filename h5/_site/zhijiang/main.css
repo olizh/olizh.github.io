@@ -148,9 +148,9 @@
 
 /*shared styles*/
 .o-bg {
-  /*background-image: url('../zhijiang/Ningbo_Rivers_Panorama_at_Night.jpg');*/
+  background-image: url('../zhijiang/harp.jpg');
   background-color: #333;
-  background-size: auto 700px;
+  background-size: auto 100%;
 }
 .o-red-box {
   color: white;
@@ -166,34 +166,45 @@
 }
 .o-redtop {
   background-image: url('../zhijiang/redbanner.png');
-  background-size: 375px auto;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   top: 0;
   left: 0;
   right:0;
-  bottom: 100px;
+  height: 0;
+  padding-top: 106%;
   width: 100%;
   background-position: center top;
+}
+.o-redtop-container {
+  margin: auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width:100%;
+  height: 100%;
+  display: table;
+}
+.o-redtop-inner {
+  width: 100%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 .o-en-title {
   font-size: 23px;
   font-family: arial;
   font-weight: bold;
-  top: 100px;
-  left: 0;
-  right: 0;
   height: 1.4em;
-  margin: auto;
+  margin: 0 auto 14px auto;
   width: 250px;
 }
 .o-ch-title {
   font-size: 23px;
   font-weight: normal;
-  top: 150px;
-  left: 0;
-  right: 0;
   height: 1.4em;
-  margin: auto;
+  margin: 0 auto 14px auto;
   width: 200px;
 }
 .o-ch-number {
@@ -202,11 +213,8 @@
 }
 .o-ch-text {
   font-size: 17px;
-  top: 200px;
-  left: 0;
-  right: 0;
   height: 1.4em;
-  margin: auto;
+  margin: 0 auto 14px auto;
   width: 280px;
 }
 .o-ch-small-text {
@@ -215,7 +223,7 @@
   left: 0;
   right: 0;
   height: 6em;
-  margin: auto;
+  margin: 14px auto 14px auto;
   width: 250px;
   color: white;
 }
