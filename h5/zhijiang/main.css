@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/* Animation */
+
+
+
+.is-current .animated, .running.animated {
+  -webkit-animation-play-state: running;
+          animation-fill-mode: running;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
+          animation-fill-mode: paused;
+}
+.animated.delay-1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.animated.delay-2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.animated.delay-3 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.animated.delay-4 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.animated.delay-5 {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.animated.delay-6 {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+.animated.slow {
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}
+.animated.speed-medium {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+}
+
+@-webkit-keyframes wave {
+  from{
+      background-position:0 5px;
+  }
+  to{
+      background-position:47px 5px;
+  }
+}
+@keyframes wave {
+  from{
+      background-position:0 5px;
+  }
+  to{
+      background-position:47px 5px;
+  }
+}
+.animated.wave {
+    -webkit-animation-name: wave;
+            animation-name: wave;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+}
+
+@-webkit-keyframes drift {
+  from{-webkit-transform:translateX(-300px);}
+  to{-webkit-transform:translateX(1600px);}
+}
+@keyframes drift {
+  from{-webkit-transform:translateX(-300px);}
+  to{-webkit-transform:translateX(1600px);}
+}
+@-webkit-keyframes rotate {
+  0%    { -webkit-transform: rotate(0deg); }
+  100%  { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@-webkit-keyframes scroll {
+  from{
+      background-position:0 0;
+  }
+  to{
+      background-position:0 -300px;
+  }
+}
+@keyframes scroll {
+  from{
+      background-position:0 0;
+  }
+  to{
+      background-position:0 -300px;
+  }
+}
+@-webkit-keyframes flick {
+  0%, 60%, 100%{
+      opacity: 0.3;
+  }
+  30%{
+      opacity: 1;
+  }
+}
+@keyframes flick {
+  0%, 60%, 100%{
+      opacity: 0.3;
+  }
+  30%{
+      opacity: 1;
+  }
+}
+/* Animation */
+
+/* http://registry.origami.ft.com/components/o-colors@2.4.4 */
+
+
+/* Background and Color  */
+#gamecontent {background:#333 !important;}
+.transparent.slide {background:transparent;}
+.o-night.slide {background-color:#333;}
+#share-icon {display:none;}
+/* Background and Color */
+
+
+/*shared styles*/
+.o-bg {
+  background-image: url('../zhijiang/Ningbo_Rivers_Panorama_at_Night.jpg');
+  background-size: auto 700px;
+}
+.o-red-box {
+  color: white;
+  padding: 0 14px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgba(197,1,1,0.59);
+}
+/*Page 1*/
+.o-bg-1 {
+  background-position: center top;
+}
+.o-redtop {
+  background-image: url('../zhijiang/redbanner.png');
+  background-size: 375px auto;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 100px;
+  width: 100%;
+  background-position: center top;
+}
+.o-en-title {
+  font-size: 23px;
+  font-family: arial;
+  font-weight: bold;
+  top: 100px;
+  left: 0;
+  right: 0;
+  height: 1.4em;
+  margin: auto;
+  width: 250px;
+}
+.o-ch-title {
+  font-size: 23px;
+  font-weight: normal;
+  top: 150px;
+  left: 0;
+  right: 0;
+  height: 1.4em;
+  margin: auto;
+  width: 200px;
+}
+.o-ch-number {
+  font-weight: bold;
+  font-family: arial;
+}
+.o-ch-text {
+  font-size: 17px;
+  top: 200px;
+  left: 0;
+  right: 0;
+  height: 1.4em;
+  margin: auto;
+  width: 250px;
+}
+.o-ch-small-text {
+  font-size: 14px;
+  top: 250px;
+  left: 0;
+  right: 0;
+  height: 6em;
+  margin: auto;
+  width: 250px;
+  color: white;
+}
+.o-ch-small-text p {
+  text-align: center;
+}
+.o-bottom-bar {
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.33);
+  bottom: 0;
+  width: 100%;
+}
+.o-logo {
+  height: 60px;
+  width: 60px;
+  background-position: 0 0;
+  background-size: 100% auto;
+}
+.o-logo-left {
+  float: left;
+  margin: 5px 0 0 14px;
+}
+.o-logo-zhijiang {
+  background-image: url("../zhijiang/sumitlogo.png");
+}

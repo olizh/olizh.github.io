@@ -117,6 +117,22 @@
       background-position:0 -300px;
   }
 }
+@-webkit-keyframes flick {
+  0%, 60%, 100%{
+      opacity: 0.3;
+  }
+  30%{
+      opacity: 1;
+  }
+}
+@keyframes flick {
+  0%, 60%, 100%{
+      opacity: 0.3;
+  }
+  30%{
+      opacity: 1;
+  }
+}
 /* Animation */
 
 /* http://registry.origami.ft.com/components/o-colors@2.4.4 */
@@ -149,7 +165,31 @@
     -webkit-animation:drift 120s linear 60s infinite both;
 }
 
-
+.arrow-container {
+  bottom: 10px;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+.arrow-1, .arrow-2, .arrow-3 {
+  height: 25px;
+  width: 12px;
+  display: inline-block;
+  background-image: url(../ft_careers/arrow.png);
+  background-size: auto 100%;
+}
+.arrow-1 {
+  -webkit-animation: flick 1.4s 0.4s infinite;
+  animation: flick 1.4s linear 0.4s infinite;
+}
+.arrow-2 {
+  -webkit-animation: flick 1.4s 0.2s infinite;
+  animation: flick 1.4s 0.2s infinite;
+}
+.arrow-3 {
+  -webkit-animation: flick 1.4s infinite;
+  animation: flick 1.4s infinite;
+}
 .baloon {background-size:100% 100%;}
 .baloon-1 {
     background-image:url(../ft_careers/baloon1.png);
@@ -162,6 +202,8 @@
 
 .water {top:90%;bottom:0;left:0;right:0;background-color:#cbf0ff;}
 .boat {bottom:10%;left:0;right:0;margin:0 auto;width:295px;height:126px;background-image:url(../ft_careers/boat.png);background-size:295px 126px;}
+.boat-container {bottom:10%;left:0;right:0;margin:0 auto;width:295px;height:126px;}
+.boat-inner {width:295px;height:126px;background-image:url(../ft_careers/boat.png);background-size:295px 126px;}
 .wave {bottom:10%;left:0;right:0;background-image:url(../ft_careers/wave.png);background-size:47px 18px;height:18px;background-position:0 5px;background-repeat:repeat-x;}
 .slogans {left:0;right:0;top:0;bottom:10%;margin:auto;}
 .slogans.top {top:5%;bottom:auto;}
@@ -179,6 +221,27 @@
 .people.middle-object {width:275px;height:107px;background-image:url(../ft_careers/people.png);-webkit-transform:translate3d(25px,0,0);}
 .hacker-screen {left:81px;top:3px;width:95px;height:33px;background-image:url(../ft_careers/code.jpg);background-size:100% 100%;background-color:black;-webkit-animation:scroll 3s infinite linear;}
 /*objects*/
+
+/*recruit page layout*/
+.o-center {text-align: center;height:60px;}
+button.big {font-size: 20px;height: 44px;border:medium none;padding: 0 14px;text-shadow:0 0 0 #FFF;}
+button.blue {background:#cbf0ff;color:black;}
+button.orange {background:#eda45e;}
+button.green {background: #09a25c;color:white;}
+button.purple {background: #92288f;}
+button.pink {background:#FFF1E0;color:black;}
+.slide div.o-header-title {top:0;width:100%;height:44px;line-height:44px;font-size:20px;text-align:center;font-weight:bold;border-bottom: 8px solid #9E2F50;background:#333;}
+.right-bottom-slogan {
+background-image: url(http://s.ftimg.net/img/slogan.png);
+right: 0;
+bottom: 0;
+width: 210px;
+height: 61px;
+background-size: 100% 100%;
+}
+
+/*share icon for wechat*/
+#share-icon {display:none;}
 
 /*shared objects*/
 .wheel-container {position:absolute;bottom:-90px;left:0;right:0;margin:auto;width:200px;height:200px;}

@@ -311,7 +311,11 @@ function openbook() {
     closeFullScreen();
     
     
-    if (k != null && k != "" && k >= 0 && k<allpages) {startFromArticle(k,currentPage,currentPageCount);} else {startFromArticle(0,0,0)}
+    if (k != null && k != "" && k >= 0 && k<allpages && allpages>=30) {
+        startFromArticle(k,currentPage,currentPageCount);
+    } else {
+        startFromArticle(0,0,0)
+    }
     
     //点击设置的背景则关闭设置菜单
     $("#setting").unbind().bind("click",function(e){
