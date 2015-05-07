@@ -149,6 +149,7 @@
 /*shared styles*/
 .o-bg {
   background-image: url('../zhijiang/Ningbo_Rivers_Panorama_at_Night.jpg');
+  background-color: #333;
   background-size: auto 700px;
 }
 .o-red-box {
