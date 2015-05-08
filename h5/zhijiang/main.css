@@ -148,8 +148,8 @@
 
 /*shared styles*/
 .o-bg {
-  background-image: url('../zhijiang/harp.jpg');
-  background-color: #333;
+  /*background-image: url('../zhijiang/harp.jpg');*/
+  background-color: #275186;
   background-size: auto 100%;
 }
 .o-red-box {
