@@ -148,7 +148,7 @@
 
 /*shared styles*/
 .o-bg {
-  /*background-image: url('../zhijiang/harp.jpg');*/
+  background-image: url('../zhijiang/bg1.jpg');
   background-color: #275186;
   background-size: auto 100%;
 }
@@ -165,7 +165,7 @@
   background-position: center top;
 }
 .o-redtop {
-  background-image: url('../zhijiang/redbanner.png');
+  background-image: url('../zhijiang/red.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
   top: 0;
@@ -186,7 +186,7 @@
   right:0;
   width:100%;
   height: 100%;
-  display: table;
+  display: none;
 }
 .o-redtop-inner {
   width: 100%;
