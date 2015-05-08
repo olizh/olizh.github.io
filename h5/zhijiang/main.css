@@ -233,14 +233,12 @@
   text-align: center;
 }
 .o-bottom-bar {
-  height: 70px;
+  height: 82px;
   background-color: rgba(255, 255, 255, 0.33);
   bottom: 0;
   width: 100%;
 }
 .o-logo {
-  height: 60px;
-  width: 60px;
   background-position: 0 0;
   background-size: 100% auto;
 }
@@ -248,8 +246,26 @@
   float: left;
   margin: 5px 0 0 14px;
 }
+.o-logo-right {
+  float: right;
+  margin: 5px 14px 0 0;
+}
 .o-logo-zhijiang {
   background-image: url("../zhijiang/sumitlogo.png");
+  width: 83px;
+  height: 91px;
+  background-position: -17px -14px;
+}
+.o-logo-FT {
+  background-image: url("../zhijiang/logo1.png");
+  width: 53px;
+  height: 74px;
+  background-position: 0 -2px;
+}
+.o-logo-FTC {
+  background-image: url("../zhijiang/logo2.png");
+  width: 70px;
+  height: 68px;
 }
 
 /*Media Queries*/
