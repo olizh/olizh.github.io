@@ -260,12 +260,12 @@
   background-image: url("../zhijiang/logo1.png");
   width: 53px;
   height: 74px;
-  background-position: 0 -2px;
 }
 .o-logo-FTC {
   background-image: url("../zhijiang/logo2.png");
   width: 70px;
   height: 68px;
+  background-position: 0 -2px;
 }
 
 /*Media Queries*/
