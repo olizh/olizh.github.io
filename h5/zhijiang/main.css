@@ -162,6 +162,10 @@
       opacity: 1;
   }
 }
+
+.spinning {
+  -webkit-animation: rotate 3s infinite linear;animation: rotate 3s infinite linear;
+}
 /* Animation */
 
 /* http://registry.origami.ft.com/components/o-colors@2.4.4 */
@@ -454,11 +458,11 @@
   transform: rotate(8deg);
 }
 .o-red-block-1 {
-  left: 90px;
+  left: 95px;
   top: 10px;
 }
 .o-red-block-2 {
-  left: 110px;
+  left: 125px;
   right: 0;
   top: 0;
 }
