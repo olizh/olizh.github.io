@@ -306,6 +306,8 @@
 }
 .o-lower-two-third {
   width: 100%;
+  max-width: 414px;
+  margin: auto;
   height: 66.66667%;
   position: relative;
 }
