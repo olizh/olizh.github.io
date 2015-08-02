@@ -1,10 +1,950 @@
-<!doctype html> <html class=no-js> <head> <meta charset=utf-8> <title>Wow Academy</title> <meta name=description> <meta name=viewport content="width=device-width, initial-scale=1, minimal-ui"> <meta content="Learn Finance and Business Any Time and Anywhere" name=description> <meta name=apple-mobile-web-app-capable content=yes> <meta name=apple-mobile-web-app-status-bar-style content=black> <link rel=apple-touch-icon-precomposed href=http://s.ftimg.net/img/ipad_icon.png> <meta name=viewport content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> <!--Place favicon.ico and apple-touch-icon.png in the root directory--> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> </head> <body> <!--[if lt IE 10]>
- <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
- <![endif]--> <div class=start-screen id=start-screen> <div class=spinner> <div class=dot1></div> <div class=dot2></div> </div> </div> <header class=n-header> <div class=n-header__container> <div class=n-header__primary> <span id=n-header-title>商学院</span> <div class="n-header__left n-header__side n-header__menu"></div> <div id=n-header__back class="n-header__left n-header__side n-header__back">返回</div> <div id=n-header__close class="n-header__left n-header__side n-header__close">关闭</div> <div class="n-header__right n-header__side n-header__setting"></div> <div class="n-header__right n-header__side n-header__score" id=n-header__score></div> </div> </div> </header> <div class=n-content-container> <div id=home-content-scroller class=n-content-scroller> <div id=home-content class=n-content-inner></div> </div> </div> <div class=n-course-container> <div class=n-progress-container> <div class=n-progress-inner id=n-progress-inner></div> </div> <div id=n-course-inner class=n-course-inner></div> <div class=n-course-button-container><button id=n-course-button class=n-course-button></button></div> </div> <!--Google Analytics: change UA-XXXXX-X to be your site's ID.--> <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script> <script src=scripts/bundle.js></script> </body> </html> 
+<!--如果您是制作新的HTML 5沉浸式报道，请直接跳到“所有内容开始”--> <!DOCTYPE html> <html> <head> <meta http-equiv=Content-Type content="text/html; charset=utf-8"> <title>特别报道</title> <meta name=apple-mobile-web-app-capable content=yes> <meta name=apple-mobile-web-app-status-bar-style content=black> <link rel=apple-touch-icon-precomposed href=img/fticon.png> <meta name=viewport content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> <link rel=stylesheet href=styles/main-demo.css> <!--Google Analytics--> <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','http://m.ftchinese.com/index.php/jsapi/analytics','ga');
+ga('create', 'UA-1608715-1');
+ga('send', 'pageview');
+</script> <!--End Google Analytics--> </head> <body> <div id=share-icon><img src=http://s.ftimg.net/img/friend-share-icon.jpg></div> <div id=o-rotate-note><div>旋转屏幕，查看精彩内容！</div></div> <div id=screenstart class=opening ontouchmove=event.preventDefault();><span><p class=booklead id=startstatus>FT中文网特别报道</p><div class="progresscontainer instartscreen"><div id=startbar class="progressbar standardprogressbar uses3d progressbg structureprogress"></div></div><p class=booklead id=loadstatus>&nbsp;</p></span> <div class=backuplinks><a onclick=javascript:window.location.reload()>重新加载</a></div> </div> <!--如果要出目录，就必须用到FTScroller--> <div class="fullbody fruit landscapeImage" id=game> <div id=swipe> <div id=gamecontent> </div> </div> <div class="tap pagedots"></div> <div class="tap pagetitle"></div> <div id=contentRail> <div class=-bg-checkered> <div id=toolRail> <div class=nutmeg-content> <div class=nutmeg-content_left><button onclick="jumptostory('contentpage')" class=button-menu><span id=index-title>目录</span></button></div> <div class=nutmeg-content_right><button onclick=setting() class=nutmeg_settings-btn aria-label=Settings></button></div> <div class="nutmeg-content_right rightmargin"><button onclick=setFontSize() class=nutmeg_fontsize-btn aria-label=Settings></button></div> </div> </div> </div> <div id=imageRail> <div id=imageRailInner></div> </div> </div> <div id=fontsetting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"><button onclick=closeFontSize() aria-label=Settings>确定</button></div> 设置字号 </div> <div class="fontpreferences overlay-content"> <div id=extra-small class=extra-small>最小<span class=tickbg></span></div> <div id=small class=small>小<span class=tickbg></span></div> <div id=medium class=medium>适中<span class=tickbg></span></div> <div id=big class=big>大<span class=tickbg></span></div> <div id=extra-big class=extra-big>特大<span class=tickbg></span></div> </div> </div> </div> </div> </div> <div id=setting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"><button onclick=closeSetting() class=overlay_close-btn aria-label=Settings></button></div> 设置与帮助 </div> <div class=nightreading> <strong>夜间模式</strong> <span class=displayvalue onclick=switchNightReading()> <span class=ui-toggle> <span class=ui-toggle-button></span> <span class="ui-toggle-label ui-toggle-label-on">开</span> <span class="ui-toggle-label ui-toggle-label-off">关</span> </span> </span> <span class=description>在晚上切换为夜间阅读模式，可以减小对眼睛的压力，并节约电池</span> </div> <div class="bgpreferences overlay-content"> <strong>自选背景</strong> <div id=pink>粉色<span class=tickbg></span></div> <div id=white>白色<span class=tickbg></span></div> </div> <div class=standalonebutton><a href="mailto:ftchinese.feedback@gmail.com?subject=Feedback on FT HTML 5 Story" id=feedbackEmail><button class=ui-light-btn>反馈问题</button></a></div> <div id=testMessage></div> </div> </div> </div> </div> <div id=largepic class=overlay> <div class=overlayBG></div> <div class=inner> <button class=cherry_button></button> <div class=cell> </div> </div> </div> <div id=allcontent style=display:none;> <!--所有内容开始--> <!--封面：背景图片会自动铺满屏幕 
+内容会水平垂直居中
+底部的credit默认靠右下对齐--> <div class="slide layout-5 o-bg-style-dark" title=封面 topic=封面 style="background-image: url(http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky-4-hr_kgpjdpm.png);"> <div class=page> <h1 class="story-title text-inner normal" style=line-height:1.2em;>在沪外侨眼中的上海</h1> <h2 class="story-heading text-inner small">在高薪工作机会的吸引下，世界各地的人士纷纷涌入中国的商业之都。不过，是什么因素让他们留了下来？上海的外侨在这里讲述了他们的家庭生活、上海的街头小吃以及“逃离”这座城市的故事。</h2> <div class="o-text-block o-bottom o-right o-credit"> <p>本文作者：帕提•沃德米尔(Patti Waldmeir)</p> <p>补充报道：张嫣</p> </div> </div> </div> <!--目录：需要设定三个地方--> <!--页数不多的报道可以不放目录--> <div class="slide contentpage" topic=目录 storyid=contentpage><div class=page> <div class="header notouchall"> <div class="navleftcontainer notouchall" onclick="sectionScroller.scrollBy(-$(window).width(), 0,300);return false;"><div class="subleftbg notouchall"></div></div> <div class="navrightcontainer notouchall" onclick="sectionScroller.scrollBy($(window).width(), 0,300);return false;"><div class="subrightbg notouchall"></div></div> <div class="navigationScroller notouchall"> <ul class="navigation notouchall"></ul> </div> </div> <div class=theContent> <div class=tint-pink id=coverintro> <div class=tint-inner> <!--全书的名字--> <div style="line-height:100%;margin:0 0 15px 0;padding:0;font-weight:bold;font-size:25px;">在沪外侨眼中的上海</div> <!--图片--> <img src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/an26a8-lr.jpg><br> <!--说明--> 用了几乎不到一代人的时间，上海就把自身从一座街道狭窄、建筑破旧、商业被数十年的共产主义体制拖垮的城市，改造为一座人口2300万、遍地摩天大厦和豪华商场的未来派大都市，成为无可争议的中国金融之都。在此期间，那些曾在上世纪把上海打造为“亚洲巴黎”的欧美人也回来了（与他们一同到来的还有成千上万日本人、韩国人、台湾人和新加坡人），试图帮助这座城市实现它在21世纪的梦想，即变身为“亚洲的纽约”。 </div> </div> <div class=scrollPage> <div class=container> <div class=contentcategory></div> </div> </div> </div> </div></div> <!--背景自动铺满屏幕--> <!--文字块可以通过o-bottom/o-top, o-left/o-right来放置到四个角--> <!--手机屏幕会自动适配--> <!--请使用p标签而不是<br>来断行--> <div class="slide layout-5 o-bg-style-dark" topic=图片 title=上海 style="background-image: url(http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/xu6118472taichi_practitioners-hr_8hdvvwm);"><div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>从马可•波罗(Marco Polo)和忽必烈(Kublai Khan)的时代开始，中国就一直对外国人有着一种吸引力——要说眼下哪座中国城市对外国人吸引力最大，恐怕非中国风最淡的上海莫属。</p> <p>上海既有异国风情又不让人感到特别陌生，既现代又不失古韵。它吸引着世界各地想从中国经济繁荣中分一杯羹的人，而且不会让他们感到难以适应。</p> </div> </div></div> <!--以视频为背景--> <!--视频设为muted，自动加载，无限循环--> <!--在手机和iPad上，翻到这一页不播放视频，只显示背景图片(.section-bg-3)--> <!--适用于已经知道视频地址的情况--> <!--请和技术部门或视频部门沟通，了解如何上传视频--> <!--文字块可以通过o-bottom/o-top, o-left/o-right来放置到四个角--> <div class="slide layout-5 o-bg-style-dark" topic=图片 title=文化 style="background-image: url(http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-5-hr_trwu830.png);"><div class=page> <div class=video-bg> <video preload=auto loop muted=muted> <source src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.mp4 type=video/mp4> <source src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.webmhd.webm type=video/webm> </video> </div> <div class="o-block o-text-block o-bottom o-left"><h1 class="story-title text-inner normal" style=line-height:1.2em;>文化，请拨1</h1></div> </div></div> <!--利用data-fixed-bg这个属性为这一页设一个固定背景--> <!--在翻页时产生类似backgound-attachement的效果--> <div class="slide layout-5 o-bg-style-dark" topic=图片 title=工作 data-fixed-bg=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/an26a8-hr.jpg><div class=page> <div class="o-block o-text-block o-bottom o-left"><p>‘对西方人来说，在华工作需要具备一套特别的技能——有时甚至对其他东亚国家的人来说也是如此’</p></div> </div></div> <!--视频作为内容播放--> <!--设定poster属性，在视频播放前预览--> <!--由于iPhone和iPad的Bug，手指放在视频上无法翻页--> <div class="slide layout-5 black" topic=视频 title=视频><div class=page> <div class=videocontainer> <video preload=none controls poster=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/anna_greenspan-1-mr.png> <source src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/anna_greenspan.mp4 type=video/mp4> <source src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/anna_greenspan_1280x720.webmhd.webm type=video/webm> </video> </div> </div></div> <!--插入文章--> <!--可以利用CMS的文章导出功能自动生成下方的代码--> <div class=slide storyid=woz topic=文章 title=沃茨> <div class="page article"> <div class=articleviewport><div class=articletarget></div></div> <div class=fixedContent> <div class=articleinfo> <div class=headline> 斯蒂夫•沃兹尼亚克 </div> <div class=lead>理查德•沃特斯：苹果公司联合创始人、天才工程师承认他对苹果仍然余情未了</div> <div class=datestamp>2006年9月30日</div> <!--large代表这个图片可以点击放大--> <!--headshot代表这个图片放置在第二栏的底部--> <img class="large headshot" src=http://i.ftimg.net/picture/9/000048719_piclink.jpg> </div> </div> <!--flowedContent中的内容会自动分页分栏排版，适应各种屏幕--> <div class=flowedContent> <p>Hickory Pit烧烤店位于加州圣何塞市的一个不起眼的街区，看上去不像一个适合推心置腹的好地方。餐厅外立面是混凝土外壳，里面别有洞天，颇有上世纪50年代的风格：一排排的小摊点装饰着糖果粉和蓝色的塑料，贴面台面，荧光灯。</p> <p>斯蒂夫•沃兹尼亚克(Steve Wozniak)看上去很自在。这并不奇怪，因为他最近在这里逗留了很长时间。这儿不大好找人，一不小心就会错过这位硅谷传奇工程师。一位服务员指着大厅的后面，但是我只看见两个男人弯着腰，摆弄着两个连在一起的手持设备。他们刚刚用完的聚苯乙烯餐盒放在桌子上，里面还有吃剩的肋条。</p> <p>服务员坚持说沃兹(大家都这么叫他)就在那里，我再次过去看了一眼，原来其中一个玩手持设备的人就是他。只是他已经吃过了。沃兹尼亚克连忙解释道，他和他的朋友正在玩俄罗斯方块。他问我知道他曾经是俄罗斯方块的世界冠军吗？又问我玩过打砖块游戏breakout吗？这是他为雅达利(Atari)公司设计的，那时候电子游戏还不是用软件写的，是直接烧制到机器的硬件里。他马上又开始描述早期电路的工作原理，回忆他当年花了四天四夜终于把所有的点位都放到屏幕上正确的位置。</p> <p>“你得把所有芯片上的线路都连好，这样芯片就会交替地出现一、零、一、零、哒、哒、哒、哒”他一边敲，一边说，仿佛回到了上世纪70年代。</p> <p>这个沉醉其中的工程师须发已经略有斑白，胸毛从黄色的T恤上露出来。他就是苹果神话的另一半。虽然乔布斯(Steve Jobs)更有名，但是沃兹尼亚克一样也是硅谷的传奇。</p> <p>他曾经是——现在也还是——技术宅男中的极品，硅谷程序员心目中永远的大胡子巫师。计算机工业早期的辉煌，正是源自他少年时对电子的热爱。1976年，他单枪匹马设计的苹果二代(Apple II)，被很多人认为是近几十年来最出色的工程成就，开创了台式机和笔记本电脑进入千家万户的新时代。他和乔布斯也因此成为大明星和千万富豪，几乎在一夜之间开启了个人电脑的革命。</p> <p>我们坐在一起是因为沃兹尼亚克最近写了回忆录。准确地说，是他口述，一位新闻界的朋友吉娜•史密斯(Gina Smith)执笔。他说自己已经连续50天坐在同样的位置和史密斯一同探讨文字了。听到这儿，我脑海里马上浮现出了两人吃过的、堆得像小山一样的肋条。</p> <p>那乔布斯对沃兹尼亚克描述的这段硅谷历史怎么看呢？乔布斯比沃兹尼亚克小四岁，他们第一次见面的时候，乔布斯还在上高中。“根据我的理解，他读了之后，觉得我把他写成了一个混球。”沃兹尼亚克说到。</p> <p>我理解乔布斯的心情。沃兹尼亚克在《我是沃兹：从宅男程序员到偶像》中提到一件事：在经过多个日夜的奋战之后，沃兹终于设计出了史上第一款大热的电子游戏Breakout，乔布斯把这个游戏以700美元卖给了雅达利公司，分给了沃兹一半。后来沃兹发现雅达利实际上给了乔布斯几千美元，乔布斯欺骗了自己的朋友。</p> <p>沃兹尼亚克也不是特别在乎乔布斯的感受。“史蒂夫有时候挺招人烦的，”他回忆起两人在苹果合作了十年，直到1985年分别离开了苹果。“他有时很讨厌。别人开会的时候他会突然走进来说，得了吧，都是一堆垃圾，你们别做这个了。然后他就走出去，扭脸又说，你们都是傻逼。”</p> <p>为了防止读者误解沃兹尼亚克的意思，我得申明一下他说话一贯带有工程师固有的直率，甚至天真。他曾经抱怨被断章取义，不过这是很自然的，因为他时常口无遮拦。</p> <p>为了找补回来，他又谈起了书中的内容，“我确信我在书中说了一些乔布斯的好话，不过我记不住了。”实际上他记得，不过这不足以抵消他对乔布斯的嘲弄。 服务员已经给我们的凉茶添了三次水了，我们再也不能拖着不点菜了。来这种地方，你就顾不得自己的胆固醇水平了。我本来想要一个整份肋排，还是作罢了，只点了一个小份。沃兹尼亚克想点一份甜橙派，但是服务员说没有了，他失望之情溢于言表，只好要了樱桃派。</p> <p>当你听沃兹尼亚克说话时，你很快就会意识到他跟上了年纪的摇滚明星没什么两样，都渴望重温过去的辉煌。在我们见面的头一个小时中，他不厌其烦地回顾了从11岁开始时做过的各种电子项目：电阻器、闪烁的灯泡和焊接线。</p> <p>他是工程师中的工程师。在他心目中，历史上的所有大事小情都是他这样的人做出的技术选择导致的直接和唯一结果。如果你问任何一个商科学生，苹果为什么没有保持住早期在个人电脑的领先优势，你会被告知是因为没有把技术授权给其他电脑制造商，这个商业决策的失误给微软留下了机会，他们为“开放”的IBM个人电脑开发操作系统软件，赢得了市场。但是在沃兹尼亚克看来，苹果失败的唯一原因是苹果二代（他的杰作）的下一代产品在技术上的缺陷。</p> <p>在他的描述中，他开发的电脑是电子行业黄金时代的巅峰之作。那个时候，一个人秉持着做出最好作品的理念，就可以改变整个计算机行业的历史。他做出苹果二代只花了三个月时间。如果一个人就能做出这样的成就，那么接下来的这么多年科技行业上为什么再无可以媲美的建树呢？</p> <p>“我们在制造电脑的时候，总是认为人比技术更重要，”他说，这样就产生了很多bug和设计糟糕的产品，制造出来的机器对于用户错误操作的各种可能性也考虑不周。“我很确定，苹果和世界上其他公司一样，都失去了成功的秘诀。”</p> <p>哪儿出了问题？在沃兹尼亚克有些过于简单的世界观看来，是由于工程师的主导地位被商人取代了。个人电脑行业开始进入低迷的原因？“没有好的、扎实的测试体系。没有好好关注产品。基本上是商业利益说了算。”</p> <p>菜上来了，肋条的味道出人意料地好。配菜是橡木烤玉米和烟熏豆子，却令人难以下咽。我羡慕地看着沃兹尼亚克盘中厚厚的樱桃派。</p> <p>沃兹尼亚克逐渐进入主题。在他的故事中，工程师是唯一的英雄，是缔造者。这个人“想出了所有的主意，写出了程序，把它展示给别人，又添加画龙点睛的奇妙功能”。</p> <p>在这个理想的世界中——这仍是硅谷很多工程师的理想——这位英雄工程师还是一个艺术家。</p> <p>“这就像是我身体的一部分，” 沃兹尼亚克说，“它是一种艺术。当它成为我的一部分，我就会尽力让它变得完美。我记得当我[为苹果二代]做软盘板的时候，我自己来把它固定到主板上，总是搞不定。我连续干了两周，每天都干到凌晨四点。当我终于做完的时候，我意识到如果我用另外一种方法来设计电路，主板上只需要有五个洞，而不是八个。所以我把所有的东西都拆了，从头做起。用户是看不见洞的。但是这对我来说很重要。这是我的一部分。就好像我的身体一样。”</p> <p>“在那个时候，事情就是这样做的。”</p> <p>这似乎有点自我神化的成分。但是如果这是一种幻觉，硅谷的人似乎都信这个：一个工程师加一个好主意就可以改变世界。沃兹尼亚克自己就是活生生的例子。金钱可以改变庞大产业如个人电脑的格局，但是不能阻止下一个英雄工程师实现他的梦想。</p> <p>“尝试和寻找新东西是人的天性，人的头脑就是干这个的，”沃兹尼亚克说，“我们自己天生就有好奇心。可以让世界变得更好的新想法无处不在，但是你拿一大笔钱给一个聪明的工程师，他倒不一定能做出好的东西。”</p> <p>现在是以谷歌为首的这一代公司大显身手的时代了。对于沃兹尼亚克个人来说，当初的那种臻于完美的技术状态再也没能重现。乔布斯后来回到了苹果，引领了苹果公司的强劲复苏。而沃兹尼亚克也尝试过一些别的事业，比如万能家用遥控器、宠物和个人物品追踪器，都以失败告终。</p> <p>这些年来，他从事过音乐会推广和慈善工作，有八年时间给10岁的孩子们上课。对于这段时光，他声称自己很满意。不过他还是非常渴望回到个人电脑革命的中心舞台，毕竟他是最早的发起者之一。</p> <p>“我很希望能参与一些[苹果公司的]事情。但是我觉得史蒂夫不会喜欢这个，”他也承认自己对计算机系统设计的知识已经有些跟不上时代了。这让人很难不产生这样的感觉：尽管这两人的过去是那样不可分割，沃兹尼亚克现在的角色更像偶然造访的同窗旧友或寒酸亲戚，略让人尴尬；你得强装笑容来敷衍他。</p> <p>关于他最近创办的一个企业，他说，“一个朋友跟我说，嘿，你得把史蒂夫放到董事会，或者让他帮点忙。”乔布斯很快就回应了：“不。”乔布斯也受邀为沃兹尼亚克的新书撰写前言，还是拒绝。</p> <p>下午4点，午餐时间早过了。自承为“工具控”的沃兹尼亚克起身到餐厅的后门取他的赛格威(Segway)电动车。这是一种自我平衡的两轮电动车，一度被硅谷人士捧为将要改变交通格局的机器。多年过去了，这仍然只是一个新奇的玩具。</p> <p>现在还没到日落的时候，但是看着沃兹尼亚克站在这个奇怪的机器上准备西行，夕阳西下的感觉油然而生。</p> <div class="food nowrap"> <p><b>The Hickory Pit烧烤店</b></p> <p>圣何塞</p> <p>小份肋排一份</p> <p>樱桃派两份</p> <p>咖啡两杯</p> <p>凉茶一杯</p> <p>总价：25.67美元</p> </div> </div> </div> </div> <!--如果这一页中有一个class=animation的元素，
+翻到这一页时，会运行这个元素的function中指定的函数，
+函数的定义放在下面的字段。
+利用这个功能，再加上一个开发者，可以在一个页面上做出任何功能，
+包括图表、演示、iFrame、甚至游戏--> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/6/000053176_piclink.jpg title=美国预算> <div class=animation function=usdeficit></div> </div> <div class=slide topic=图表 title=房价与股市> <div class=animation function=houseandstock></div> </div> <div class=slide topic=图表 title=组合图表> <div class=animation function=combinationChart001></div> </div> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/4/000047104_piclink.jpg title=世界人口> <div class=animation function=worldPopulation></div> </div> <!--单选题--> <div class="slide layout-2" topic=互动测试 title＝"互动小测"=""> <div class=page> <div class=quiz> <div><p class=question>关于几位文艺界名人，下列说法正确的是？</p></div> <div class=option explain=韩寒在出了几本关于年轻人的书后与2006年开始在网络上关注社会现实问题。摩尔是著名的左翼电影人，抨击小布什的《华氏911》是他的代表作。而《史密斯夫妇》是朱莉与布拉德·皮特主演的。> <p value=1 type=w explain="">韩寒是通过网络博客和微博成名的作家</p> <p value=1 type=r explain="">小巴菲特在小时候需要通过干家务赚到零花钱</p> <p value=1 type=w explain="">迈克尔·摩尔以抨击奥巴马的电影而著称</p> <p value=1 type=w explain="">安吉丽娜·朱莉与马特·戴蒙共同出演了《史密斯夫妇》</p> </div> </div> </div> </div> <!--表格：建议列数不要太多，以适应小屏幕--> <div class="slide layout-5" topic=表格 title=生活成本><div class="page longPicture"> <table class=data-table> <caption>生活成本—最昂贵城市</caption> <thead><tr></tr></thead> <tbody> <tr><td><strong>2015年排名</strong></td><td><strong>2014年排名</strong></td><td><strong>城市</strong></td><td><strong>所在国家</strong></td><td><strong>两居室公寓月租金（以美元计）**</strong></td><td><strong>三居室住房月租金（以美元计）**</strong></td></tr> <tr><td>1</td><td>1</td><td>罗安达</td><td>安哥拉</td><td>6800</td><td>15800</td></tr><tr><td>2</td><td>3</td><td>香港</td><td>中国</td><td>6576</td><td>11863</td></tr> <tr><td>3</td><td>5</td><td>苏黎世</td><td>瑞士</td><td>3963</td><td>5892</td></tr><tr><td>4</td><td>4</td><td>新加坡</td><td>新加坡</td><td>3247</td><td>6936</td></tr> <tr><td>5</td><td>6</td><td>日内瓦</td><td>瑞士</td><td>3749</td><td>6213</td></tr> <tr><td>6</td><td>10</td><td>上海</td><td>中国</td><td>4064</td><td>6503</td></tr> <tr><td>7</td><td>11</td><td>北京</td><td>中国</td><td>3577</td><td>5284</td></tr> <tr><td>8</td><td>14</td><td>首尔</td><td>韩国</td><td>3495</td><td>6808</td></tr> <tr><td>9</td><td>8</td><td>伯尔尼</td><td>瑞士</td><td>2464</td><td>n/a*</td></tr> <tr><td>10</td><td>2</td><td>恩贾梅纳</td><td>乍得</td><td>n/a*</td><td>2252</td></tr><tr><td colspan=6><em>来源：美世</em>. 注释：*该地区缺少合适的房产 **未配备家具</td></tr> </tbody> </table> </div></div> <!--鸣谢：其实就是固定背景的模版--> <div class="slide layout-5 o-bg-style-dark section-bg-thanks" topic=鸣谢 title=鸣谢 data-fixed-bg=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/bar_pic140510034_high_res_-hr_lm1svfb.jpg><div class=page> <div class="o-block o-text-block o-top o-left o-font-small"> <h1 class="story-title text-inner normal" style=line-height:1.2em;>鸣谢：</h1> <p>作者：英国《金融时报》驻上海记者帕提•沃德米尔(Patti Waldmeir)；补充报道：张嫣</p> <p>视频与图片：鲍考什•阿尔吉尔达斯(Bakas Algirdas)</p> <p>视频编辑：保罗•帕斯夸尔(Paolo Pascual)</p> <p>编辑与设计：雨果•格林哈尔希(Hugo Greenhalgh)</p> <p>制作：乔治•基里亚科斯(George Kyriakos)</p> <p>图片编辑：安迪•米尔斯(Andy Mears)、迈克尔•克拉布特里(Michael Crabtree)</p> <p>图像处理：克里斯•坎贝尔(Chris Campbell)</p> <p>统计：凯特•弗赖(Keith Fray)</p> <p>调研：阿尼娅•努斯鲍姆(Ania Nussbaum) </p> <p>图片补充：路透社(Reuters)、Alamy、Dreamstime、范克新</p> <p>译者：邢嵬、曲雯雯</p> </div> </div></div> <!--相关链接--> <!--利用o-side这个属性，右边底部的那个图片可以在手机屏幕上自动隐藏--> <div class="slide layout-5 section-bg-thanks" topic=相关阅读 title=相关阅读><div class=page> <div class="o-block o-text-block o-top o-left o-font-small"> <h1 class="story-title text-inner normal" style=line-height:1.2em;>相关阅读</h1> <p><strong>FT</strong>: </p> <p><a href=http://www.ftchinese.com/story/001061577 target=_blank>分析：经济减速让北京陷入两难</a> </p> <p><a href=http://www.ftchinese.com/story/001060251 target=_blank>上海11名官员因外滩踩踏事件受罚</a> </p> <p><a href=http://www.ftchinese.com/story/001060339 target=_blank>中国人心系中式早餐</a> </p> <p><strong>其他来源</strong>: </p> <p><a href=https://expatexplorer.hsbc.com/survey/files/pdfs/overall-reports/2014/HSBCExpatExplorer2014report.pdf target=_blank>Expat explorer report 2014 – HSBC</a> </p> <p><a href=http://www.mercer.com/content/mercer/global/all/en/newsroom/cost-of-living-survey.html target=_blank>Cost of living rankings 2014 – Mercer</a> </p> <p><a href=http://www.rolandberger.com/media/publications/2013-02-01-rbsc-pub-MaximizingthevalueofChinasmuseums.html target=_blank>Maximising the value of China’s museums, 2013 – Roland Berger</a> </p> <p><a href="http://www.nytimes.com/2012/04/15/travel/moganshan-china-a-lofty-retreat-from-sweltering-shanghai.html?r=0" target=_blank>A lofty retreat from sweltering Shanghai – New York Times</a> </p> </div> <div class="o-block o-text-block o-bottom o-right o-side"> <img src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/_ab_1306-lr_dsiktn9.jpg> </div> </div></div> <!--所有内容结束--> </div> <!--在固定在页面的元素--> <div class="wheel-container animated running fadeInUpToggle"><div id=o-wheel class="wheel rotate"></div></div> <script>var wheelObject = document.getElementById("o-wheel");</script> <!--在固定在页面的元素--> <div id=allads> <div id=fullpageads startpage=0 everypage=5> <!--全屏广告素材--> <div class="slide layout-5 fullpagead" style=background:#000;><div class=page> <img class=coverImage src=http://m.ftchinese.com/lunch/picture/ad/datejustii.jpg> </div></div> <div class="slide layout-5 fullpagead" style=background:#000;><div class=page> <img class=coverImage src=http://m.ftchinese.com/lunch/picture/ad/yachtmasterii.jpg> </div></div> <div class="slide layout-5 fullpagead" style=background:#000;><div class=page> <img class=coverImage src=http://m.ftchinese.com/lunch/picture/ad/daydate.jpg> </div></div> <!--全屏广告素材结束--> </div> <div id=mpuads> <!--MPU广告素材--> <div class=mpuad> <img src=http://m.ftchinese.com/lunch/picture/mpu/p.gif> </div> <div class=mpuad> <img src=http://m.ftchinese.com/lunch/picture/mpu/YMII_300x250_FT.jpg> </div> <div class=mpuad> <img src=http://m.ftchinese.com/lunch/picture/mpu/datejust_FT_300x250.jpg> </div> <div class=mpuad> <div class="MPU tint-orange">HTML5 MPU</div> </div> <!--MPU广告素材结束--> </div> </div> </div></body> <script>
+function isIE() { return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));}
+
+//如果是IE，不管是什么版本，都中止程序
+if (isIE() === true) {
+    document.body.innerHTML = '<h1>亲爱的用户，我们发现您使用了IE浏览器！这会给您带来严重的安全隐患！请改用Chrome或FireFox等现代浏览器来浏览FT中文网的精彩内容！</h1>';
+}
+</script> <script>document.getElementById("startbar").style.width="5%";</script> <script src=scripts/demo.js></script> <script src=http://code.highcharts.com/mapdata/custom/world.js></script> <script language=javascript>
+$(function(){
+    var firstImage = $('#allcontent .slide').eq(0).css('background-image') || '';
+    firstImage =firstImage.replace(/^url\(/g,'').replace(/\)$/g,'');
+    var img = new Image();
+    
+    
+    if (firstImage !== '' && firstImage !== 'none') {
+        img.src = firstImage;
+        img.onload = function() { 
+            openbook();
+        };
+    } else {
+        openbook();
+    }
+    new FastClick(document.body);
+});
+</script> <script language=javascript>
+<!--Animation函数-->
+
+function playFunction(thefunction) {
+  switch(thefunction) {
+    case 'usdeficit':
+      usdeficit();
+      break;
+    case 'houseandstock':
+      houseandstock();
+      break;
+    case 'combinationChart001': 
+      combinationChart001();
+      break;
+    case 'worldPopulation':
+      worldPopulation();
+      break;
+  }
+}
+
+
+
+
+
+function usdeficit() {
+  addNote('在80年代至今的几位总统任内，只有比尔·克林顿实现了4年的联邦预算盈余。支持者认为这是克林顿和萨默斯经济政策的功劳，反对者认为他们只是占了互联网泡沫繁荣的光（见前一张互动图）。图中可以看出2001年的9·11和2008年金融危机对政府预算的巨大影响。数据来自国会预算办公室(CBO)。');
+  var chart = new Highcharts.Chart({
+      chart: {renderTo: gChartId, defaultSeriesType: 'area',animation:{duration:500}},
+      title: {text: '图III：81年以来的美联邦政府平均收支'},
+      yAxis: {title:{text: '占GDP的百分比'},min:14},       
+      plotOptions: {
+          area: {
+              pointStart: 1981,
+          }
+      },
+      series: [{name:'联邦政府支出',data: [22.2,23.1,23.5,22.2,22.8,22.5,21.6,21.3,21.2,21.9,22.3,22.1,21.4,21.0,20.6,20.2,19.5,19.1,18.5,18.2,18.2,19.1,19.7,19.6,19.9,20.1,19.7,20.8,25.2,24.1,24.1,22.8]},
+              {name:'联邦政府收入',data: [19.6,19.2,17.5,17.3,17.7,17.5,18.4,18.2,18.4,18.0,17.8,17.5,17.5,18.0,18.4,18.8,19.2,19.9,19.8,20.6,19.5,17.6,16.2,16.1,17.3,18.2,18.5,17.6,15.1,15.1,15.4,15.8]},]
+  });
+}
+
+
+function houseandstock() {
+  addNote('股市经历了7个波动周期，其中上涨4个，下跌3个。而在这7个周期中，房价走势与之同步的有5个半。之所以会有半个周期，是因为在2014年的5-9月间，股市已开始回升，而房价还在缓慢下跌，随后两者又进入同步上升。');
+  $('#' + gChartId).highcharts({
+      title: {
+          text: '再谈股市与楼市关系'
+      },
+      xAxis: [{
+          categories: ['2005.05','2005.06','2005.07','2005.08','2005.09','2005.10','2005.11','2005.12','2006.01','2006.02','2006.03','2006.04','2006.05','2006.06','2006.07','2006.08','2006.09','2006.10','2006.11','2006.12','2007.01','2007.02','2007.03','2007.04','2007.05','2007.06','2007.07','2007.08','2007.09','2007.10','2007.11','2007.12','2008.01','2008.02','2008.03','2008.04','2008.05','2008.06','2008.07','2008.08','2008.09','2008.10','2008.11','2008.12','2009.01','2009.02','2009.03','2009.04','2009.05','2009.06','2009.07','2009.08','2009.09','2009.10','2009.11','2009.12','2010.01','2010.02','2010.03','2010.04','2010.05','2010.06','2010.07','2010.08','2010.09','2010.10','2010.11','2010.12','2011.01','2011.02','2011.03','2011.04','2011.05','2011.06','2011.07','2011.08','2011.09','2011.10','2011.11','2011.12','2012.01','2012.02','2012.03','2012.04','2012.05','2012.06','2012.07','2012.08','2012.09','2012.10','2012.11','2012.12','2013.01','2013.02','2013.03','2013.04','2013.05','2013.06','2013.07','2013.08','2013.09','2013.10','2013.11','2013.12','2014.01','2014.02','2014.03','2014.04','2014.05','2014.06','2014.07','2014.08','2014.09','2014.10','2014.11','2014.12','2015.01','2015.02','2015.03','2015.04'],
+          crosshair: true,
+          plotLines: [{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 29, // Value of where the line will appear
+          width: 2 // Width of the line    
+          },{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 41, // Value of where the line will appear
+          width: 2 // Width of the line    
+          },{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 59, // Value of where the line will appear
+          width: 2 // Width of the line    
+          },{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 62, // Value of where the line will appear
+          width: 2 // Width of the line    
+          },{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 65, // Value of where the line will appear
+          width: 2 // Width of the line    
+          },{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 77, // Value of where the line will appear
+          width: 2 // Width of the line    
+          },{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 107, // Value of where the line will appear
+          width: 2 // Width of the line    
+          },{
+          color: '#2e6e9e', // Color value
+          dashStyle: 'solid', // Style of the plot line. Default to solid
+          value: 113, // Value of where the line will appear
+          width: 2 // Width of the line    
+          }
+
+          ]
+
+      }],
+      yAxis: [{ // Primary yAxis
+          labels: {
+              format: '{value}',
+              style: {
+                  color: Highcharts.getOptions().colors[1]
+              }
+          },
+          title: {
+              text: '股指',
+              style: {
+                  color: Highcharts.getOptions().colors[1]
+              }
+          }
+      }, { // Secondary yAxis
+          title: {
+              text: '房价指数',
+              style: {
+                  color: Highcharts.getOptions().colors[0]
+              }
+          },
+          labels: {
+              format: '{value}',
+              style: {
+                  color: Highcharts.getOptions().colors[0]
+              }
+          },
+          opposite: true
+      }],
+      tooltip: {
+          shared: true
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'left',
+          x: 80,
+          verticalAlign: 'top',
+          y: 0,
+          floating: true,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+      },
+      series: [{
+          name: '上证指数',
+          type: 'area',
+          data: [1061,1081,1083,1163,1156,1093,1099,1161,1258,1299,1298,1440,1641,1672,1613,1659,1752,1838,2099,2675,2786,2881,3184,3841,4110,3821,4471,5219,5552,5955,4872,5262,4383,4349,3473,3693,3433,2736,2776,2397,2294,1729,1871,1821,1991,2083,2373,2478,2633,2959,3412,2668,2779,2996,3195,3277,2989,3052,3109,2871,2592,2398,2638,2639,2656,2979,2820,2808,2791,2905,2928,2912,2743,2762,2702,2567,2359,2468,2333,2199,2293,2428,2263,2396,2372,2225,2104,2048,2086,2069,1980,2269,2385,2366,2237,2178,2301,1979,1994,2098,2175,2142,2221,2116,2033,2056,2033,2026,2039,2048,2202,2217,2364,2420,2683,3235,3210,3310,3748,4442],
+          tooltip: {
+              valueSuffix: ''
+          }
+
+      }, {
+          name: '中原二手住宅价格指数',
+          type: 'spline',
+          yAxis: 1,
+          data: [119,121,120,117,119,119,123,125,125,127,133,137,140,142,143,144,147,149,153,155,158,162,166,173,179,186,193,202,210,218,219,217,216,215,215,216,218,216,213,210,204,199,195,196,195,195,199,207,216,227,235,242,248,256,264,272,274,273,279,290,284,277,274,275,282,285,288,294,304,310,313,314,314,315,315,315,316,314,312,306,299,297,300,304,307,311,316,320,325,329,334,338,344,352,361,365,369,373,378,383,392,398,403,404,405,410,413,414,412,406,403,400,397,398,398,400,402,403,407,416],
+          tooltip: {
+              valueSuffix: ''
+          }
+      }]
+  });
+}
+
+function combinationChart001() {
+  addNote('组合图表');
+  //从highcharts.com上复制的代码，只需把第一行改为如下的代码就可以正常显示
+  $('#' + gChartId).highcharts({
+          title: {
+              text: 'Combination chart'
+          },
+          xAxis: {
+              categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+          },
+          labels: {
+              items: [{
+                  html: 'Total fruit consumption',
+                  style: {
+                      left: '50px',
+                      top: '18px',
+                      color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                  }
+              }]
+          },
+          series: [{
+              type: 'column',
+              name: 'Jane',
+              data: [3, 2, 1, 3, 4]
+          }, {
+              type: 'column',
+              name: 'John',
+              data: [2, 3, 5, 7, 6]
+          }, {
+              type: 'column',
+              name: 'Joe',
+              data: [4, 3, 3, 9, 0]
+          }, {
+              type: 'spline',
+              name: 'Average',
+              data: [3, 2.67, 3, 6.33, 3.33],
+              marker: {
+                  lineWidth: 2,
+                  lineColor: Highcharts.getOptions().colors[3],
+                  fillColor: 'white'
+              }
+          }, {
+              type: 'pie',
+              name: 'Total consumption',
+              data: [{
+                  name: 'Jane',
+                  y: 13,
+                  color: Highcharts.getOptions().colors[0] // Jane's color
+              }, {
+                  name: 'John',
+                  y: 23,
+                  color: Highcharts.getOptions().colors[1] // John's color
+              }, {
+                  name: 'Joe',
+                  y: 19,
+                  color: Highcharts.getOptions().colors[2] // Joe's color
+              }],
+              center: [100, 80],
+              size: 100,
+              showInLegend: false,
+              dataLabels: {
+                  enabled: false
+              }
+          }]
+      });
+}
+
+
+function worldPopulation() {
+  addNote('');
+  var data = [{
+  code: "AF",
+      z: 30552
+  }, {
+      code: "AL",
+      z: 2897
+  }, {
+      code: "DZ",
+      z: 39208
+  }, {
+      code: "AS",
+      z: 55
+  }, {
+      code: "ADO",
+      z: 79
+  }, {
+      code: "AO",
+      z: 21472
+  }, {
+      code: "AG",
+      z: 90
+  }, {
+      code: "AR",
+      z: 41446
+  }, {
+      code: "AM",
+      z: 2977
+  }, {
+      code: "AW",
+      z: 103
+  }, {
+      code: "AU",
+      z: 23129
+  }, {
+      code: "AT",
+      z: 8480
+  }, {
+      code: "AZ",
+      z: 9417
+  }, {
+      code: "BS",
+      z: 377
+  }, {
+      code: "BH",
+      z: 1332
+  }, {
+      code: "BD",
+      z: 156595
+  }, {
+      code: "BB",
+      z: 285
+  }, {
+      code: "BY",
+      z: 9466
+  }, {
+      code: "BE",
+      z: 11183
+  }, {
+      code: "BZ",
+      z: 332
+  }, {
+      code: "BJ",
+      z: 10323
+  }, {
+      code: "BM",
+      z: 65
+  }, {
+      code: "BT",
+      z: 754
+  }, {
+      code: "BO",
+      z: 10671
+  }, {
+      code: "BA",
+      z: 3829
+  }, {
+      code: "BW",
+      z: 2021
+  }, {
+      code: "BR",
+      z: 200362
+  }, {
+      code: "BN",
+      z: 418
+  }, {
+      code: "BG",
+      z: 7265
+  }, {
+      code: "BF",
+      z: 16935
+  }, {
+      code: "BI",
+      z: 10163
+  }, {
+      code: "CV",
+      z: 499
+  }, {
+      code: "KH",
+      z: 15135
+  }, {
+      code: "CM",
+      z: 22254
+  }, {
+      code: "CA",
+      z: 35154
+  }, {
+      code: "KY",
+      z: 58
+  }, {
+      code: "CF",
+      z: 4616
+  }, {
+      code: "TD",
+      z: 12825
+  }, {
+      code: "CHI",
+      z: 162
+  }, {
+      code: "CL",
+      z: 17620
+  }, {
+      code: "CN",
+      z: 1357380
+  }, {
+      code: "CO",
+      z: 48321
+  }, {
+      code: "KM",
+      z: 735
+  }, {
+      code: "ZAR",
+      z: 67514
+  }, {
+      code: "CG",
+      z: 4448
+  }, {
+      code: "CR",
+      z: 4872
+  }, {
+      code: "CI",
+      z: 20316
+  }, {
+      code: "HR",
+      z: 4256
+  }, {
+      code: "CU",
+      z: 11266
+  }, {
+      code: "CW",
+      z: 154
+  }, {
+      code: "CY",
+      z: 1141
+  }, {
+      code: "CZ",
+      z: 10514
+  }, {
+      code: "DK",
+      z: 5615
+  }, {
+      code: "DJ",
+      z: 873
+  }, {
+      code: "DM",
+      z: 72
+  }, {
+      code: "DO",
+      z: 10404
+  }, {
+      code: "EC",
+      z: 15738
+  }, {
+      code: "EG",
+      z: 82056
+  }, {
+      code: "SV",
+      z: 6340
+  }, {
+      code: "GQ",
+      z: 757
+  }, {
+      code: "ER",
+      z: 6333
+  }, {
+      code: "EE",
+      z: 1318
+  }, {
+      code: "ET",
+      z: 94101
+  }, {
+      code: "FO",
+      z: 49
+  }, {
+      code: "FJ",
+      z: 881
+  }, {
+      code: "FI",
+      z: 5439
+  }, {
+      code: "FR",
+      z: 65940
+  }, {
+      code: "PF",
+      z: 277
+  }, {
+      code: "GA",
+      z: 1672
+  }, {
+      code: "GM",
+      z: 1849
+  }, {
+      code: "GE",
+      z: 4487
+  }, {
+      code: "DE",
+      z: 80652
+  }, {
+      code: "GH",
+      z: 25905
+  }, {
+      code: "GR",
+      z: 11028
+  }, {
+      code: "GL",
+      z: 56
+  }, {
+      code: "GD",
+      z: 106
+  }, {
+      code: "GU",
+      z: 165
+  }, {
+      code: "GT",
+      z: 15468
+  }, {
+      code: "GN",
+      z: 11745
+  }, {
+      code: "GW",
+      z: 1704
+  }, {
+      code: "GY",
+      z: 800
+  }, {
+      code: "HT",
+      z: 10317
+  }, {
+      code: "HN",
+      z: 8098
+  }, {
+      code: "HK",
+      z: 7188
+  }, {
+      code: "HU",
+      z: 9894
+  }, {
+      code: "IS",
+      z: 324
+  }, {
+      code: "IN",
+      z: 1252140
+  }, {
+      code: "ID",
+      z: 249866
+  }, {
+      code: "IR",
+      z: 77447
+  }, {
+      code: "IQ",
+      z: 33417
+  }, {
+      code: "IE",
+      z: 4598
+  }, {
+      code: "IMY",
+      z: 86
+  }, {
+      code: "IL",
+      z: 8060
+  }, {
+      code: "IT",
+      z: 60234
+  }, {
+      code: "JM",
+      z: 2715
+  }, {
+      code: "JP",
+      z: 127339
+  }, {
+      code: "JO",
+      z: 6460
+  }, {
+      code: "KZ",
+      z: 17035
+  }, {
+      code: "KE",
+      z: 44354
+  }, {
+      code: "KI",
+      z: 102
+  }, {
+      code: "KP",
+      z: 24895
+  }, {
+      code: "KR",
+      z: 50220
+  }, {
+      code: "KSV",
+      z: 1824
+  }, {
+      code: "KW",
+      z: 3369
+  }, {
+      code: "KG",
+      z: 5720
+  }, {
+      code: "LA",
+      z: 6770
+  }, {
+      code: "LV",
+      z: 2013
+  }, {
+      code: "LB",
+      z: 4467
+  }, {
+      code: "LS",
+      z: 2074
+  }, {
+      code: "LR",
+      z: 4294
+  }, {
+      code: "LY",
+      z: 6202
+  }, {
+      code: "LI",
+      z: 37
+  }, {
+      code: "LT",
+      z: 2958
+  }, {
+      code: "LU",
+      z: 543
+  }, {
+      code: "MO",
+      z: 566
+  }, {
+      code: "MK",
+      z: 2107
+  }, {
+      code: "MG",
+      z: 22925
+  }, {
+      code: "MW",
+      z: 16363
+  }, {
+      code: "MY",
+      z: 29717
+  }, {
+      code: "MV",
+      z: 345
+  }, {
+      code: "ML",
+      z: 15302
+  }, {
+      code: "MT",
+      z: 423
+  }, {
+      code: "MH",
+      z: 53
+  }, {
+      code: "MR",
+      z: 3890
+  }, {
+      code: "MU",
+      z: 1259
+  }, {
+      code: "MX",
+      z: 122332
+  }, {
+      code: "FM",
+      z: 104
+  }, {
+      code: "MD",
+      z: 3559
+  }, {
+      code: "MC",
+      z: 38
+  }, {
+      code: "MN",
+      z: 2839
+  }, {
+      code: "ME",
+      z: 621
+  }, {
+      code: "MA",
+      z: 33008
+  }, {
+      code: "MZ",
+      z: 25834
+  }, {
+      code: "MM",
+      z: 53259
+  }, {
+      code: "NA",
+      z: 2303
+  }, {
+      code: "NP",
+      z: 27797
+  }, {
+      code: "NL",
+      z: 16804
+  }, {
+      code: "NC",
+      z: 262
+  }, {
+      code: "NZ",
+      z: 4442
+  }, {
+      code: "NI",
+      z: 6080
+  }, {
+      code: "NE",
+      z: 17831
+  }, {
+      code: "NG",
+      z: 173615
+  }, {
+      code: "MP",
+      z: 54
+  }, {
+      code: "NO",
+      z: 5080
+  }, {
+      code: "OM",
+      z: 3632
+  }, {
+      code: "PK",
+      z: 182143
+  }, {
+      code: "PW",
+      z: 21
+  }, {
+      code: "PA",
+      z: 3864
+  }, {
+      code: "PG",
+      z: 7321
+  }, {
+      code: "PY",
+      z: 6802
+  }, {
+      code: "PE",
+      z: 30376
+  }, {
+      code: "PH",
+      z: 98394
+  }, {
+      code: "PL",
+      z: 38514
+  }, {
+      code: "PT",
+      z: 10457
+  }, {
+      code: "PR",
+      z: 3615
+  }, {
+      code: "QA",
+      z: 2169
+  }, {
+      code: "ROM",
+      z: 19981
+  }, {
+      code: "RU",
+      z: 143500
+  }, {
+      code: "RW",
+      z: 11777
+  }, {
+      code: "WS",
+      z: 190
+  }, {
+      code: "SM",
+      z: 31
+  }, {
+      code: "ST",
+      z: 193
+  }, {
+      code: "SA",
+      z: 28829
+  }, {
+      code: "SN",
+      z: 14133
+  }, {
+      code: "RS",
+      z: 7164
+  }, {
+      code: "SC",
+      z: 89
+  }, {
+      code: "SL",
+      z: 6092
+  }, {
+      code: "SG",
+      z: 5399
+  }, {
+      code: "SX",
+      z: 40
+  }, {
+      code: "SK",
+      z: 5413
+  }, {
+      code: "SI",
+      z: 2060
+  }, {
+      code: "SB",
+      z: 561
+  }, {
+      code: "SO",
+      z: 10496
+  }, {
+      code: "ZA",
+      z: 53157
+  }, {
+      code: "SS",
+      z: 11296
+  }, {
+      code: "ES",
+      z: 46618
+  }, {
+      code: "LK",
+      z: 20483
+  }, {
+      code: "KN",
+      z: 54
+  }, {
+      code: "LC",
+      z: 182
+  }, {
+      code: "MF",
+      z: 31
+  }, {
+      code: "VC",
+      z: 109
+  }, {
+      code: "SD",
+      z: 37964
+  }, {
+      code: "SR",
+      z: 539
+  }, {
+      code: "SZ",
+      z: 1250
+  }, {
+      code: "SE",
+      z: 9600
+  }, {
+      code: "CH",
+      z: 8088
+  }, {
+      code: "SY",
+      z: 22846
+  }, {
+      code: "TJ",
+      z: 8208
+  }, {
+      code: "TZ",
+      z: 49253
+  }, {
+      code: "TH",
+      z: 67011
+  }, {
+      code: "TMP",
+      z: 1180
+  }, {
+      code: "TG",
+      z: 6817
+  }, {
+      code: "TO",
+      z: 105
+  }, {
+      code: "TT",
+      z: 1341
+  }, {
+      code: "TN",
+      z: 10887
+  }, {
+      code: "TR",
+      z: 74933
+  }, {
+      code: "TM",
+      z: 5240
+  }, {
+      code: "TC",
+      z: 33
+  }, {
+      code: "TV",
+      z: 10
+  }, {
+      code: "UG",
+      z: 37579
+  }, {
+      code: "UA",
+      z: 45490
+  }, {
+      code: "AE",
+      z: 9346
+  }, {
+      code: "GB",
+      z: 64107
+  }, {
+      code: "US",
+      z: 316129
+  }, {
+      code: "UY",
+      z: 3407
+  }, {
+      code: "UZ",
+      z: 30243
+  }, {
+      code: "VU",
+      z: 253
+  }, {
+      code: "VE",
+      z: 30405
+  }, {
+      code: "VN",
+      z: 89709
+  }, {
+      code: "VI",
+      z: 105
+  }, {
+      code: "WBG",
+      z: 4170
+  }, {
+      code: "YE",
+      z: 24407
+  }, {
+      code: "ZM",
+      z: 14539
+  }, {
+      code: "ZW",
+      z: 14150
+  }];
+  var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+  $('#' + gChartId).highcharts('Map', {
+      chart : {
+          borderWidth : 0
+      },
+
+      title: {
+          text: 'World population 2013 by country'
+      },
+
+      subtitle : {
+          text : 'Demo of Highcharts map with bubbles'
+      },
+
+      legend: {
+          enabled: false
+      },
+
+      mapNavigation: {
+          enabled: true,
+          buttonOptions: {
+              verticalAlign: 'bottom'
+          }
+      },
+
+      series : [{
+          name: 'Countries',
+          mapData: mapData,
+          color: '#E0E0E0',
+          enableMouseTracking: false
+      }, {
+          type: 'mapbubble',
+          mapData: mapData,
+          name: 'Population 2013',
+          joinBy: ['iso-a2', 'code'],
+          data: data,
+          minSize: 4,
+          maxSize: '12%',
+          tooltip: {
+              pointFormat: '{point.code}: {point.z} thousands'
+          }
+      }]
+  });
+}
+</script> </html>
