@@ -1,0 +1,1751 @@
+<!--如果您是制作新的HTML 5沉浸式报道，请直接跳到“所有内容开始”--> <!DOCTYPE html> <html> <head> <meta http-equiv=Content-Type content="text/html; charset=utf-8"> <title>特别报道</title> <meta name=apple-mobile-web-app-capable content=yes> <meta name=apple-mobile-web-app-status-bar-style content=black> <link rel=apple-touch-icon-precomposed href=img/fticon.png> <meta name=viewport content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> <link rel=stylesheet href=styles/main-demo.css> <!--Google Analytics--> <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'http://m.ftchinese.com/index.php/jsapi/analytics', 'ga');
+    ga('create', 'UA-1608715-1');
+    ga('send', 'pageview');
+    </script> <!--End Google Analytics--> </head> <body> <div id=share-icon><img src=http://s.ftimg.net/img/friend-share-icon.jpg></div> <div id=o-rotate-note> <div>旋转屏幕，查看精彩内容！</div> </div> <div id=screenstart class=opening ontouchmove=event.preventDefault();><span><p class=booklead id=startstatus>FT中文网特别报道</p><div class="progresscontainer instartscreen"><div id=startbar class="progressbar standardprogressbar uses3d progressbg structureprogress"></div></div><p class=booklead id=loadstatus>&nbsp;</p></span> <div class=backuplinks><a onclick=javascript:window.location.reload()>重新加载</a></div> </div> <!--如果要出目录，就必须用到FTScroller--> <div class="fullbody fruit landscapeImage" id=game> <div id=swipe> <div id=gamecontent> </div> </div> <div class="tap pagedots"></div> <div class="tap pagetitle"></div> <div id=contentRail> <div class=-bg-checkered> <div id=toolRail> <div class=nutmeg-content> <div class=nutmeg-content_left> <button onclick="jumptostory('contentpage')" class=button-menu><span id=index-title>目录</span></button> </div> <div class=nutmeg-content_right> <button onclick=setting() class=nutmeg_settings-btn aria-label=Settings></button> </div> <div class="nutmeg-content_right rightmargin"> <button onclick=setFontSize() class=nutmeg_fontsize-btn aria-label=Settings></button> </div> </div> </div> </div> <div id=imageRail> <div id=imageRailInner></div> </div> </div> <div id=fontsetting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"> <button onclick=closeFontSize() aria-label=Settings>确定</button> </div> 设置字号 </div> <div class="fontpreferences overlay-content"> <div id=extra-small class=extra-small>最小<span class=tickbg></span></div> <div id=small class=small>小<span class=tickbg></span></div> <div id=medium class=medium>适中<span class=tickbg></span></div> <div id=big class=big>大<span class=tickbg></span></div> <div id=extra-big class=extra-big>特大<span class=tickbg></span></div> </div> </div> </div> </div> </div> <div id=setting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"> <button onclick=closeSetting() class=overlay_close-btn aria-label=Settings></button> </div> 设置与帮助 </div> <div class=nightreading> <strong>夜间模式</strong> <span class=displayvalue onclick=switchNightReading()> <span class=ui-toggle> <span class=ui-toggle-button></span> <span class="ui-toggle-label ui-toggle-label-on">开</span> <span class="ui-toggle-label ui-toggle-label-off">关</span> </span> </span> <span class=description>在晚上切换为夜间阅读模式，可以减小对眼睛的压力，并节约电池</span> </div> <div class="bgpreferences overlay-content"> <strong>自选背景</strong> <div id=pink>粉色<span class=tickbg></span></div> <div id=white>白色<span class=tickbg></span></div> </div> <div class=standalonebutton> <a href="mailto:ftchinese.feedback@gmail.com?subject=Feedback on FT HTML 5 Story" id=feedbackEmail> <button class=ui-light-btn>反馈问题</button> </a> </div> <div id=testMessage></div> </div> </div> </div> </div> <div id=largepic class=overlay> <div class=overlayBG></div> <div class=inner> <button class=cherry_button></button> <div class=cell> </div> </div> </div> <div id=allcontent style=display:none;> <!--所有内容开始--> <!--所有内容开始--> <!--Please use tab for indentation--> <!--Add all your inline styles here using the preset breakpoints--> <style>
+                    /* mobile first*/
+            
+            .o-bg-section-op.slide {
+                background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
+            }
+            
+            .o-bg-section-1.slide {
+                background-image: url(http://i.ftimg.net/picture/8/000053948_piclink.jpg);
+            }
+            
+            .o-bg-section-2.slide {
+                background-image: url(http://i.ftimg.net/picture/9/000053949_piclink.jpg);
+            }
+            
+            .o-bg-section-3.slide {
+                background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
+            }
+            
+            @media only screen and (min-width: 450px) {
+                .o-bg-section-op.slide {
+                    .o-bg-section-op.slide {
+                        background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
+                    }
+                    .o-bg-section-1.slide {
+                        background-image: url(http://i.ftimg.net/picture/8/000053948_piclink.jpg);
+                    }
+                    .o-bg-section-2.slide {
+                        background-image: url(http://i.ftimg.net/picture/9/000053949_piclink.jpg);
+                    }
+                    .o-bg-section-3.slide {
+                        background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
+                    }
+                    @media only screen and (min-width: 700px) {
+                        .o-bg-section-op.slide {
+                            background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
+                        }
+                        .o-bg-section-1.slide {
+                            background-image: url(http://i.ftimg.net/picture/8/000053948_piclink.jpg);
+                        }
+                        .o-bg-section-2.slide {
+                            background-image: url(http://i.ftimg.net/picture/9/000053949_piclink.jpg);
+                        }
+                        .o-bg-section-3.slide {
+                            background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
+                        }
+                    }
+                    @media only screen and (min-width: 1024px) {
+                        .o-bg-section-op.slide {
+                            background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
+                        }
+                        .o-bg-section-1.slide {
+                            background-image: url(http://i.ftimg.net/picture/8/000053948_piclink.jpg);
+                        }
+                        .o-bg-section-2.slide {
+                            background-image: url(http://i.ftimg.net/picture/9/000053949_piclink.jpg);
+                        }
+                        .o-bg-section-3.slide {
+                            background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
+                        }
+                    }
+            </style> <div class="slide layout-5 o-bg-style-dark o-bg-section-op" title=封面 topic=封面> <div class=page> <h1 class="story-title text-inner normal" style=line-height:1.2em;>一带一路如何改变中国海外投资？ </h1> <h2 class="story-heading text-inner small"> 宣示"一帶一路"戰略即将满两年，这期间中国发生了什么变化？將來可能面对什么样的风险？</h2> <div class="o-text-block o-bottom o-right o-credit"> <p>专辑制作：史书华</p> <p>补充报道：蒋馨尔</p> </div> </div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-1" topic=图片 title=pakistain> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>大事，总是从不经意的小事開始累积。</p> <p>2013年9月，习近平出访哈萨克斯坦，提出”丝绸之路经济带”构思，当时的媒体和学者专家，还没有太多联想和解讀。一个月后，习近平参与亚太经济合作组织（APEC）领导人非正式会议，在印尼国会演讲时提出，中国愿意与东盟国家共同建设“21世纪海上丝绸之路”。 </p> <p>至此，一带一路被端到所有人面前，成为讨论热点。</p> </div> </div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-2" topic=图片 title=哈萨克斯坦> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>一条路、一条海，两条路径，600公里长，沿线60多国，44億人口，21萬億美元的GDP規模，分別占到了全球人口的63%和經濟總量的29%。</p> <p>一带一路突然出现，就像一片大布，笼罩中国政经全局。但这到底是什么样的罩，却让人看不清。两年过去，就连年8月8日”一带一路百人论坛”上，专家学者也从最基本的定义、解读开始讨论。</p> <p>但当分析一带一路背后的成因，却很有共识。</p> <p>近年，在中国高速增长背后，几个信号，透漏中国经济的不安。</p> </div> </div> </div> <div class=slide topic=图表 title=对外出口> <div class=animation function=obor_export></div> </div> <div class=slide topic=图表 title=非金融投资> <div class=animation function=obor_nonFinancialInvestment></div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-3" topic=图片 title=哈萨克斯坦> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>两年过去，一带一路有改变中国什么吗？</p> </div> </div> </div> <div class=slide topic=图表 title=一带一路投资件数占比> <div class=animation function=obor_investmentItems></div> </div> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/4/000047104_piclink.jpg title=世界人口> <div class=animation function=obor_areaspline> </div> </div> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/4/000047104_piclink.jpg title=世界人口> <div class=animation function=obor_percentageArea> </div> </div> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/4/000047104_piclink.jpg title=世界人口> <div class=animation function=mapOBOR> </div> </div> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/4/000047104_piclink.jpg title=一帶一路之前> <div class=animation function=mapWorldBefore> </div> </div> <!--表格：建议列数不要太多，以适应小屏幕--> <div class="slide layout-5" topic=表格 title=生活成本 thumbnail=http://i.ftimg.net/picture/4/000047104_piclink.jpg> <div class="page longPicture animation" function=oborSparkline> <caption>生活成本—最昂贵城市</caption> <table id=table-sparkline class=table-sparkline> <thead> <tr> <th>地区</th> <th>四年变化</th> <th>差值</th> <th>各类别下的变化</th> <!--能源、金属、房地产、科技、交通、其他--> </tr> </thead> <tbody id=tbody-sparkline> <tr> <th>阿拉伯中东和北非</th> <td data-sparkline="9090, 8700, 13930, 8950"> </td><td>5090</td> <td data-sparkline="1370, 0, -190, -1790, 230, 5930 ; column"> </td></tr> <tr> <th>撒哈拉以南的非洲</th> <td data-sparkline="32640, 36400, 24470, 30710"> </td><td>-13860</td> <td data-sparkline="-7400, -6120, 2260, -1980, -1090, 470; column"> </td></tr> <tr> <th>东亚</th> <td data-sparkline="16530, 18970, 20350, 12650"> </td><td>-2500</td> <td data-sparkline="-4500, -6410, 2390, 660, 2890, 2470 ; column"> </td></tr> <tr> <th>西亚</th> <td data-sparkline="17710, 20880, 32420, 17230"> </td><td>11060</td> <td data-sparkline="510, -260, 1420, 740, 7180, 1470 ; column"> </td></tr> <tr> <th>欧洲</th> <td data-sparkline="18110, 13040, 27020, 30670"> </td><td>26540</td> <td data-sparkline="1380, -460, 1350, 670, 11100, 12500; column"> </td></tr> <tr> <th>北美</th> <td data-sparkline="6940, 20110, 4680, 2330"> </td><td>-20040</td> <td data-sparkline="-20140, -420, 970, -280, -700, 530 ; column"> </td></tr> <tr> <th>美国</th> <td data-sparkline="9820, 14480, 13250, 20010"> </td><td>8960</td> <td data-sparkline="-3640, -100, 4150, 8950, 1000, -1400 ; column"> </td></tr> <tr> <th>南美</th> <td data-sparkline="14090, 7030, 24450, 8230"> </td><td>11560</td> <td data-sparkline="6560, 4940, -260, 300, -690, 710; column"> </td></tr> <tr> <th>澳大利亚</th> <td data-sparkline="6690, 12650, 4650, 9420"> </td><td>-5270</td> <td data-sparkline="-8270, -4690, 4090, 0, 1610, 1990 ; column"> </td></tr> </tbody> </table> </div> </div> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/4/000047104_piclink.jpg title=一帶一路之後> <div class=animation function=mapWorldAfter> </div> </div> <div class="slide layout-5 o-bg-style-dark" topic=图片 title=上海 style="background-image: url(https://next-geebee.ft.com/image/v1/images/raw/ftcms%3A5792bd98-ccb7-11e4-b5a5-00144feab7de?source=next&fit=scale-down&width=710);"> <div class=page> <div class="o-block o-text-block o-bottom o-right"> 当钱、人、策略，沿著一带一路向外推进，中国可能会碰上那些风险？ </div> </div> </div> <!--以视频为背景--> <!--视频设为muted，自动加载，无限循环--> <!--在手机和iPad上，翻到这一页不播放视频，只显示背景图片(.section-bg-3)--> <!--适用于已经知道视频地址的情况--> <!--请和技术部门或视频部门沟通，了解如何上传视频--> <!--文字块可以通过o-bottom/o-top, o-left/o-right来放置到四个角--> <div class="slide layout-5 o-bg-style-dark" topic=图片 title=文化 style="background-image: url(http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-5-hr_trwu830.png);"> <div class=page> <div class=video-bg> <video preload=auto loop muted=muted> 文化 <source src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.mp4 type=video/mp4> <source src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.webmhd.webm type=video/webm> </video> </div> <div class="o-block o-text-block o-bottom o-left"> <h1 class="story-title text-inner normal" style=line-height:1.2em;>视频1: 巴基斯坦</h1></div> </div> </div> <!--利用data-fixed-bg这个属性为这一页设一个固定背景--> <!--在翻页时产生类似backgound-attachement的效果--> <div class="slide layout-5 o-bg-style-dark" topic=图片 title=工作 data-fixed-bg=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/an26a8-hr.jpg> <div class=page> <div class="o-block o-text-block o-bottom o-left"> <p>‘对西方人来说，在华工作需要具备一套特别的技能——有时甚至对其他东亚国家的人来说也是如此’</p> </div> </div> </div> <!--视频作为内容播放--> <!--设定poster属性，在视频播放前预览--> <!--由于iPhone和iPad的Bug，手指放在视频上无法翻页--> <div class="slide layout-5 black" topic=视频 title=视频> <div class=page> <div class=videocontainer> <video preload=none controls poster=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/anna_greenspan-1-mr.png> <source src="http://p.bokecc.com/playvideo.bo?uid=922662811F1A49E9&playerid=3571A3BF2AEC8829&playertype=1&autoStart=true&vid=DCE25ED3B39457A09C33DC5901307461"> <source src="http://p.bokecc.com/playvideo.bo?uid=922662811F1A49E9&playerid=3571A3BF2AEC8829&playertype=1&autoStart=true&vid=DCE25ED3B39457A09C33DC5901307461" type=video/webm> </video> </div> </div> </div> <!--插入文章--> <!--可以利用CMS的文章导出功能自动生成下方的代码--> <div class=slide storyid=woz topic=文章 title=沃茨> <div class="page article"> <div class=articleviewport> <div class=articletarget></div> </div> <div class=fixedContent> <div class=articleinfo> <div class=headline> 斯蒂夫•沃兹尼亚克 </div> <div class=lead>理查德•沃特斯：苹果公司联合创始人、天才工程师承认他对苹果仍然余情未了</div> <div class=datestamp>2006年9月30日</div> <!--large代表这个图片可以点击放大--> <!--headshot代表这个图片放置在第二栏的底部--><img class="large headshot" src=http://i.ftimg.net/picture/9/000048719_piclink.jpg> </div> </div> <!--flowedContent中的内容会自动分页分栏排版，适应各种屏幕--> <div class=flowedContent> <p>Hickory Pit烧烤店位于加州圣何塞市的一个不起眼的街区，看上去不像一个适合推心置腹的好地方。餐厅外立面是混凝土外壳，里面别有洞天，颇有上世纪50年代的风格：一排排的小摊点装饰着糖果粉和蓝色的塑料，贴面台面，荧光灯。</p> <div class="food nowrap"> <p><b>The Hickory Pit烧烤店</b></p> <p>圣何塞</p> <p>小份肋排一份</p> <p>樱桃派两份</p> <p>咖啡两杯</p> <p>凉茶一杯</p> <p>总价：25.67美元</p> </div> </div> </div> </div> <!--鸣谢：其实就是固定背景的模版--> <div class="slide layout-5 o-bg-style-dark section-bg-thanks" topic=制作团队 title=制作团队 data-fixed-bg=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/bar_pic140510034_high_res_-hr_lm1svfb.jpg> <div class=page> <div class="o-block o-text-block o-top o-left o-font-small o-credit"> <h1 class="story-title text-inner normal" style=line-height:1.2em;>制作团队：</h1> <p>制作：史书华、蒋馨尔</p> <p>视频编辑：林栋、王烁</p> </div> </div> </div> <!--相关链接--> <!--利用o-side这个属性，右边底部的那个图片可以在手机屏幕上自动隐藏--> <div class="slide layout-5 section-bg-thanks" topic=相关阅读 title=相关阅读> <div class=page> <div class="o-block o-text-block o-top o-left o-font-small"> <h1 class="story-title text-inner normal" style=line-height:1.2em;>相关阅读</h1> <p><strong>FT</strong>: </p> <p><a href=http://www.ftchinese.com/story/001061577 target=_blank>分析：经济减速让北京陷入两难</a> </p> <p><a href=http://www.ftchinese.com/story/001060251 target=_blank>上海11名官员因外滩踩踏事件受罚</a> </p> <p><a href=http://www.ftchinese.com/story/001060339 target=_blank>中国人心系中式早餐</a> </p> <p><strong>其他来源</strong>: </p> <p><a href=https://expatexplorer.hsbc.com/survey/files/pdfs/overall-reports/2014/HSBCExpatExplorer2014report.pdf target=_blank>Expat explorer report 2014 – HSBC</a> </p> <p><a href=http://www.mercer.com/content/mercer/global/all/en/newsroom/cost-of-living-survey.html target=_blank>Cost of living rankings 2014 – Mercer</a> </p> <p><a href=http://www.rolandberger.com/media/publications/2013-02-01-rbsc-pub-MaximizingthevalueofChinasmuseums.html target=_blank>Maximising the value of China’s museums, 2013 – Roland Berger</a> </p> <p><a href="http://www.nytimes.com/2012/04/15/travel/moganshan-china-a-lofty-retreat-from-sweltering-shanghai.html?r=0" target=_blank>A lofty retreat from sweltering Shanghai – New York Times</a> </p> </div> <div class="o-block o-text-block o-bottom o-right o-side"> <img src=http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/_ab_1306-lr_dsiktn9.jpg> </div> </div> </div> <!--所有内容结束--> </div> <!--在固定在页面的元素--> <div class="wheel-container animated running fadeInUpToggle"> <div id=o-wheel class="wheel rotate"></div> </div> <script>
+        var wheelObject = document.getElementById("o-wheel");
+        </script> <!--在固定在页面的元素--> <div id=allads> <div id=fullpageads startpage=0 everypage=5> <!--全屏广告素材--> <div class="slide layout-5 fullpagead" style=background:#000;> <div class=page> <img class=coverImage src=http://m.ftchinese.com/lunch/picture/ad/datejustii.jpg> </div> </div> <div class="slide layout-5 fullpagead" style=background:#000;> <div class=page> <img class=coverImage src=http://m.ftchinese.com/lunch/picture/ad/yachtmasterii.jpg> </div> </div> <div class="slide layout-5 fullpagead" style=background:#000;> <div class=page> <img class=coverImage src=http://m.ftchinese.com/lunch/picture/ad/daydate.jpg> </div> </div> <!--全屏广告素材结束--> </div> <div id=mpuads> <!--MPU广告素材--> <div class=mpuad> <img src=http://m.ftchinese.com/lunch/picture/mpu/p.gif> </div> <div class=mpuad> <img src=http://m.ftchinese.com/lunch/picture/mpu/YMII_300x250_FT.jpg> </div> <div class=mpuad> <img src=http://m.ftchinese.com/lunch/picture/mpu/datejust_FT_300x250.jpg> </div> <div class=mpuad> <div class="MPU tint-orange">HTML5 MPU</div> </div> <!--MPU广告素材结束--> </div> </div> </div></body> <script>
+function isIE() {
+    return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));
+}
+
+//如果是IE，不管是什么版本，都中止程序
+if (isIE() === true) {
+    document.body.innerHTML = '<h1>亲爱的用户，我们发现您使用了IE浏览器！这会给您带来严重的安全隐患！请改用Chrome或FireFox等现代浏览器来浏览FT中文网的精彩内容！</h1>';
+}
+</script> <script>
+document.getElementById("startbar").style.width = "5%";
+</script> <script src=scripts/demo.js></script> <script src=http://code.highcharts.com/mapdata/custom/world.js></script> <script language=javascript>
+$(function() {
+    var firstImage = $('#allcontent .slide').eq(0).css('background-image') || '';
+    var img = new Image();
+    firstImage = firstImage.replace(/^url\(/g, '').replace(/\)$/g, '');
+    if (firstImage !== '' && firstImage !== 'none') {
+        img.src = firstImage;
+        img.onload = function() {
+            openbook();
+        };
+    } else {
+        openbook();
+    }
+    new FastClick(document.body);
+});
+</script> <script language=javascript>
+/*--------------Animation函数-----------------*/
+function playFunction(thefunction) {
+    switch (thefunction) {
+        case 'obor_nonFinancialInvestment':
+            obor_nonFinancialInvestment();
+            break;
+        case 'obor_investmentItems':
+            obor_investmentItems();
+            break;
+        case 'obor_export':
+            obor_export();
+            break;
+        case 'obor_areaspline':
+            obor_areaspline();
+            break;
+        case 'oborSparkline':
+            oborSparkline();
+            break;
+        case 'houseandstock':
+            houseandstock();
+            break;
+        case 'combinationChart001':
+            combinationChart001();
+            break;
+        case 'mapWorldBefore':
+            mapWorldBefore();
+            break;
+        case 'mapWorldAfter':
+            mapWorldAfter();
+            break;
+        case 'mapOBOR':
+            mapOBOR();
+            break;
+        case 'usdeficit':
+            usdeficit();
+            break;
+        case 'obor_percentageArea':
+            obor_percentageArea();
+            break;
+
+
+    }
+}
+
+
+
+/*-----------------line chart------------*/
+
+function obor_export() {
+    addNote('第一，出口成长熄火。');
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: gChartId,
+            defaultSeriesType: 'line',
+            animation: {
+                duration: 500
+            }
+        },
+        title: {
+            text: '出口成長率'
+        },
+        yAxis: {
+            title: {
+                text: '出口成長率％'
+            },
+            min: -30
+        },
+        plotOptions: {
+            area: {
+                pointStart: 2003,
+            }
+        },
+        series: [{
+            name: '出口成長率(％)',
+            data: [
+                111.28, 15.499, 16.864, 20.708, 24.894, 21.053, -22.689, 37.627, 32.067, 15.033, 16.211, 13.171
+            ]
+        }, ]
+    });
+}
+
+
+
+/*--------------area chart------------------*/
+
+
+function obor_nonFinancialInvestment() {
+    addNote('同时，非金融對外投資下降。2014年，中国对外投资逆差599亿。细探背后原因，有學者認為，并不是对外投资亏钱，恐怕对外投资不够多。');
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: gChartId,
+            defaultSeriesType: 'area',
+            animation: {
+                duration: 500
+            }
+        },
+        title: {
+            text: '非金融對外投資下降'
+        },
+        yAxis: {
+            title: {
+                text: '年增長率％'
+            },
+            min: 0
+        },
+        plotOptions: {
+            area: {
+                pointStart: 2003,
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            x: 0,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        series: [{
+            name: '中国非金融类对外直接投资(年增長率％)',
+            data: [112.3, 93, 123, 31.6, 6.2, 63.6, 6.5, 36.3, 1.8, 28.6, 16.8, 14.1]
+        }, ]
+    });
+}
+
+/*--------------area chart------------------*/
+
+
+function obor_investmentItems() {
+    addNote('一带一路系列国家投资件数占整体对外投资比例');
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: gChartId,
+            defaultSeriesType: 'area',
+            animation: {
+                duration: 500
+            }
+        },
+        title: {
+            text: '中国投资一带一路系列国家的件数，并没有明显成长。'
+        },
+        yAxis: {
+            title: {
+                text: '占比％'
+            },
+            min: 0
+        },
+        plotOptions: {
+            area: {
+                pointStart: 2005,
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            x: 0,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        series: [{
+            name: '一带一路系列国家投资件数占整体对外投资比例',
+            data: [48, 55, 57, 49, 39, 42, 41, 36, 39, 35, 41]
+        }, ]
+    });
+}
+
+
+/*----------------percentage area----------*/
+
+function obor_percentageArea() {
+    addNote('percentageArea');
+    //从highcharts.com上复制的代码，只需把第一行改为如下的代码就可以正常显示
+    $('#' + gChartId).highcharts({
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: '占比'
+        },
+        subtitle: {
+            text: 'Source: Wikipedia.org'
+        },
+        xAxis: {
+            categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+            tickmarkPlacement: 'off',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Percent'
+            }
+        },
+        tooltip: {
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <br><b>{point.percentage:.1f}%</b>',
+            shared: true
+        },
+        plotOptions: {
+            area: {
+                stacking: 'percent',
+                lineColor: '#ffffff',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#ffffff'
+                }
+            }
+        },
+        series: [{
+            name: 'none',
+            data: [52, 45, 43, 51, 61, 58, 59, 64, 61, 65, 59]
+        }, {
+            name: 'obor',
+            data: [48, 55, 57, 49, 39, 42, 41, 36, 39, 35, 41]
+        }]
+    });
+}
+
+
+
+
+function oborSparkline() {
+    Highcharts.SparkLine = function(options, callback) {
+        var defaultOptions = {
+            chart: {
+                renderTo: (options.chart && options.chart.renderTo) || this,
+                backgroundColor: null,
+                borderWidth: 0,
+                type: 'area',
+                margin: [2, 0, 2, 0],
+                width: 120,
+                height: 20,
+                style: {
+                    overflow: 'visible'
+                },
+                skipClone: true
+            },
+            title: {
+                text: ''
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                lineWidth: 0,
+                labels: {
+                    enabled: false
+                },
+                title: {
+                    text: null
+                },
+                startOnTick: false,
+                endOnTick: false,
+                tickPositions: []
+            },
+            yAxis: {
+                reversed: false,
+                endOnTick: false,
+                startOnTick: false,
+                labels: {
+                    enabled: false
+                },
+                title: {
+                    text: null
+                },
+                tickPositions: [0],
+                plotLines: [{
+                    color: '#333',
+                    width: 1,
+                    value: 0
+                }]
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                backgroundColor: null,
+                borderWidth: 0,
+                shadow: false,
+                useHTML: true,
+                hideDelay: 0,
+                shared: true,
+                padding: 0,
+                positioner: function(w, h, point) {
+                    return {
+                        x: point.plotX - w / 2,
+                        y: point.plotY - h
+                    };
+                }
+            },
+            plotOptions: {
+                series: {
+                    animation: false,
+                    lineWidth: 1,
+                    shadow: false,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    marker: {
+                        radius: 1,
+                        states: {
+                            hover: {
+                                radius: 2
+                            }
+                        }
+                    },
+                    fillOpacity: 0.25
+                },
+                column: {
+                    color: '#75a5c2',
+                    negativeColor: '#b1493f',
+                    borderColor: 'silver'
+                }
+            }
+        };
+        options = Highcharts.merge(defaultOptions, options);
+
+        return new Highcharts.Chart(options, callback);
+    };
+
+    var start = +new Date(),
+        $tds = $("td[data-sparkline]"),
+        fullLen = $tds.length,
+        n = 0;
+
+    // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
+    // can take some seconds, so we split the input into chunks and apply them in timeouts
+    // in order avoid locking up the browser process and allow interaction.
+    function doChunk() {
+        var time = +new Date(),
+            i,
+            len = $tds.length,
+            $td,
+            stringdata,
+            arr,
+            data,
+            chart;
+
+        for (i = 0; i < len; i += 1) {
+            $td = $($tds[i]);
+            stringdata = $td.data('sparkline');
+            arr = stringdata.split('; ');
+            data = $.map(arr[0].split(', '), parseFloat);
+            chart = {};
+
+            if (arr[1]) {
+                chart.type = arr[1];
+            }
+            $td.highcharts('SparkLine', {
+                series: [{
+                    data: data,
+                    pointStart: 1
+                }],
+                tooltip: {
+                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', Q{point.x}:</span><br/>',
+                    pointFormat: '<b>{point.y}.000</b> USD'
+                },
+                chart: chart
+            });
+
+            n += 1;
+
+            // If the process takes too much time, run a timeout to allow interaction with the browser
+            if (new Date() - time > 500) {
+                $tds.splice(0, i + 1);
+                setTimeout(doChunk, 0);
+                break;
+            }
+
+            // Print a feedback on the performance
+            if (n === fullLen) {
+                $('#result').html('Generated ' + fullLen + ' sparklines in ' + (new Date() - start) + ' ms');
+            }
+        }
+    }
+    doChunk();
+}
+
+
+
+
+function usdeficit() {
+    addNote('在80年代至今的几位总统任内，只有比尔·克林顿实现了4年的联邦预算盈余。支持者认为这是克林顿和萨默斯经济政策的功劳，反对者认为他们只是占了互联网泡沫繁荣的光（见前一张互动图）。图中可以看出2001年的9·11和2008年金融危机对政府预算的巨大影响。数据来自国会预算办公室(CBO)。');
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: gChartId,
+            defaultSeriesType: 'area',
+            animation: {
+                duration: 500
+            }
+        },
+        title: {
+            text: '图III：81年以来的美联邦政府平均收支'
+        },
+        yAxis: {
+            title: {
+                text: '占GDP的百分比'
+            },
+            min: 14
+        },
+        plotOptions: {
+            area: {
+                pointStart: 1981,
+            }
+        },
+        series: [{
+            name: '联邦政府支出',
+            data: [22.2, 23.1, 23.5, 22.2, 22.8, 22.5, 21.6, 21.3, 21.2, 21.9, 22.3, 22.1, 21.4, 21.0, 20.6, 20.2, 19.5, 19.1, 18.5, 18.2, 18.2, 19.1, 19.7, 19.6, 19.9, 20.1, 19.7, 20.8, 25.2, 24.1, 24.1, 22.8]
+        }, {
+            name: '联邦政府收入',
+            data: [19.6, 19.2, 17.5, 17.3, 17.7, 17.5, 18.4, 18.2, 18.4, 18.0, 17.8, 17.5, 17.5, 18.0, 18.4, 18.8, 19.2, 19.9, 19.8, 20.6, 19.5, 17.6, 16.2, 16.1, 17.3, 18.2, 18.5, 17.6, 15.1, 15.1, 15.4, 15.8]
+        }, ]
+    });
+}
+
+
+
+
+
+
+function houseandstock() {
+    addNote('test');
+    $('#' + gChartId).highcharts({
+        title: {
+            text: '投资件数'
+        },
+        xAxis: [{
+            categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+            crosshair: true,
+            plotLines: [{
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 29, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }, {
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 41, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }, {
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 59, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }, {
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 62, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }, {
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 65, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }, {
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 77, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }, {
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 107, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }, {
+                    color: '#2e6e9e', // Color value
+                    dashStyle: 'solid', // Style of the plot line. Default to solid
+                    value: 113, // Value of where the line will appear
+                    width: 2 // Width of the line    
+                }
+
+            ]
+
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value}',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '股指',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: '房价指数',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                format: '{value}',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 80,
+            verticalAlign: 'top',
+            y: 0,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        series: [{
+            name: '上证指数',
+            type: 'area',
+            data: [1061, 1081, 1083, 1163, 1156, 1093, 1099, 1161, 1258, 1299, 1298, 1440, 1641, 1672, 1613, 1659, 1752, 1838, 2099, 2675, 2786, 2881, 3184, 3841, 4110, 3821, 4471, 5219, 5552, 5955, 4872, 5262, 4383, 4349, 3473, 3693, 3433, 2736, 2776, 2397, 2294, 1729, 1871, 1821, 1991, 2083, 2373, 2478, 2633, 2959, 3412, 2668, 2779, 2996, 3195, 3277, 2989, 3052, 3109, 2871, 2592, 2398, 2638, 2639, 2656, 2979, 2820, 2808, 2791, 2905, 2928, 2912, 2743, 2762, 2702, 2567, 2359, 2468, 2333, 2199, 2293, 2428, 2263, 2396, 2372, 2225, 2104, 2048, 2086, 2069, 1980, 2269, 2385, 2366, 2237, 2178, 2301, 1979, 1994, 2098, 2175, 2142, 2221, 2116, 2033, 2056, 2033, 2026, 2039, 2048, 2202, 2217, 2364, 2420, 2683, 3235, 3210, 3310, 3748, 4442],
+            tooltip: {
+                valueSuffix: ''
+            }
+
+        }, {
+            name: '中原二手住宅价格指数',
+            type: 'spline',
+            yAxis: 1,
+            data: [119, 121, 120, 117, 119, 119, 123, 125, 125, 127, 133, 137, 140, 142, 143, 144, 147, 149, 153, 155, 158, 162, 166, 173, 179, 186, 193, 202, 210, 218, 219, 217, 216, 215, 215, 216, 218, 216, 213, 210, 204, 199, 195, 196, 195, 195, 199, 207, 216, 227, 235, 242, 248, 256, 264, 272, 274, 273, 279, 290, 284, 277, 274, 275, 282, 285, 288, 294, 304, 310, 313, 314, 314, 315, 315, 315, 316, 314, 312, 306, 299, 297, 300, 304, 307, 311, 316, 320, 325, 329, 334, 338, 344, 352, 361, 365, 369, 373, 378, 383, 392, 398, 403, 404, 405, 410, 413, 414, 412, 406, 403, 400, 397, 398, 398, 400, 402, 403, 407, 416],
+            tooltip: {
+                valueSuffix: ''
+            }
+        }]
+    });
+}
+
+
+function obor_areaspline() {
+    addNote('组合图表');
+    //从highcharts.com上复制的代码，只需把第一行改为如下的代码就可以正常显示
+    $('#' + gChartId).highcharts({
+        chart: {
+            type: 'areaspline'
+        },
+        title: {
+            text: 'Average fruit consumption during one week'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 150,
+            y: 100,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        xAxis: {
+            categories: [
+                'Monday',
+                'Tuesday',
+                'Wednesday',
+                'Thursday',
+                'Friday',
+                'Saturday',
+                'Sunday'
+            ],
+            plotBands: [{ // visualize the weekend
+                from: 4.5,
+                to: 6.5,
+                color: 'rgba(68, 170, 213, .2)'
+            }]
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit units'
+            }
+        },
+        tooltip: {
+            shared: true,
+            valueSuffix: ' units'
+        },
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            areaspline: {
+                fillOpacity: 0.5
+            }
+        },
+        series: [{
+            name: 'John',
+            data: [3, 4, 3, 5, 4, 10, 12]
+        }, {
+            name: 'Jane',
+            data: [1, 3, 4, 3, 3, 5, 4]
+        }]
+    });
+}
+
+
+
+
+
+
+function combinationChart001() {
+    addNote('组合图表');
+    //从highcharts.com上复制的代码，只需把第一行改为如下的代码就可以正常显示
+    $('#' + gChartId).highcharts({
+        title: {
+            text: 'Combination chart'
+        },
+        xAxis: {
+            categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+        },
+        labels: {
+            items: [{
+                html: 'Total fruit consumption',
+                style: {
+                    left: '50px',
+                    top: '18px',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                }
+            }]
+        },
+        series: [{
+            type: 'column',
+            name: 'Jane',
+            data: [3, 2, 1, 3, 4]
+        }, {
+            type: 'column',
+            name: 'John',
+            data: [2, 3, 5, 7, 6]
+        }, {
+            type: 'column',
+            name: 'Joe',
+            data: [4, 3, 3, 9, 0]
+        }, {
+            type: 'spline',
+            name: 'Average',
+            data: [3, 2.67, 3, 6.33, 3.33],
+            marker: {
+                lineWidth: 2,
+                lineColor: Highcharts.getOptions().colors[3],
+                fillColor: 'white'
+            }
+        }, {
+            type: 'pie',
+            name: 'Total consumption',
+            data: [{
+                name: 'Jane',
+                y: 13,
+                color: Highcharts.getOptions().colors[0] // Jane's color
+            }, {
+                name: 'John',
+                y: 23,
+                color: Highcharts.getOptions().colors[1] // John's color
+            }, {
+                name: 'Joe',
+                y: 19,
+                color: Highcharts.getOptions().colors[2] // Joe's color
+            }],
+            center: [100, 80],
+            size: 100,
+            showInLegend: false,
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+}
+
+
+
+/*-----------start of mapOBOR------------*/
+
+function mapOBOR() {
+    addNote('');
+    var data =
+
+        [
+
+
+            {
+                "code": "KH",
+                "z": 200
+            }
+        ]
+
+
+    ;
+    //Highcharts.maps["custom/world"] = AsiaAfricaEurope;
+    //var mapData = Highcharts.geojson(Highcharts.maps['custom/AsiaAfricaEurope']);
+    var mapData = Highcharts.geojson(AsiaAfricaEurope);
+    console.log(mapData);
+    $('#' + gChartId).highcharts('Map', {
+        chart: {
+            borderWidth: 0
+        },
+
+        title: {
+            text: 'OBOR地图'
+        },
+
+        subtitle: {
+            text: '中國對外投資分布'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        series: [{
+            name: 'Countries',
+            mapData: mapData,
+            color: '#E0E0E0',
+            enableMouseTracking: false
+        }, {
+            type: 'mapbubble',
+            mapData: mapData,
+            name: '中国投资金额',
+            joinBy: ['iso-a2', 'code'],
+            data: data,
+            minSize: 4,
+            maxSize: '12%',
+            tooltip: {
+                pointFormat: '{point.name}: {point.z} 亿美元'
+            }
+        }]
+    });
+}
+
+
+
+//end  of mapOBOR 
+
+
+/*--------------Start of before map ----------*/
+
+function mapWorldBefore() {
+    addNote('');
+    var data =
+
+        [{
+            "code": "AF",
+            "z": 4,
+            "name_c": "阿富汗"
+        }, {
+            "code": "DZ",
+            "z": 38.5,
+            "name_c": "阿尔及利亚"
+        }, {
+            "code": "AO",
+            "z": 31.2,
+            "name_c": "安哥拉"
+        }, {
+            "code": "AR",
+            "z": 1,
+            "name_c": "阿根廷"
+        }, {
+            "code": "AU",
+            "z": 196.8,
+            "name_c": "澳大利亚"
+        }, {
+            "code": "AT",
+            "z": 1.4,
+            "name_c": "奥地利"
+        }, {
+            "code": "BD",
+            "z": 26.3,
+            "name_c": "孟加拉"
+        }, {
+            "code": "BY",
+            "z": 8.4,
+            "name_c": "白俄罗斯"
+        }, {
+            "code": "BE",
+            "z": 2.6,
+            "name_c": "比利时"
+        }, {
+            "code": "BJ",
+            "z": 2.4,
+            "name_c": "贝宁"
+        }, {
+            "code": "BO",
+            "z": 1.7,
+            "name_c": "玻利维亚"
+        }, {
+            "code": "BA",
+            "z": 2.8,
+            "name_c": "波斯尼亚和黑塞哥维那"
+        }, {
+            "code": "BR",
+            "z": 83.7,
+            "name_c": "巴西"
+        }, {
+            "code": "GB",
+            "z": 92.1,
+            "name_c": "英国"
+        }, {
+            "code": "BG",
+            "z": 2.1,
+            "name_c": "保加利亚"
+        }, {
+            "code": "KH",
+            "z": 34.1,
+            "name_c": "柬埔寨"
+        }, {
+            "code": "CM",
+            "z": 17.3,
+            "name_c": "喀麦隆"
+        }, {
+            "code": "CA",
+            "z": 242.8,
+            "name_c": "加拿大"
+        }, {
+            "code": "TD",
+            "z": 56.3,
+            "name_c": "乍得"
+        }, {
+            "code": "CL",
+            "z": 15.5,
+            "name_c": "智利"
+        }, {
+            "code": "CO",
+            "z": 12.2,
+            "name_c": "哥伦比亚"
+        }, {
+            "code": "CG",
+            "z": 1.2,
+            "name_c": "刚果"
+        }, {
+            "code": "CR",
+            "z": 4.7,
+            "name_c": "哥斯达黎加"
+        }, {
+            "code": "CD",
+            "z": 19.3,
+            "name_c": "刚果"
+        }, {
+            "code": "DJ",
+            "z": 7,
+            "name_c": "吉布提"
+        }, {
+            "code": "EC",
+            "z": 40.7,
+            "name_c": "厄瓜多尔"
+        }, {
+            "code": "EG",
+            "z": 43,
+            "name_c": "埃及"
+        }, {
+            "code": "GQ",
+            "z": 8.7,
+            "name_c": "赤道几内亚"
+        }, {
+            "code": "ET",
+            "z": 53.1,
+            "name_c": "埃塞俄比亚"
+        }, {
+            "code": "FR",
+            "z": 15,
+            "name_c": "法国"
+        }, {
+            "code": "GA",
+            "z": 7.8,
+            "name_c": "加蓬"
+        }, {
+            "code": "GE",
+            "z": 7.3,
+            "name_c": "格鲁吉亚"
+        }, {
+            "code": "DE",
+            "z": 28.4,
+            "name_c": "德国"
+        }, {
+            "code": "GH",
+            "z": 18.4,
+            "name_c": "加纳"
+        }, {
+            "code": "GR",
+            "z": 4.5,
+            "name_c": "希腊"
+        }, {
+            "code": "GN",
+            "z": 59.5,
+            "name_c": "几内亚"
+        }, {
+            "code": "GY",
+            "z": 7.5,
+            "name_c": "圭亚那"
+        }, {
+            "code": "HN",
+            "z": 1.5,
+            "name_c": "洪都拉斯"
+        }, {
+            "code": "HU",
+            "z": 27.5,
+            "name_c": "匈牙利"
+        }, {
+            "code": "IN",
+            "z": 32.5,
+            "name_c": "印度"
+        }, {
+            "code": "ID",
+            "z": 116.1,
+            "name_c": "印度尼西亚"
+        }, {
+            "code": "IR",
+            "z": 28.9,
+            "name_c": "伊朗"
+        }, {
+            "code": "IQ",
+            "z": 19.3,
+            "name_c": "伊拉克"
+        }, {
+            "code": "IL",
+            "z": 3.8,
+            "name_c": "以色列"
+        }, {
+            "code": "IT",
+            "z": 21.3,
+            "name_c": "意大利"
+        }, {
+            "code": "#N/A",
+            "z": 14.3,
+            "name_c": "象牙海岸"
+        }, {
+            "code": "JM",
+            "z": 6.1,
+            "name_c": "牙买加"
+        }, {
+            "code": "JP",
+            "z": 9.2,
+            "name_c": "日本"
+        }, {
+            "code": "JO",
+            "z": 12.5,
+            "name_c": "约旦"
+        }, {
+            "code": "KZ",
+            "z": 75.1,
+            "name_c": "哈萨克斯坦"
+        }, {
+            "code": "KE",
+            "z": 80.1,
+            "name_c": "肯尼亚"
+        }, {
+            "code": "KW",
+            "z": 5.1,
+            "name_c": "科威特"
+        }, {
+            "code": "LA",
+            "z": 22.3,
+            "name_c": "老挝"
+        }, {
+            "code": "MG",
+            "z": 1.5,
+            "name_c": "马达加斯加"
+        }, {
+            "code": "MW",
+            "z": 5,
+            "name_c": "马拉维"
+        }, {
+            "code": "MY",
+            "z": 95.9,
+            "name_c": "马来西亚"
+        }, {
+            "code": "MT",
+            "z": 2.6,
+            "name_c": "马耳他"
+        }, {
+            "code": "MU",
+            "z": 1.1,
+            "name_c": "毛里求斯"
+        }, {
+            "code": "MX",
+            "z": 2.2,
+            "name_c": "墨西哥"
+        }, {
+            "code": "MA",
+            "z": 3.6,
+            "name_c": "摩洛哥"
+        }, {
+            "code": "MZ",
+            "z": 69.8,
+            "name_c": "莫桑比克"
+        }, {
+            "code": "NP",
+            "z": 17.3,
+            "name_c": "尼泊尔"
+        }, {
+            "code": "NZ",
+            "z": 12,
+            "name_c": "新西兰"
+        }, {
+            "code": "NI",
+            "z": 5.3,
+            "name_c": "尼加拉瓜"
+        }, {
+            "code": "NG",
+            "z": 81.2,
+            "name_c": "尼日利亚"
+        }, {
+            "code": "PK",
+            "z": 45.3,
+            "name_c": "巴基斯坦"
+        }, {
+            "code": "PG",
+            "z": 4.3,
+            "name_c": "巴布亚新几内亚"
+        }, {
+            "code": "PE",
+            "z": 9,
+            "name_c": "秘鲁"
+        }, {
+            "code": "PH",
+            "z": 3.5,
+            "name_c": "菲律宾"
+        }, {
+            "code": "PL",
+            "z": 14,
+            "name_c": "波兰"
+        }, {
+            "code": "PT",
+            "z": 45.9,
+            "name_c": "葡萄牙"
+        }, {
+            "code": "QA",
+            "z": 8.5,
+            "name_c": "卡塔尔"
+        }, {
+            "code": "RO",
+            "z": 13,
+            "name_c": "罗马尼亚"
+        }, {
+            "code": "RU",
+            "z": 76.9,
+            "name_c": "俄罗斯联邦"
+        }, {
+            "code": "RW",
+            "z": 1.2,
+            "name_c": "卢旺达"
+        }, {
+            "code": "SA",
+            "z": 28,
+            "name_c": "沙特阿拉伯"
+        }, {
+            "code": "SN",
+            "z": 3.5,
+            "name_c": "塞内加尔"
+        }, {
+            "code": "RS",
+            "z": 11.8,
+            "name_c": "塞尔维亚"
+        }, {
+            "code": "SL",
+            "z": 24.9,
+            "name_c": "塞拉利昂"
+        }, {
+            "code": "SG",
+            "z": 13.9,
+            "name_c": "新加坡"
+        }, {
+            "code": "ZA",
+            "z": 7.3,
+            "name_c": "南非"
+        }, {
+            "code": "KR",
+            "z": 10.3,
+            "name_c": "韩国"
+        }, {
+            "code": "SS",
+            "z": 22.1,
+            "name_c": "南苏丹"
+        }, {
+            "code": "ES",
+            "z": 5.5,
+            "name_c": "西班牙"
+        }, {
+            "code": "LK",
+            "z": 34.2,
+            "name_c": "斯里兰卡"
+        }, {
+            "code": "SD",
+            "z": 3.2,
+            "name_c": "苏丹"
+        }, {
+            "code": "CH",
+            "z": 8.7,
+            "name_c": "瑞士"
+        }, {
+            "code": "TW",
+            "z": 1.4,
+            "name_c": "台湾"
+        }, {
+            "code": "TJ",
+            "z": 3,
+            "name_c": "塔吉克斯坦"
+        }, {
+            "code": "TZ",
+            "z": 32.2,
+            "name_c": "坦桑尼亚"
+        }, {
+            "code": "TH",
+            "z": 5.8,
+            "name_c": "泰国"
+        }, {
+            "code": "TG",
+            "z": 3.8,
+            "name_c": "多哥"
+        }, {
+            "code": "TT",
+            "z": 10.1,
+            "name_c": "特立尼达和多巴哥"
+        }, {
+            "code": "TR",
+            "z": 51.9,
+            "name_c": "土耳其"
+        }, {
+            "code": "AE",
+            "z": 34.3,
+            "name_c": "阿拉伯联合酋长国"
+        }, {
+            "code": "UG",
+            "z": 65.2,
+            "name_c": "乌干达"
+        }, {
+            "code": "UA",
+            "z": 4.1,
+            "name_c": "乌克兰"
+        }, {
+            "code": "US",
+            "z": 243,
+            "name_c": "美国"
+        }, {
+            "code": "UZ",
+            "z": 4.6,
+            "name_c": "乌兹别克斯坦"
+        }, {
+            "code": "VE",
+            "z": 53.9,
+            "name_c": "委内瑞拉"
+        }, {
+            "code": "VN",
+            "z": 27.6,
+            "name_c": "越南"
+        }, {
+            "code": "ZM",
+            "z": 25.9,
+            "name_c": "赞比亚"
+        }, {
+            "code": "ZW",
+            "z": 18.4,
+            "name_c": "津巴布韦"
+        }];
+    var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+    $('#' + gChartId).highcharts('Map', {
+        chart: {
+            borderWidth: 0
+        },
+
+        title: {
+            text: '一帶一路之前'
+        },
+
+        subtitle: {
+            text: '中國對外投資分布'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        series: [{
+            name: 'Countries',
+            mapData: mapData,
+            color: '#E0E0E0',
+            enableMouseTracking: false
+        }, {
+            type: 'mapbubble',
+            mapData: mapData,
+            name: '中国投资金额',
+            joinBy: ['iso-a2', 'code'],
+            data: data,
+            minSize: 2,
+            maxSize: '15%',
+            tooltip: {
+                pointFormat: '{point.name_c}: {point.z} 亿美元'
+            }
+        }]
+    });
+}
+
+/*---------end of before map------*/
+
+/*----------start of after map------*/
+
+function mapWorldAfter() {
+    addNote('');
+    var data = [{
+        "code": "DZ",
+        "name_c": "阿尔及利亚",
+        "z": 35.3
+    }, {
+        "code": "AO",
+        "name_c": "安哥拉",
+        "z": 37.6
+    }, {
+        "code": "AG",
+        "name_c": "安提瓜和巴布达",
+        "z": 10
+    }, {
+        "code": "AR",
+        "name_c": "阿根廷",
+        "z": 67.3
+    }, {
+        "code": "AU",
+        "name_c": "澳大利亚",
+        "z": 137.3
+    }, {
+        "code": "BD",
+        "name_c": "孟加拉",
+        "z": 37.7
+    }, {
+        "code": "BE",
+        "name_c": "比利时",
+        "z": 5.8
+    }, {
+        "code": "BO",
+        "name_c": "玻利维亚",
+        "z": 12.3
+    }, {
+        "code": "BA",
+        "name_c": "波斯尼亚和黑塞哥维那",
+        "z": 10.6
+    }, {
+        "code": "BR",
+        "name_c": "巴西",
+        "z": 52.3
+    }, {
+        "code": "GB",
+        "name_c": "英国",
+        "z": 108.9
+    }, {
+        "code": "BN",
+        "name_c": "汶莱",
+        "z": 2
+    }, {
+        "code": "KH",
+        "name_c": "柬埔寨",
+        "z": 19.1
+    }, {
+        "code": "CM",
+        "name_c": "喀麦隆",
+        "z": 12.2
+    }, {
+        "code": "CA",
+        "name_c": "加拿大",
+        "z": 41.1
+    }, {
+        "code": "CG",
+        "name_c": "刚果",
+        "z": 22.3
+    }, {
+        "code": "HR",
+        "name_c": "克罗地亚",
+        "z": 1.3
+    }, {
+        "code": "CU",
+        "name_c": "古巴",
+        "z": 1
+    }, {
+        "code": "CD",
+        "name_c": "刚果",
+        "z": 3
+    }, {
+        "code": "DK",
+        "name_c": "丹麦",
+        "z": 7
+    }, {
+        "code": "DJ",
+        "name_c": "吉布提",
+        "z": 10.2
+    }, {
+        "code": "EC",
+        "name_c": "厄瓜多尔",
+        "z": 32.4
+    }, {
+        "code": "EG",
+        "name_c": "埃及",
+        "z": 36.9
+    }, {
+        "code": "GQ",
+        "name_c": "赤道几内亚",
+        "z": 3.4
+    }, {
+        "code": "ER",
+        "name_c": "厄立特里亚国",
+        "z": 4
+    }, {
+        "code": "ET",
+        "name_c": "埃塞俄比亚",
+        "z": 44.1
+    }, {
+        "code": "FR",
+        "name_c": "法国",
+        "z": 46.5
+    }, {
+        "code": "DE",
+        "name_c": "德国",
+        "z": 20.7
+    }, {
+        "code": "GH",
+        "name_c": "加纳",
+        "z": 19.2
+    }, {
+        "code": "GR",
+        "name_c": "希腊",
+        "z": 2
+    }, {
+        "code": "GN",
+        "name_c": "几内亚",
+        "z": 23.1
+    }, {
+        "code": "IN",
+        "name_c": "印度",
+        "z": 36.1
+    }, {
+        "code": "ID",
+        "name_c": "印度尼西亚",
+        "z": 73.3
+    }, {
+        "code": "IR",
+        "name_c": "伊朗",
+        "z": 6.9
+    }, {
+        "code": "IQ",
+        "name_c": "伊拉克",
+        "z": 28.6
+    }, {
+        "code": "IL",
+        "name_c": "以色列",
+        "z": 54.7
+    }, {
+        "code": "IT",
+        "name_c": "意大利",
+        "z": 154.6
+    }, {
+        "code": "JP",
+        "name_c": "日本",
+        "z": 11.3
+    }, {
+        "code": "JO",
+        "name_c": "约旦",
+        "z": 6.2
+    }, {
+        "code": "KZ",
+        "name_c": "哈萨克斯坦",
+        "z": 38
+    }, {
+        "code": "KE",
+        "name_c": "肯尼亚",
+        "z": 14.2
+    }, {
+        "code": "KW",
+        "name_c": "科威特",
+        "z": 4.6
+    }, {
+        "code": "KG",
+        "name_c": "吉尔吉斯斯坦",
+        "z": 38
+    }, {
+        "code": "LU",
+        "name_c": "卢森堡",
+        "z": 2.2
+    }, {
+        "code": "MK",
+        "name_c": "马其顿",
+        "z": 4
+    }, {
+        "code": "MW",
+        "name_c": "马拉维",
+        "z": 2.1
+    }, {
+        "code": "MY",
+        "name_c": "马来西亚",
+        "z": 64.5
+    }, {
+        "code": "MX",
+        "name_c": "墨西哥",
+        "z": 9.9
+    }, {
+        "code": "ME",
+        "name_c": "黑山",
+        "z": 11.2
+    }, {
+        "code": "MZ",
+        "name_c": "莫桑比克",
+        "z": 19.3
+    }, {
+        "code": "MM",
+        "name_c": "缅甸",
+        "z": 3
+    }, {
+        "code": "NA",
+        "name_c": "納米比亞",
+        "z": 28.5
+    }, {
+        "code": "NP",
+        "name_c": "尼泊尔",
+        "z": 17.4
+    }, {
+        "code": "NL",
+        "name_c": "荷兰",
+        "z": 61.7
+    }, {
+        "code": "NZ",
+        "name_c": "新西兰",
+        "z": 11.1
+    }, {
+        "code": "NG",
+        "name_c": "尼日利亚",
+        "z": 139.7
+    }, {
+        "code": "NO",
+        "name_c": "挪威",
+        "z": 7.7
+    }, {
+        "code": "OM",
+        "name_c": "阿曼",
+        "z": 3
+    }, {
+        "code": "PK",
+        "name_c": "巴基斯坦",
+        "z": 143.2
+    }, {
+        "code": "PG",
+        "name_c": "巴布亚新几内亚",
+        "z": 7.2
+    }, {
+        "code": "PE",
+        "name_c": "秘鲁",
+        "z": 98.8
+    }, {
+        "code": "PH",
+        "name_c": "菲律宾",
+        "z": 10
+    }, {
+        "code": "PL",
+        "name_c": "波兰",
+        "z": 3.9
+    }, {
+        "code": "PT",
+        "name_c": "葡萄牙",
+        "z": 24.2
+    }, {
+        "code": "QA",
+        "name_c": "卡塔尔",
+        "z": 1.7
+    }, {
+        "code": "RO",
+        "name_c": "罗马尼亚",
+        "z": 5.4
+    }, {
+        "code": "RU",
+        "name_c": "俄罗斯联邦",
+        "z": 103
+    }, {
+        "code": "RW",
+        "name_c": "卢旺达",
+        "z": 1.2
+    }, {
+        "code": "ST",
+        "name_c": "圣多美和普林西比",
+        "z": 1.5
+    }, {
+        "code": "SA",
+        "name_c": "沙特阿拉伯",
+        "z": 47.2
+    }, {
+        "code": "RS",
+        "name_c": "塞尔维亚",
+        "z": 19.2
+    }, {
+        "code": "SL",
+        "name_c": "塞拉利昂",
+        "z": 7.7
+    }, {
+        "code": "SG",
+        "name_c": "新加坡",
+        "z": 37.3
+    }, {
+        "code": "ZA",
+        "name_c": "南非",
+        "z": 3.3
+    }, {
+        "code": "KR",
+        "name_c": "韩国",
+        "z": 68.3
+    }, {
+        "code": "SS",
+        "name_c": "南苏丹",
+        "z": 1
+    }, {
+        "code": "ES",
+        "name_c": "西班牙",
+        "z": 5.4
+    }, {
+        "code": "LK",
+        "name_c": "斯里兰卡",
+        "z": 37.1
+    }, {
+        "code": "SD",
+        "name_c": "苏丹",
+        "z": 28.3
+    }, {
+        "code": "CH",
+        "name_c": "瑞士",
+        "z": 15.9
+    }, {
+        "code": "TW",
+        "name_c": "台湾",
+        "z": 9.9
+    }, {
+        "code": "TJ",
+        "name_c": "塔吉克斯坦",
+        "z": 2.5
+    }, {
+        "code": "TZ",
+        "name_c": "坦桑尼亚",
+        "z": 32.8
+    }, {
+        "code": "TH",
+        "name_c": "泰国",
+        "z": 11.6
+    }, {
+        "code": "TT",
+        "name_c": "特立尼达和多巴哥",
+        "z": 5.9
+    }, {
+        "code": "TR",
+        "name_c": "土耳其",
+        "z": 4.8
+    }, {
+        "code": "TM",
+        "name_c": "土库曼斯坦",
+        "z": 6
+    }, {
+        "code": "AE",
+        "name_c": "阿拉伯联合酋长国",
+        "z": 13.8
+    }, {
+        "code": "UG",
+        "name_c": "乌干达",
+        "z": 21.2
+    }, {
+        "code": "US",
+        "name_c": "美国",
+        "z": 332.6
+    }, {
+        "code": "UZ",
+        "name_c": "乌兹别克斯坦",
+        "z": 4.4
+    }, {
+        "code": "VE",
+        "name_c": "委内瑞拉",
+        "z": 49.7
+    }, {
+        "code": "YE",
+        "name_c": "也门",
+        "z": 5.1
+    }, {
+        "code": "ZM",
+        "name_c": "赞比亚",
+        "z": 1.1
+    }, {
+        "code": "ZW",
+        "name_c": "津巴布韦",
+        "z": 49.8
+    }]
+
+    ;
+    var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+    $('#' + gChartId).highcharts('Map', {
+        chart: {
+            borderWidth: 0
+        },
+
+        title: {
+            text: '一帶一路之後'
+        },
+
+        subtitle: {
+            text: '中國對外投資分布'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        series: [{
+            name: 'Countries',
+            mapData: mapData,
+            color: '#E0E0E0',
+            enableMouseTracking: false
+        }, {
+            type: 'mapbubble',
+            mapData: mapData,
+            name: '中国投资金额',
+            joinBy: ['iso-a2', 'code'],
+            data: data,
+            minSize: 2,
+            maxSize: '15%',
+            tooltip: {
+                pointFormat: '{point.name_c}: {point.z} 亿美元'
+            }
+        }]
+    });
+}
+/*---------end of after map----------*/
+</script> </html> 
