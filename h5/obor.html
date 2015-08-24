@@ -13,7 +13,7 @@
     ga('create', 'UA-1608715-1');
     ga('send', 'pageview');
     </script> <!--End Google Analytics--> </head> <body> <div id=share-icon><img src=http://s.ftimg.net/img/friend-share-icon.jpg></div> <div id=o-rotate-note> <div>旋转屏幕，查看精彩内容！</div> </div> <div id=screenstart class=opening ontouchmove=event.preventDefault();><span><p class=booklead id=startstatus>FT中文网特别报道</p><div class="progresscontainer instartscreen"><div id=startbar class="progressbar standardprogressbar uses3d progressbg structureprogress"></div></div><p class=booklead id=loadstatus>&nbsp;</p></span> <div class=backuplinks><a onclick=javascript:window.location.reload()>重新加载</a></div> </div> <!--如果要出目录，就必须用到FTScroller--> <div class="fullbody fruit landscapeImage" id=game> <div id=swipe> <div id=gamecontent> </div> </div> <div class="tap pagedots"></div> <div class="tap pagetitle"></div> <div id=contentRail> <div class=-bg-checkered> <div id=toolRail> <div class=nutmeg-content> <div class=nutmeg-content_left> <button onclick="jumptostory('contentpage')" class=button-menu><span id=index-title>目录</span></button> </div> <div class=nutmeg-content_right> <button onclick=setting() class=nutmeg_settings-btn aria-label=Settings></button> </div> <div class="nutmeg-content_right rightmargin"> <button onclick=setFontSize() class=nutmeg_fontsize-btn aria-label=Settings></button> </div> </div> </div> </div> <div id=imageRail> <div id=imageRailInner></div> </div> </div> <div id=fontsetting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"> <button onclick=closeFontSize() aria-label=Settings>确定</button> </div> 设置字号 </div> <div class="fontpreferences overlay-content"> <div id=extra-small class=extra-small>最小<span class=tickbg></span></div> <div id=small class=small>小<span class=tickbg></span></div> <div id=medium class=medium>适中<span class=tickbg></span></div> <div id=big class=big>大<span class=tickbg></span></div> <div id=extra-big class=extra-big>特大<span class=tickbg></span></div> </div> </div> </div> </div> </div> <div id=setting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"> <button onclick=closeSetting() class=overlay_close-btn aria-label=Settings></button> </div> 设置与帮助 </div> <div class=nightreading> <strong>夜间模式</strong> <span class=displayvalue onclick=switchNightReading()> <span class=ui-toggle> <span class=ui-toggle-button></span> <span class="ui-toggle-label ui-toggle-label-on">开</span> <span class="ui-toggle-label ui-toggle-label-off">关</span> </span> </span> <span class=description>在晚上切换为夜间阅读模式，可以减小对眼睛的压力，并节约电池</span> </div> <div class="bgpreferences overlay-content"> <strong>自选背景</strong> <div id=pink>粉色<span class=tickbg></span></div> <div id=white>白色<span class=tickbg></span></div> </div> <div class=standalonebutton> <a href="mailto:ftchinese.feedback@gmail.com?subject=Feedback on FT HTML 5 Story" id=feedbackEmail> <button class=ui-light-btn>反馈问题</button> </a> </div> <div id=testMessage></div> </div> </div> </div> </div> <div id=largepic class=overlay> <div class=overlayBG></div> <div class=inner> <button class=cherry_button></button> <div class=cell> </div> </div> </div> <div id=allcontent style=display:none;> <!--所有内容开始--> <!--所有内容开始--> <!--Please use tab for indentation--> <!--Add all your inline styles here using the preset breakpoints--> <style>
-                    /* mobile first*/
+                        /* mobile first*/
             
             .o-bg-section-op.slide {
                 background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
@@ -30,14 +30,15 @@
             .o-bg-section-3.slide {
                 background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
             }
+            
             .o-bg-section-4.slide {
-                            background-image: url(http://i.ftimg.net/picture/9/000054109_piclink.jpg);
-                         }
+                background-image: url(http://i.ftimg.net/picture/9/000054109_piclink.jpg);
+            }
+            
             .o-bg-section-5.slide {
-                            background-image: url(http://i.ftimg.net/picture/0/000054110_piclink.jpg);
-                        }
-
-
+                background-image: url(http://i.ftimg.net/picture/0/000054110_piclink.jpg);
+            }
+            
             @media only screen and (min-width: 450px) {
                 .o-bg-section-op.slide {
                     .o-bg-section-op.slide {
@@ -53,32 +54,12 @@
                         background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
                     }
                     .o-bg-section-4.slide {
-                            background-image: url(http://i.ftimg.net/picture/9/000054109_piclink.jpg);
-                         }
-                        .o-bg-section-5.slide {
-                            background-image: url(http://i.ftimg.net/picture/0/000054110_piclink.jpg);
-                        }
-
+                        background-image: url(http://i.ftimg.net/picture/9/000054109_piclink.jpg);
+                    }
+                    .o-bg-section-5.slide {
+                        background-image: url(http://i.ftimg.net/picture/0/000054110_piclink.jpg);
+                    }
                     @media only screen and (min-width: 700px) {
-                        .o-bg-section-op.slide {
-                            background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
-                        }
-                        .o-bg-section-1.slide {
-                            background-image: url(http://i.ftimg.net/picture/8/000053948_piclink.jpg);
-                        }
-                        .o-bg-section-2.slide {
-                            background-image: url(http://i.ftimg.net/picture/9/000053949_piclink.jpg);
-                        }
-                        .o-bg-section-3.slide {
-                            background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
-                        }
-                         .o-bg-section-4.slide {
-                            background-image: url(http://i.ftimg.net/picture/9/000054109_piclink.jpg);
-                         }
-                        .o-bg-section-5.slide {
-                            background-image: url(http://i.ftimg.net/picture/0/000054110_piclink.jpg);
-                        }
-                    @media only screen and (min-width: 1345px) {
                         .o-bg-section-op.slide {
                             background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
                         }
@@ -93,13 +74,31 @@
                         }
                         .o-bg-section-4.slide {
                             background-image: url(http://i.ftimg.net/picture/9/000054109_piclink.jpg);
-                         }
+                        }
                         .o-bg-section-5.slide {
                             background-image: url(http://i.ftimg.net/picture/0/000054110_piclink.jpg);
                         }
-
-                    }
-            </style> <div class="slide layout-5 o-bg-style-dark o-bg-section-op" title=封面 topic=封面> <div class=page> <h1 class="story-title text-inner normal" style=line-height:1.2em;>一带一路<br>如何改变中国海外投资？ </h1> <p>&nbsp</p> <h2 class="story-heading text-inner small"> 宣示"一帶一路"戰略即将满两年，这期间中国发生了什么变化？將來可能面对什么样的风险？</h2> <div class="o-text-block o-bottom o-right o-credit"> <p>专辑制作：史书华</p> <p>补充报道：蒋馨尔</p> </div> </div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-1" topic=图片 title=pakistain> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>大事，总是从不经意的小事開始累積。</p> <p>2013年9月，习近平出访哈萨克斯坦，提出”丝绸之路经济带”构思，当时的媒体和学者专家，並没有太多联想與解讀。一个月后，习近平参与亚太经济合作组织（APEC）领导人非正式会议，在印尼国会演讲时提出，中国愿意与东盟国家共同建设“21世纪海上丝绸之路”。 </p> <p>至此，"一带一路"概念，正式被端到所有人面前，成为讨论热点。</p> <p class=o-credit>图片来源：Getty Image</p> </div> </div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-5" topic=图片 title=哈萨克斯坦> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>两条路径，600公里长，沿线64個国家，占全球人口的三分之二和经济总量的三成。</p> <p>一带一路出现，就像一片大布，罩著中国政经全局。但这到底是什么样的顶，却让人看不清。两年过去，今年3月，官方正式公布行动纲领。但直到8月8日，由民間发起的”一带一路百人论坛”上，专家学者仍从最基本的定义开始讨论。</p> <p>儘管仍在摸路，但当分析一带一路背后的成因，專家學者却很有共识。近年，在中国高速增长背后，几个信号，透漏中国经济的不安。</p> </div> </div> </div> <!--div class=slide topic="图表" title="对外出口">
+                        @media only screen and (min-width: 1345px) {
+                            .o-bg-section-op.slide {
+                                background-image: url(http://i.ftimg.net/picture/7/000053947_piclink.jpg);
+                            }
+                            .o-bg-section-1.slide {
+                                background-image: url(http://i.ftimg.net/picture/8/000053948_piclink.jpg);
+                            }
+                            .o-bg-section-2.slide {
+                                background-image: url(http://i.ftimg.net/picture/9/000053949_piclink.jpg);
+                            }
+                            .o-bg-section-3.slide {
+                                background-image: url(http://i.ftimg.net/picture/6/000053946_piclink.jpg);
+                            }
+                            .o-bg-section-4.slide {
+                                background-image: url(http://i.ftimg.net/picture/9/000054109_piclink.jpg);
+                            }
+                            .o-bg-section-5.slide {
+                                background-image: url(http://i.ftimg.net/picture/0/000054110_piclink.jpg);
+                            }
+                        }
+            </style> <div class="slide layout-5 o-bg-style-dark o-bg-section-op" title=封面 topic=封面> <div class=page> <h1 class="story-title text-inner normal" style=line-height:1.2em;>一带一路<br>如何改变中国海外投资？</h1> <p>&nbsp</p> <h2 class="story-heading text-inner small">宣示"一帶一路"戰略即将满两年，这期间中国发生了什么变化？將來可能面对什么样的风险？</h2> <div class="o-text-block o-bottom o-right o-credit"> <p>专辑制作：史书华</p> <p>补充报道：蒋馨尔</p> </div> </div> </div> <div class=slide topic=图表 title=ZoomIn> <div class=animation function=oborZoom></div> </div> <div class=slide topic=图表 title=RichInfo> <div class=animation function=oborRich></div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-1" topic=图片 title=pakistain> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>大事，总是从不经意的小事開始累積。</p> <p>2013年9月，习近平出访哈萨克斯坦，提出”丝绸之路经济带”构思，当时的媒体和学者专家，並没有太多联想與解讀。一个月后，习近平参与亚太经济合作组织（APEC）领导人非正式会议，在印尼国会演讲时提出，中国愿意与东盟国家共同建设“21世纪海上丝绸之路”。 </p> <p>至此，"一带一路"概念，正式被端到所有人面前，成为讨论热点。</p> <p class=o-credit>图片来源：Getty Image</p> </div> </div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-5" topic=图片 title=哈萨克斯坦> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>两条路径，600公里长，沿线64個国家，占全球人口的三分之二和经济总量的三成。</p> <p>一带一路出现，就像一片大布，罩著中国政经全局。但这到底是什么样的顶，却让人看不清。两年过去，今年3月，官方正式公布行动纲领。但直到8月8日，由民間发起的”一带一路百人论坛”上，专家学者仍从最基本的定义开始讨论。</p> <p>儘管仍在摸路，但当分析一带一路背后的成因，專家學者却很有共识。近年，在中国高速增长背后，几个信号，透漏中国经济的不安。</p> </div> </div> </div> <!--div class=slide topic="图表" title="对外出口">
  <div class="animation" function="obor_export"></div>
  </div--> <div class=slide topic=图表 title=对外出口熄火> <div class=animation function=obor_linechart></div> </div> <div class=slide topic=图表 title=非金融直接對外投資成長不足> <div class=animation function=obor_linechart2></div> </div> <!--div class=slide topic="图表" title="非金融投资">
  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1mCWKqCtr_Ym5kQUkXFYlG0ibap_IYDluS4-MgIOMwsU/pubchart?oid=96633983&amp;format=interactive"></iframe>
@@ -121,7 +120,7 @@
  <div class=slide topic="图表" thumbnail="http://i.ftimg.net/picture/4/000047104_piclink.jpg" title=一帶一路之後>
  <div class=animation function=mapWorldAfter>
  </div>
- </div>--> <!--表格：建议列数不要太多，以适应小屏幕--> <div class="slide layout-5" topic=表格 title=生活成本> <div class="page longPicture animation" function=oborSparkline> <caption>是谁再投资一带一路国家？</caption> <p>细看前10大投资一带一路沿线国家的企业如下表，仍以建设和能源相關企业为主。</p> <p>&nbsp</p> <table id=table-sparkline class=table-sparkline> <thead> <tr> <th style=font-size:18px ;="">公司</th> <th style=font-size:18px ;="">2011~2014年<br>投资金额</th> <!--th>差值</th--> <th style=font-size:18px ;="">011~2014年<br>投资金额变化</th> <!--能源、金属、房地产、科技、交通、其他--> </tr> </thead> <tbody id=tbody-sparkline> <tr> <th style=font-size:16px ;="">中国石油天然气</th> <td data-sparkline="5.7, 9, 86.6, 45.9"> <!--<td>5090</td>--> </td><td data-sparkline="-11, 03, 78, -41; column"> </td></tr> <tr> <th style=font-size:16px ;="">国机资产</th> <td data-sparkline="85.1, 30.8, 20, 58.1"> <!--<td>-13860</td>--> </td><td data-sparkline="52, -54, -11, 38; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国石油化工</th> <td data-sparkline="44.6, 8.5, 48.8, 25.3"> <!--td>-2500</td--> </td><td data-sparkline="25, -36, 40, -24; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国交通建设</th> <td data-sparkline="38, 7.6, 91.4, 34.5"> <!--td>11060</td--> </td><td data-sparkline="23, -30, 84, -57; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国电力建设</th> <td data-sparkline="0, 56.2, 45.4, 46.4"> <!--td>26540</td--> </td><td data-sparkline="0, 56, -11, 1; column"> </td></tr> <tr> <th style=font-size:16px ;="">山东电力建设</th> <td data-sparkline="3, 0, 0, 12.9"> <!--td>-20040</td--> </td><td data-sparkline="-14, -03, 0, 13; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国长江三峡</th> <td data-sparkline="3.7, 27.3, 20.2, 9"> <!--td>8960</td--> </td><td data-sparkline="-21, 24, -07, -11; column"> </td></tr><tr> <th style=font-size:16px ;="">中国建筑工程</th> <td data-sparkline="13.4, 3.4, 6.8, 35.3"> <!--td>11560</td--> </td><td data-sparkline="13, -10, 03, 29; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国水电建设</th> <td data-sparkline="8.6, 0, 0, 0"> <!--td>-5270</td--> </td><td data-sparkline="-35, -09, 0, 0 ; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国铁路工程</th> <td data-sparkline="3.4, 11.3,0 , 50.3"> <!--td>-5270</td--> </td><td data-sparkline="03, 08, -11, 50; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国华电</th> <td data-sparkline="7.9, 25.4, 8.8, 4.5"> <!--td>-5270</td--> </td><td data-sparkline="-23, 18, -17, -04; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国化学工程</th> <td data-sparkline="0, 40.5, 13.8, 2.4"> <!--td>-5270</td--> </td><td data-sparkline="-03, 41, -27, -11; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国人民保险</th> <td data-sparkline="4.6, 13.2, 22.4, 13.6"> <!--td>-5270</td--> </td><td data-sparkline="05, 09, 09, -09; column"> </td></tr> </tbody> </table> </div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-4" topic=图片 title=section4> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>兩年下來，一帶一路策略仍在緩慢前行。這背後，可能還是關係到政策的不明確，以及對一帶一路國家的不熟悉。</p> <p>当钱、人、策略，沿著一带一路向外推进，中国可能会碰上那些风险？</p> </div> </div> </div> <!--以视频为背景--> <!--视频设为muted，自动加载，无限循环--> <!--在手机和iPad上，翻到这一页不播放视频，只显示背景图片(.section-bg-3)--> <!--适用于已经知道视频地址的情况--> <!--请和技术部门或视频部门沟通，了解如何上传视频--> <!--文字块可以通过o-bottom/o-top, o-left/o-right来放置到四个角--> <!--<div class="slide layout-5 o-bg-style-dark" topic=图片 title=文化 style="background-image: url(http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-5-hr_trwu830.png);">
+ </div>--> <!--表格：建议列数不要太多，以适应小屏幕--> <div class="slide layout-5" topic=表格 title=生活成本> <div class="page longPicture animation" function=oborSparkline> <caption>是谁再投资一带一路国家？</caption> <p>细看前10大投资一带一路沿线国家的企业如下表，仍以建设和能源相關企业为主。</p> <p>&nbsp</p> <table id=table-sparkline class=table-sparkline> <thead> <tr> <th style=font-size:18px ;="">公司</th> <th style=font-size:18px ;="">2011~2014年 <br>投资金额</th> <!--th>差值</th--> <th style=font-size:18px ;="">011~2014年 <br>投资金额变化</th> <!--能源、金属、房地产、科技、交通、其他--> </tr> </thead> <tbody id=tbody-sparkline> <tr> <th style=font-size:16px ;="">中国石油天然气</th> <td data-sparkline="5.7, 9, 86.6, 45.9"> <!--<td>5090</td>--> </td><td data-sparkline="-11, 03, 78, -41; column"> </td></tr> <tr> <th style=font-size:16px ;="">国机资产</th> <td data-sparkline="85.1, 30.8, 20, 58.1"> <!--<td>-13860</td>--> </td><td data-sparkline="52, -54, -11, 38; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国石油化工</th> <td data-sparkline="44.6, 8.5, 48.8, 25.3"> <!--td>-2500</td--> </td><td data-sparkline="25, -36, 40, -24; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国交通建设</th> <td data-sparkline="38, 7.6, 91.4, 34.5"> <!--td>11060</td--> </td><td data-sparkline="23, -30, 84, -57; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国电力建设</th> <td data-sparkline="0, 56.2, 45.4, 46.4"> <!--td>26540</td--> </td><td data-sparkline="0, 56, -11, 1; column"> </td></tr> <tr> <th style=font-size:16px ;="">山东电力建设</th> <td data-sparkline="3, 0, 0, 12.9"> <!--td>-20040</td--> </td><td data-sparkline="-14, -03, 0, 13; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国长江三峡</th> <td data-sparkline="3.7, 27.3, 20.2, 9"> <!--td>8960</td--> </td><td data-sparkline="-21, 24, -07, -11; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国建筑工程</th> <td data-sparkline="13.4, 3.4, 6.8, 35.3"> <!--td>11560</td--> </td><td data-sparkline="13, -10, 03, 29; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国水电建设</th> <td data-sparkline="8.6, 0, 0, 0"> <!--td>-5270</td--> </td><td data-sparkline="-35, -09, 0, 0 ; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国铁路工程</th> <td data-sparkline="3.4, 11.3,0 , 50.3"> <!--td>-5270</td--> </td><td data-sparkline="03, 08, -11, 50; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国华电</th> <td data-sparkline="7.9, 25.4, 8.8, 4.5"> <!--td>-5270</td--> </td><td data-sparkline="-23, 18, -17, -04; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国化学工程</th> <td data-sparkline="0, 40.5, 13.8, 2.4"> <!--td>-5270</td--> </td><td data-sparkline="-03, 41, -27, -11; column"> </td></tr> <tr> <th style=font-size:16px ;="">中国人民保险</th> <td data-sparkline="4.6, 13.2, 22.4, 13.6"> <!--td>-5270</td--> </td><td data-sparkline="05, 09, 09, -09; column"> </td></tr> </tbody> </table> </div> </div> <div class="slide layout-5 o-bg-style-dark o-bg-section-4" topic=图片 title=section4> <div class=page> <div class="o-block o-text-block o-bottom o-right"> <p>兩年下來，一帶一路策略仍在緩慢前行。這背後，可能還是關係到政策的不明確，以及對一帶一路國家的不熟悉。</p> <p>当钱、人、策略，沿著一带一路向外推进，中国可能会碰上那些风险？</p> </div> </div> </div> <!--以视频为背景--> <!--视频设为muted，自动加载，无限循环--> <!--在手机和iPad上，翻到这一页不播放视频，只显示背景图片(.section-bg-3)--> <!--适用于已经知道视频地址的情况--> <!--请和技术部门或视频部门沟通，了解如何上传视频--> <!--文字块可以通过o-bottom/o-top, o-left/o-right来放置到四个角--> <!--<div class="slide layout-5 o-bg-style-dark" topic=图片 title=文化 style="background-image: url(http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-5-hr_trwu830.png);">
  <div class=page>
  <div class=video-bg>
  <video preload=auto loop muted=muted> 文化
@@ -156,8 +155,8 @@
  </div>--> <!--鸣谢：其实就是固定背景的模版--> <div class="slide layout-5 o-bg-style-dark section-bg-thanks" topic=制作团队 title=制作团队 data-fixed-bg=http://i.ftimg.net/picture/9/000053949_piclink.jpg> <div class=page> <div class="o-block o-text-block o-top o-left o-font-small o-credit"> <h1 class="story-title text-inner normal" style=line-height:1.2em;>制作团队：</h1> <p>制作：史书华、蒋馨尔</p> <p>视频编辑：林栋、王烁</p> </div> </div> </div> <!--相关链接--> <!--利用o-side这个属性，右边底部的那个图片可以在手机屏幕上自动隐藏--> <div class="slide layout-5 section-bg-thanks" topic=相关阅读 title=相关阅读> <div class=page> <div class="o-block o-text-block o-top o-left o-font-small"> <h1 class="story-title text-inner normal" style=line-height:1.2em;>相关阅读</h1> <p><strong>FT</strong>: </p> <p><a href=http://www.ftchinese.com/story/001061577 target=_blank>分析：经济减速让北京陷入两难</a> </p> <p><a href=http://www.ftchinese.com/story/001060251 target=_blank>上海11名官员因外滩踩踏事件受罚</a> </p> <p><a href=http://www.ftchinese.com/story/001060339 target=_blank>中国人心系中式早餐</a> </p> <p><strong>其他来源</strong>: </p> <p><a href=https://expatexplorer.hsbc.com/survey/files/pdfs/overall-reports/2014/HSBCExpatExplorer2014report.pdf target=_blank>Expat explorer report 2014 – HSBC</a> </p> <p><a href=http://www.mercer.com/content/mercer/global/all/en/newsroom/cost-of-living-survey.html target=_blank>Cost of living rankings 2014 – Mercer</a> </p> <p><a href=http://www.rolandberger.com/media/publications/2013-02-01-rbsc-pub-MaximizingthevalueofChinasmuseums.html target=_blank>Maximising the value of China’s museums, 2013 – Roland Berger</a> </p> <p><a href="http://www.nytimes.com/2012/04/15/travel/moganshan-china-a-lofty-retreat-from-sweltering-shanghai.html?r=0" target=_blank>A lofty retreat from sweltering Shanghai – New York Times</a> </p> </div> <!--<div class="o-block o-text-block o-bottom o-right o-side"> <img src=http://i.ftimg.net/picture/9/000054109_piclink.jpg> </div>
  </div>
  </div>--> <!--所有内容结束--> </div> <!--在固定在页面的元素--> <div class="wheel-container animated running fadeInUpToggle"> <div id=o-wheel class="wheel rotate"></div> </div> <script>
-        var wheelObject = document.getElementById("o-wheel");
-        </script> <!--在固定在页面的元素--> <div id=allads> <div id=fullpageads startpage=0 everypage=5> <!--全屏广告素材
+                var wheelObject = document.getElementById("o-wheel");
+                </script> <!--在固定在页面的元素--> <div id=allads> <div id=fullpageads startpage=0 everypage=5> <!--全屏广告素材
  <div class="slide layout-5 fullpagead" style="background:#000;">
  <div class="page">
  <img class="coverImage" src="http://m.ftchinese.com/lunch/picture/ad/datejustii.jpg">
@@ -225,15 +224,15 @@ function playFunction(thefunction) {
         case 'obor_nonFinancialInvestment':
             obor_nonFinancialInvestment();
             break;
-        case 'obor_investmentItems': 
+        case 'obor_investmentItems':
             obor_investmentItems();
-             break;
+            break;
         case 'obor_export':
             obor_export();
             break;
         case 'obor_areaspline':
             obor_areaspline();
-            break;        
+            break;
         case 'oborSparkline':
             oborSparkline();
             break;
@@ -261,16 +260,20 @@ function playFunction(thefunction) {
         case 'obor_heatmap':
             obor_heatmap();
             break;
-      
-
+        case 'oborZoom':
+            oborZoom();
+            break;
+        case 'oborRich':
+            oborRich();
+            break;
     }
 }
 
 /*---------------中国出口熄火--------*/
 function obor_linechart() {
     addNote('資料來源：中國商務部');
- 
-$('#' + gChartId).highcharts({
+
+    $('#' + gChartId).highcharts({
         title: {
             text: '第一，挥别高成长期，中国出口力道不足',
             x: -20 //center
@@ -281,7 +284,8 @@ $('#' + gChartId).highcharts({
         },
         xAxis: {
             categories: ['2003', '2004', '2005', '2006', '2007', '2008',
-                '2009', '2010', '2011', '2012', '2013', '2014']
+                '2009', '2010', '2011', '2012', '2013', '2014'
+            ]
         },
         yAxis: {
             title: {
@@ -307,7 +311,7 @@ $('#' + gChartId).highcharts({
         },
         series: [{
             name: '中国出口成长率',
-            data: [ 11.28, 15.50, 16.86, 20.71, 24.89, 21.05, -22.69, 37.63, 32.07, 15.03, 16.21, 13.17]
+            data: [11.28, 15.50, 16.86, 20.71, 24.89, 21.05, -22.69, 37.63, 32.07, 15.03, 16.21, 13.17]
         }, ]
     });
 }
@@ -317,8 +321,8 @@ $('#' + gChartId).highcharts({
 /*---------------中国对外投资力道不足--------*/
 function obor_linechart2() {
     addNote('資料來源：中國商務部');
- 
-$('#' + gChartId).highcharts({
+
+    $('#' + gChartId).highcharts({
         title: {
             text: '再来，中国对外投资力道逐漸熄火',
             x: -20 //center
@@ -329,13 +333,14 @@ $('#' + gChartId).highcharts({
         },
         xAxis: {
             categories: ['2005', '2006', '2007', '2008',
-                '2009', '2010', '2011', '2012', '2013', '2014']
+                '2009', '2010', '2011', '2012', '2013', '2014'
+            ]
         },
         yAxis: {
             title: {
                 text: '成长率％'
             },
-            min:0,
+            min: 0,
             plotLines: [{
                 value: 0,
                 width: 1,
@@ -364,7 +369,7 @@ $('#' + gChartId).highcharts({
         },*/
         series: [{
             name: '中国非金融类对外直接投资年增率',
-            data: [ 123, 31.6, 6.2, 63.6, 6.5, 36.3, 1.8, 28.6, 16.8, 14.1]
+            data: [123, 31.6, 6.2, 63.6, 6.5, 36.3, 1.8, 28.6, 16.8, 14.1]
         }, ]
     });
 }
@@ -518,18 +523,18 @@ function obor_percentageArea() {
     addNote('');
     //从highcharts.com上复制的代码，只需把第一行改为如下的代码就可以正常显示
     $('#' + gChartId).highcharts({
-   chart: {
+        chart: {
             type: 'area'
         },
         title: {
-            text: '從中国投資海外的件數來看，' +'<br>' + '一带一路系列国家佔比，並没有明显成长。'
+            text: '從中国投資海外的件數來看，' + '<br>' + '一带一路系列国家佔比，並没有明显成长。'
         },
         credits: {
             href: 'https://www.aei.org/china-global-investment-tracker/',
             text: '資料來源：美國企業研究所'
         },
         xAxis: {
-            categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011','2012','2013','2014','2015'],
+            categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -557,7 +562,7 @@ function obor_percentageArea() {
         },
         series: [{
             name: 'none',
-            data: [52,45,43,51,61,58,59,64,61,65,59],
+            data: [52, 45, 43, 51, 61, 58, 59, 64, 61, 65, 59],
             color: '#777777'
         }, {
             name: 'obor',
@@ -575,7 +580,7 @@ function obor_heatmap() {
     addNote('從產業來看，');
     //从highcharts.com上复制的代码，只需把第一行改为如下的代码就可以正常显示
     $('#' + gChartId).highcharts({
-   
+
         chart: {
             type: 'heatmap',
             marginTop: 40,
@@ -588,23 +593,23 @@ function obor_heatmap() {
         },
 
         xAxis: {
-            categories: ['2005','2006','2007','2008','2009','2010','2011','2012','2013','2014'
-]
+            categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014']
         },
 
         yAxis: {
             categories: [
-'其他',
-'观光',
-'科技',
-'房地产',
-'金属',
-'金融',
-'農業',
-'能源',
-'化學',
-'水電',
-'交通'],
+                '其他',
+                '观光',
+                '科技',
+                '房地产',
+                '金属',
+                '金融',
+                '農業',
+                '能源',
+                '化學',
+                '水電',
+                '交通'
+            ],
             title: null
         },
 
@@ -624,21 +629,28 @@ function obor_heatmap() {
         },
 
         tooltip: {
-            formatter: function () {
-                return '<b>' + this.series.xAxis.categories[this.point.x] + '年' +this.series.yAxis.categories[this.point.y]+ '投资占比' + this.point.value + '类</b><br><b>'+ '</b> 类<br><b>' + '</b>';
+            formatter: function() {
+                return '<b>' + this.series.xAxis.categories[this.point.x] + '年' + this.series.yAxis.categories[this.point.y] + '投资占比' + this.point.value + '类</b><br><b>' + '</b> 类<br><b>' + '</b>';
             }
         },
 
         series: [{
             name: 'Sales per employee',
             borderWidth: 1,
-            data: 
-            [
+            data: [
 
-[0,0,26.19],[1,0,29.73],[2,0,51.52],[3,0,13.72],[4,0,37.95],
-[0,1,0],[1,1,100],[2,1,26.21],[3,1,11.49],[4,1,6.59]
+                [0, 0, 26.19],
+                [1, 0, 29.73],
+                [2, 0, 51.52],
+                [3, 0, 13.72],
+                [4, 0, 37.95],
+                [0, 1, 0],
+                [1, 1, 100],
+                [2, 1, 26.21],
+                [3, 1, 11.49],
+                [4, 1, 6.59]
 
-],
+            ],
             dataLabels: {
                 enabled: false,
                 color: '#000000'
@@ -859,7 +871,7 @@ function houseandstock() {
             text: '投资件数'
         },
         xAxis: [{
-            categories: ['2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+            categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
             crosshair: true,
             plotLines: [{
                     color: '#2e6e9e', // Color value
@@ -971,7 +983,7 @@ function obor_areaspline() {
     addNote('组合图表');
     //从highcharts.com上复制的代码，只需把第一行改为如下的代码就可以正常显示
     $('#' + gChartId).highcharts({
-  chart: {
+        chart: {
             type: 'areaspline'
         },
         title: {
@@ -1032,7 +1044,269 @@ function obor_areaspline() {
 
 
 
+function oborZoom() {
+    addNote('');
 
+    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=world-population-density.json&callback=?', function(data) {
+
+        // Initiate the chart
+        $('#' + gChartId).highcharts('Map', {
+
+            title: {
+                text: 'Zoom in on country by double click'
+            },
+
+            mapNavigation: {
+                enabled: true,
+                enableDoubleClickZoomTo: true
+            },
+
+            colorAxis: {
+                min: 1,
+                max: 1000,
+                type: 'logarithmic'
+            },
+
+            series: [{
+                data: data,
+                mapData: Highcharts.maps['custom/world'],
+                joinBy: ['iso-a2', 'code'],
+                name: 'Population density',
+                states: {
+                    hover: {
+                        color: '#BADA55'
+                    }
+                },
+                tooltip: {
+                    valueSuffix: '/km²'
+                }
+            }]
+        });
+    });
+
+}
+
+
+function oborRich() {
+    addNote('');    
+    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=world-population-history.csv&callback=?', function (csv) {
+
+
+        // Very simple and case-specific CSV string splitting
+        function CSVtoArray(text) {
+            return text.replace(/^"/, '')
+                .replace(/",$/, '')
+                .split('","');
+        };
+
+        csv = csv.split(/\n/);
+
+        var countries = {},
+            mapChart,
+            countryChart,
+            numRegex = /^[0-9\.]+$/,
+            quoteRegex = /\"/g,
+            categories = CSVtoArray(csv[1]).slice(4);
+
+        // Parse the CSV into arrays, one array each country
+        $.each(csv.slice(2), function (j, line) {
+            var row = CSVtoArray(line),
+                data = row.slice(4);
+
+            $.each(data, function (i, val) {
+                
+                val = val.replace(quoteRegex, '');
+                if (numRegex.test(val)) {
+                    val = parseInt(val);
+                } else if (!val) {
+                    val = null;
+                }
+                data[i] = val;
+            });
+            countries[row[1]] = {
+                name: row[0],
+                code3: row[1],
+                data: data
+            };
+        });
+
+        // For each country, use the latest value for current population
+        var data = [];
+        for (var code3 in countries) {
+            var value = null,
+                year,
+                itemData = countries[code3].data,
+                i = itemData.length;
+
+            while (i--) {
+                if (typeof itemData[i] === 'number') {
+                    value = itemData[i];
+                    year = categories[i];
+                    break;
+                }
+            }
+            data.push({
+                name: countries[code3].name,
+                code3: code3,
+                value: value,
+                year: year
+            });
+        }
+        
+        // Add lower case codes to the data set for inclusion in the tooltip.pointFormat
+        var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+        $.each(mapData, function () {
+            this.id = this.properties['hc-key']; // for Chart.get()
+            this.flag = this.id.replace('UK', 'GB').toLowerCase();
+        });
+
+        // Wrap point.select to get to the total selected points
+        Highcharts.wrap(Highcharts.Point.prototype, 'select', function (proceed) {
+
+            proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
+            var points = mapChart.getSelectedPoints();
+
+            if (points.length) {
+                if (points.length === 1) {
+                    $('#info #flag').attr('class', 'flag ' + points[0].flag);
+                    $('#info h2').html(points[0].name);
+                } else {
+                    $('#info #flag').attr('class', 'flag');
+                    $('#info h2').html('Comparing countries');
+
+                }
+                $('#info .subheader').html('<h4>Historical population</h4><small><em>Shift + Click on map to compare countries</em></small>')
+
+                if (!countryChart) {
+                    countryChart = $('#country-chart').highcharts({
+                        chart: {
+                            height: 250,
+                            spacingLeft: 0
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        subtitle: {
+                            text: null
+                        },
+                        xAxis: {
+                            tickPixelInterval: 50,
+                            crosshair: true
+                        },
+                        yAxis: {
+                            title: null,
+                            opposite: true
+                        },
+                        tooltip: {
+                            shared: true
+                        },
+                        plotOptions: {
+                            series: {
+                                animation: {
+                                    duration: 500
+                                },
+                                marker: {
+                                    enabled: false
+                                },
+                                threshold: 0,
+                                pointStart: parseInt(categories[0]),
+                            }
+                        }
+                    }).highcharts();
+                }
+
+                $.each(points, function (i) {
+                    // Update
+                    if (countryChart.series[i]) {
+                        /*$.each(countries[this.code3].data, function (pointI, value) {
+                            countryChart.series[i].points[pointI].update(value, false);
+                        });*/
+                        countryChart.series[i].update({
+                            name: this.name,
+                            data: countries[this.code3].data,
+                            type: points.length > 1 ? 'line' : 'area'
+                        }, false);
+                    } else {
+                        countryChart.addSeries({
+                            name: this.name,
+                            data: countries[this.code3].data,
+                            type: points.length > 1 ? 'line' : 'area'
+                        }, false);
+                    }
+                });
+                while (countryChart.series.length > points.length) {
+                    countryChart.series[countryChart.series.length - 1].remove(false);
+                }
+                countryChart.redraw();
+
+            } else {
+                $('#info #flag').attr('class', '');
+                $('#info h2').html('');
+                $('#info .subheader').html('');
+                if (countryChart) {
+                    countryChart = countryChart.destroy();
+                }
+            }
+
+            
+
+        });
+        
+        // Initiate the map chart
+        mapChart = $('#' + gChartId).highcharts('Map', {
+            
+            title : {
+                text : 'Population history by country'
+            },
+
+            subtitle: {
+                text: 'Source: <a href="http://data.worldbank.org/indicator/SP.POP.TOTL/countries/1W?display=default">The World Bank</a>'
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+
+            colorAxis: {
+                type: 'logarithmic',
+                endOnTick: false,
+                startOnTick: false,
+                min: 50000
+            },
+
+            tooltip: {
+                footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
+            },
+
+            series : [{
+                data : data,
+                mapData: mapData,
+                joinBy: ['iso-a3', 'code3'],
+                name: 'Current population',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                states: {
+                    select: {
+                        color: '#a4edba',
+                        borderColor: 'black',
+                        dashStyle: 'shortdot'
+                    }
+                }
+            }]
+        }).highcharts();
+
+        // Pre-select a country
+        mapChart.get('us').select();
+    });
+
+}
 
 
 function combinationChart001() {
@@ -1104,62 +1378,213 @@ function combinationChart001() {
 
 
 
-/*-----------start of mapOBOR------------*/ 
+/*-----------start of mapOBOR------------*/
 
 function mapOBOR() {
     addNote('資料來源：<a href="https://www.aei.org/china-global-investment-tracker/" target="_blank">美國企業研究所</a>');
-    var data = 
+    var data =
 
-[{"name_c":"阿富汗","code":"AF","z":0},
-{"name_c":"阿塞拜疆","code":"AZ","z":0},
-{"name_c":"孟加拉国","code":"BD","z":37.7},
-{"name_c":"白俄罗斯","code":"BY","z":0},
-{"name_c":"波斯尼亚和黑塞哥维那","code":"BA","z":0},
-{"name_c":"文莱","code":"BN","z":2},
-{"name_c":"保加利亚","code":"BG","z":0},
-{"name_c":"柬埔寨","code":"KH","z":19.1},
-{"name_c":"克罗地亚","code":"HR","z":1.3},
-{"name_c":"捷克","code":"CZ","z":0},
-{"name_c":"埃及","code":"EG","z":36.9},
-{"name_c":"格鲁吉亚","code":"GE","z":0},
-{"name_c":"匈牙利","code":"HU","z":0},
-{"name_c":"印度","code":"IN","z":36.1},
-{"name_c":"印度尼西亚","code":"ID","z":73.3},
-{"name_c":"伊朗","code":"IR","z":6.9},
-{"name_c":"伊拉克","code":"IQ","z":28.6},
-{"name_c":"以色列","code":"IL","z":54.7},
-{"name_c":"约旦","code":"JO","z":6.2},
-{"name_c":"哈萨克斯坦","code":"KZ","z":38},
-{"name_c":"科威特","code":"KW","z":4.6},
-{"name_c":"吉尔吉斯斯坦","code":"KG","z":38},
-{"name_c":"老挝","code":"LA","z":0},
-{"name_c":"马其顿","code":"MK","z":4},
-{"name_c":"马来西亚","code":"MY","z":64.5},
-{"name_c":"蒙古","code":"MN","z":0},
-{"name_c":"黑山","code":"ME","z":11.2},
-{"name_c":"缅甸","code":"MM","z":3},
-{"name_c":"尼泊尔","code":"NP","z":17.4},
-{"name_c":"阿曼","code":"OM","z":3},
-{"name_c":"巴基斯坦","code":"PK","z":143.2},
-{"name_c":"菲律宾","code":"PH","z":10},
-{"name_c":"波兰","code":"PL","z":3.9},
-{"name_c":"卡塔尔","code":"QA","z":1.7},
-{"name_c":"罗马尼亚","code":"RO","z":5.4},
-{"name_c":"俄罗斯","code":"RU","z":103},
-{"name_c":"沙特阿拉伯","code":"SA","z":47.2},
-{"name_c":"塞尔维亚","code":"RS","z":19.2},
-{"name_c":"新加坡","code":"SG","z":37.3},
-{"name_c":"斯里兰卡","code":"LK","z":37.1},
-{"name_c":"叙利亚","code":"SY","z":0},
-{"name_c":"塔吉克斯坦","code":"TJ","z":2.5},
-{"name_c":"泰国","code":"TH","z":11.6},
-{"name_c":"土耳其","code":"TR","z":4.8},
-{"name_c":"土库曼斯坦","code":"TM","z":6},
-{"name_c":"阿拉伯联合酋长国","code":"AE","z":13.8},
-{"name_c":"乌克兰","code":"UA","z":0},
-{"name_c":"乌兹别克斯坦","code":"UZ","z":4.4},
-{"name_c":"越南","code":"VN","z":0},
-{"name_c":"也门","code":"YE","z":5.1}]
+        [{
+            "name_c": "阿富汗",
+            "code": "AF",
+            "z": 0
+        }, {
+            "name_c": "阿塞拜疆",
+            "code": "AZ",
+            "z": 0
+        }, {
+            "name_c": "孟加拉国",
+            "code": "BD",
+            "z": 37.7
+        }, {
+            "name_c": "白俄罗斯",
+            "code": "BY",
+            "z": 0
+        }, {
+            "name_c": "波斯尼亚和黑塞哥维那",
+            "code": "BA",
+            "z": 0
+        }, {
+            "name_c": "文莱",
+            "code": "BN",
+            "z": 2
+        }, {
+            "name_c": "保加利亚",
+            "code": "BG",
+            "z": 0
+        }, {
+            "name_c": "柬埔寨",
+            "code": "KH",
+            "z": 19.1
+        }, {
+            "name_c": "克罗地亚",
+            "code": "HR",
+            "z": 1.3
+        }, {
+            "name_c": "捷克",
+            "code": "CZ",
+            "z": 0
+        }, {
+            "name_c": "埃及",
+            "code": "EG",
+            "z": 36.9
+        }, {
+            "name_c": "格鲁吉亚",
+            "code": "GE",
+            "z": 0
+        }, {
+            "name_c": "匈牙利",
+            "code": "HU",
+            "z": 0
+        }, {
+            "name_c": "印度",
+            "code": "IN",
+            "z": 36.1
+        }, {
+            "name_c": "印度尼西亚",
+            "code": "ID",
+            "z": 73.3
+        }, {
+            "name_c": "伊朗",
+            "code": "IR",
+            "z": 6.9
+        }, {
+            "name_c": "伊拉克",
+            "code": "IQ",
+            "z": 28.6
+        }, {
+            "name_c": "以色列",
+            "code": "IL",
+            "z": 54.7
+        }, {
+            "name_c": "约旦",
+            "code": "JO",
+            "z": 6.2
+        }, {
+            "name_c": "哈萨克斯坦",
+            "code": "KZ",
+            "z": 38
+        }, {
+            "name_c": "科威特",
+            "code": "KW",
+            "z": 4.6
+        }, {
+            "name_c": "吉尔吉斯斯坦",
+            "code": "KG",
+            "z": 38
+        }, {
+            "name_c": "老挝",
+            "code": "LA",
+            "z": 0
+        }, {
+            "name_c": "马其顿",
+            "code": "MK",
+            "z": 4
+        }, {
+            "name_c": "马来西亚",
+            "code": "MY",
+            "z": 64.5
+        }, {
+            "name_c": "蒙古",
+            "code": "MN",
+            "z": 0
+        }, {
+            "name_c": "黑山",
+            "code": "ME",
+            "z": 11.2
+        }, {
+            "name_c": "缅甸",
+            "code": "MM",
+            "z": 3
+        }, {
+            "name_c": "尼泊尔",
+            "code": "NP",
+            "z": 17.4
+        }, {
+            "name_c": "阿曼",
+            "code": "OM",
+            "z": 3
+        }, {
+            "name_c": "巴基斯坦",
+            "code": "PK",
+            "z": 143.2
+        }, {
+            "name_c": "菲律宾",
+            "code": "PH",
+            "z": 10
+        }, {
+            "name_c": "波兰",
+            "code": "PL",
+            "z": 3.9
+        }, {
+            "name_c": "卡塔尔",
+            "code": "QA",
+            "z": 1.7
+        }, {
+            "name_c": "罗马尼亚",
+            "code": "RO",
+            "z": 5.4
+        }, {
+            "name_c": "俄罗斯",
+            "code": "RU",
+            "z": 103
+        }, {
+            "name_c": "沙特阿拉伯",
+            "code": "SA",
+            "z": 47.2
+        }, {
+            "name_c": "塞尔维亚",
+            "code": "RS",
+            "z": 19.2
+        }, {
+            "name_c": "新加坡",
+            "code": "SG",
+            "z": 37.3
+        }, {
+            "name_c": "斯里兰卡",
+            "code": "LK",
+            "z": 37.1
+        }, {
+            "name_c": "叙利亚",
+            "code": "SY",
+            "z": 0
+        }, {
+            "name_c": "塔吉克斯坦",
+            "code": "TJ",
+            "z": 2.5
+        }, {
+            "name_c": "泰国",
+            "code": "TH",
+            "z": 11.6
+        }, {
+            "name_c": "土耳其",
+            "code": "TR",
+            "z": 4.8
+        }, {
+            "name_c": "土库曼斯坦",
+            "code": "TM",
+            "z": 6
+        }, {
+            "name_c": "阿拉伯联合酋长国",
+            "code": "AE",
+            "z": 13.8
+        }, {
+            "name_c": "乌克兰",
+            "code": "UA",
+            "z": 0
+        }, {
+            "name_c": "乌兹别克斯坦",
+            "code": "UZ",
+            "z": 4.4
+        }, {
+            "name_c": "越南",
+            "code": "VN",
+            "z": 0
+        }, {
+            "name_c": "也门",
+            "code": "YE",
+            "z": 5.1
+        }]
 
 
 
@@ -1221,526 +1646,421 @@ function mapOBOR() {
 
 function mapWorldBefore() {
     addNote('');
-    var data = 
+    var data =
 
-[
-  {
-    "code": "AF",
-    "z": 4,
-    "name_c": "阿富汗"
-  },
-  {
-    "code": "DZ",
-    "z": 38.5,
-    "name_c": "阿尔及利亚"
-  },
-  {
-    "code": "AO",
-    "z": 31.2,
-    "name_c": "安哥拉"
-  },
-  {
-    "code": "AR",
-    "z": 1,
-    "name_c": "阿根廷"
-  },
-  {
-    "code": "AU",
-    "z": 196.8,
-    "name_c": "澳大利亚"
-  },
-  {
-    "code": "AT",
-    "z": 1.4,
-    "name_c": "奥地利"
-  },
-  {
-    "code": "BD",
-    "z": 26.3,
-    "name_c": "孟加拉"
-  },
-  {
-    "code": "BY",
-    "z": 8.4,
-    "name_c": "白俄罗斯"
-  },
-  {
-    "code": "BE",
-    "z": 2.6,
-    "name_c": "比利时"
-  },
-  {
-    "code": "BJ",
-    "z": 2.4,
-    "name_c": "贝宁"
-  },
-  {
-    "code": "BO",
-    "z": 1.7,
-    "name_c": "玻利维亚"
-  },
-  {
-    "code": "BA",
-    "z": 2.8,
-    "name_c": "波斯尼亚和黑塞哥维那"
-  },
-  {
-    "code": "BR",
-    "z": 83.7,
-    "name_c": "巴西"
-  },
-  {
-    "code": "GB",
-    "z": 92.1,
-    "name_c": "英国"
-  },
-  {
-    "code": "BG",
-    "z": 2.1,
-    "name_c": "保加利亚"
-  },
-  {
-    "code": "KH",
-    "z": 34.1,
-    "name_c": "柬埔寨"
-  },
-  {
-    "code": "CM",
-    "z": 17.3,
-    "name_c": "喀麦隆"
-  },
-  {
-    "code": "CA",
-    "z": 242.8,
-    "name_c": "加拿大"
-  },
-  {
-    "code": "TD",
-    "z": 56.3,
-    "name_c": "乍得"
-  },
-  {
-    "code": "CL",
-    "z": 15.5,
-    "name_c": "智利"
-  },
-  {
-    "code": "CO",
-    "z": 12.2,
-    "name_c": "哥伦比亚"
-  },
-  {
-    "code": "CG",
-    "z": 1.2,
-    "name_c": "刚果"
-  },
-  {
-    "code": "CR",
-    "z": 4.7,
-    "name_c": "哥斯达黎加"
-  },
-  {
-    "code": "CD",
-    "z": 19.3,
-    "name_c": "刚果"
-  },
-  {
-    "code": "DJ",
-    "z": 7,
-    "name_c": "吉布提"
-  },
-  {
-    "code": "EC",
-    "z": 40.7,
-    "name_c": "厄瓜多尔"
-  },
-  {
-    "code": "EG",
-    "z": 43,
-    "name_c": "埃及"
-  },
-  {
-    "code": "GQ",
-    "z": 8.7,
-    "name_c": "赤道几内亚"
-  },
-  {
-    "code": "ET",
-    "z": 53.1,
-    "name_c": "埃塞俄比亚"
-  },
-  {
-    "code": "FR",
-    "z": 15,
-    "name_c": "法国"
-  },
-  {
-    "code": "GA",
-    "z": 7.8,
-    "name_c": "加蓬"
-  },
-  {
-    "code": "GE",
-    "z": 7.3,
-    "name_c": "格鲁吉亚"
-  },
-  {
-    "code": "DE",
-    "z": 28.4,
-    "name_c": "德国"
-  },
-  {
-    "code": "GH",
-    "z": 18.4,
-    "name_c": "加纳"
-  },
-  {
-    "code": "GR",
-    "z": 4.5,
-    "name_c": "希腊"
-  },
-  {
-    "code": "GN",
-    "z": 59.5,
-    "name_c": "几内亚"
-  },
-  {
-    "code": "GY",
-    "z": 7.5,
-    "name_c": "圭亚那"
-  },
-  {
-    "code": "HN",
-    "z": 1.5,
-    "name_c": "洪都拉斯"
-  },
-  {
-    "code": "HU",
-    "z": 27.5,
-    "name_c": "匈牙利"
-  },
-  {
-    "code": "IN",
-    "z": 32.5,
-    "name_c": "印度"
-  },
-  {
-    "code": "ID",
-    "z": 116.1,
-    "name_c": "印度尼西亚"
-  },
-  {
-    "code": "IR",
-    "z": 28.9,
-    "name_c": "伊朗"
-  },
-  {
-    "code": "IQ",
-    "z": 19.3,
-    "name_c": "伊拉克"
-  },
-  {
-    "code": "IL",
-    "z": 3.8,
-    "name_c": "以色列"
-  },
-  {
-    "code": "IT",
-    "z": 21.3,
-    "name_c": "意大利"
-  },
-  {
-    "code": "#N/A",
-    "z": 14.3,
-    "name_c": "象牙海岸"
-  },
-  {
-    "code": "JM",
-    "z": 6.1,
-    "name_c": "牙买加"
-  },
-  {
-    "code": "JP",
-    "z": 9.2,
-    "name_c": "日本"
-  },
-  {
-    "code": "JO",
-    "z": 12.5,
-    "name_c": "约旦"
-  },
-  {
-    "code": "KZ",
-    "z": 75.1,
-    "name_c": "哈萨克斯坦"
-  },
-  {
-    "code": "KE",
-    "z": 80.1,
-    "name_c": "肯尼亚"
-  },
-  {
-    "code": "KW",
-    "z": 5.1,
-    "name_c": "科威特"
-  },
-  {
-    "code": "LA",
-    "z": 22.3,
-    "name_c": "老挝"
-  },
-  {
-    "code": "MG",
-    "z": 1.5,
-    "name_c": "马达加斯加"
-  },
-  {
-    "code": "MW",
-    "z": 5,
-    "name_c": "马拉维"
-  },
-  {
-    "code": "MY",
-    "z": 95.9,
-    "name_c": "马来西亚"
-  },
-  {
-    "code": "MT",
-    "z": 2.6,
-    "name_c": "马耳他"
-  },
-  {
-    "code": "MU",
-    "z": 1.1,
-    "name_c": "毛里求斯"
-  },
-  {
-    "code": "MX",
-    "z": 2.2,
-    "name_c": "墨西哥"
-  },
-  {
-    "code": "MA",
-    "z": 3.6,
-    "name_c": "摩洛哥"
-  },
-  {
-    "code": "MZ",
-    "z": 69.8,
-    "name_c": "莫桑比克"
-  },
-  {
-    "code": "NP",
-    "z": 17.3,
-    "name_c": "尼泊尔"
-  },
-  {
-    "code": "NZ",
-    "z": 12,
-    "name_c": "新西兰"
-  },
-  {
-    "code": "NI",
-    "z": 5.3,
-    "name_c": "尼加拉瓜"
-  },
-  {
-    "code": "NG",
-    "z": 81.2,
-    "name_c": "尼日利亚"
-  },
-  {
-    "code": "PK",
-    "z": 45.3,
-    "name_c": "巴基斯坦"
-  },
-  {
-    "code": "PG",
-    "z": 4.3,
-    "name_c": "巴布亚新几内亚"
-  },
-  {
-    "code": "PE",
-    "z": 9,
-    "name_c": "秘鲁"
-  },
-  {
-    "code": "PH",
-    "z": 3.5,
-    "name_c": "菲律宾"
-  },
-  {
-    "code": "PL",
-    "z": 14,
-    "name_c": "波兰"
-  },
-  {
-    "code": "PT",
-    "z": 45.9,
-    "name_c": "葡萄牙"
-  },
-  {
-    "code": "QA",
-    "z": 8.5,
-    "name_c": "卡塔尔"
-  },
-  {
-    "code": "RO",
-    "z": 13,
-    "name_c": "罗马尼亚"
-  },
-  {
-    "code": "RU",
-    "z": 76.9,
-    "name_c": "俄罗斯联邦"
-  },
-  {
-    "code": "RW",
-    "z": 1.2,
-    "name_c": "卢旺达"
-  },
-  {
-    "code": "SA",
-    "z": 28,
-    "name_c": "沙特阿拉伯"
-  },
-  {
-    "code": "SN",
-    "z": 3.5,
-    "name_c": "塞内加尔"
-  },
-  {
-    "code": "RS",
-    "z": 11.8,
-    "name_c": "塞尔维亚"
-  },
-  {
-    "code": "SL",
-    "z": 24.9,
-    "name_c": "塞拉利昂"
-  },
-  {
-    "code": "SG",
-    "z": 13.9,
-    "name_c": "新加坡"
-  },
-  {
-    "code": "ZA",
-    "z": 7.3,
-    "name_c": "南非"
-  },
-  {
-    "code": "KR",
-    "z": 10.3,
-    "name_c": "韩国"
-  },
-  {
-    "code": "SS",
-    "z": 22.1,
-    "name_c": "南苏丹"
-  },
-  {
-    "code": "ES",
-    "z": 5.5,
-    "name_c": "西班牙"
-  },
-  {
-    "code": "LK",
-    "z": 34.2,
-    "name_c": "斯里兰卡"
-  },
-  {
-    "code": "SD",
-    "z": 3.2,
-    "name_c": "苏丹"
-  },
-  {
-    "code": "CH",
-    "z": 8.7,
-    "name_c": "瑞士"
-  },
-  {
-    "code": "TW",
-    "z": 1.4,
-    "name_c": "台湾"
-  },
-  {
-    "code": "TJ",
-    "z": 3,
-    "name_c": "塔吉克斯坦"
-  },
-  {
-    "code": "TZ",
-    "z": 32.2,
-    "name_c": "坦桑尼亚"
-  },
-  {
-    "code": "TH",
-    "z": 5.8,
-    "name_c": "泰国"
-  },
-  {
-    "code": "TG",
-    "z": 3.8,
-    "name_c": "多哥"
-  },
-  {
-    "code": "TT",
-    "z": 10.1,
-    "name_c": "特立尼达和多巴哥"
-  },
-  {
-    "code": "TR",
-    "z": 51.9,
-    "name_c": "土耳其"
-  },
-  {
-    "code": "AE",
-    "z": 34.3,
-    "name_c": "阿拉伯联合酋长国"
-  },
-  {
-    "code": "UG",
-    "z": 65.2,
-    "name_c": "乌干达"
-  },
-  {
-    "code": "UA",
-    "z": 4.1,
-    "name_c": "乌克兰"
-  },
-  {
-    "code": "US",
-    "z": 243,
-    "name_c": "美国"
-  },
-  {
-    "code": "UZ",
-    "z": 4.6,
-    "name_c": "乌兹别克斯坦"
-  },
-  {
-    "code": "VE",
-    "z": 53.9,
-    "name_c": "委内瑞拉"
-  },
-  {
-    "code": "VN",
-    "z": 27.6,
-    "name_c": "越南"
-  },
-  {
-    "code": "ZM",
-    "z": 25.9,
-    "name_c": "赞比亚"
-  },
-  {
-    "code": "ZW",
-    "z": 18.4,
-    "name_c": "津巴布韦"
-  }
-]
-    ;
+        [{
+            "code": "AF",
+            "z": 4,
+            "name_c": "阿富汗"
+        }, {
+            "code": "DZ",
+            "z": 38.5,
+            "name_c": "阿尔及利亚"
+        }, {
+            "code": "AO",
+            "z": 31.2,
+            "name_c": "安哥拉"
+        }, {
+            "code": "AR",
+            "z": 1,
+            "name_c": "阿根廷"
+        }, {
+            "code": "AU",
+            "z": 196.8,
+            "name_c": "澳大利亚"
+        }, {
+            "code": "AT",
+            "z": 1.4,
+            "name_c": "奥地利"
+        }, {
+            "code": "BD",
+            "z": 26.3,
+            "name_c": "孟加拉"
+        }, {
+            "code": "BY",
+            "z": 8.4,
+            "name_c": "白俄罗斯"
+        }, {
+            "code": "BE",
+            "z": 2.6,
+            "name_c": "比利时"
+        }, {
+            "code": "BJ",
+            "z": 2.4,
+            "name_c": "贝宁"
+        }, {
+            "code": "BO",
+            "z": 1.7,
+            "name_c": "玻利维亚"
+        }, {
+            "code": "BA",
+            "z": 2.8,
+            "name_c": "波斯尼亚和黑塞哥维那"
+        }, {
+            "code": "BR",
+            "z": 83.7,
+            "name_c": "巴西"
+        }, {
+            "code": "GB",
+            "z": 92.1,
+            "name_c": "英国"
+        }, {
+            "code": "BG",
+            "z": 2.1,
+            "name_c": "保加利亚"
+        }, {
+            "code": "KH",
+            "z": 34.1,
+            "name_c": "柬埔寨"
+        }, {
+            "code": "CM",
+            "z": 17.3,
+            "name_c": "喀麦隆"
+        }, {
+            "code": "CA",
+            "z": 242.8,
+            "name_c": "加拿大"
+        }, {
+            "code": "TD",
+            "z": 56.3,
+            "name_c": "乍得"
+        }, {
+            "code": "CL",
+            "z": 15.5,
+            "name_c": "智利"
+        }, {
+            "code": "CO",
+            "z": 12.2,
+            "name_c": "哥伦比亚"
+        }, {
+            "code": "CG",
+            "z": 1.2,
+            "name_c": "刚果"
+        }, {
+            "code": "CR",
+            "z": 4.7,
+            "name_c": "哥斯达黎加"
+        }, {
+            "code": "CD",
+            "z": 19.3,
+            "name_c": "刚果"
+        }, {
+            "code": "DJ",
+            "z": 7,
+            "name_c": "吉布提"
+        }, {
+            "code": "EC",
+            "z": 40.7,
+            "name_c": "厄瓜多尔"
+        }, {
+            "code": "EG",
+            "z": 43,
+            "name_c": "埃及"
+        }, {
+            "code": "GQ",
+            "z": 8.7,
+            "name_c": "赤道几内亚"
+        }, {
+            "code": "ET",
+            "z": 53.1,
+            "name_c": "埃塞俄比亚"
+        }, {
+            "code": "FR",
+            "z": 15,
+            "name_c": "法国"
+        }, {
+            "code": "GA",
+            "z": 7.8,
+            "name_c": "加蓬"
+        }, {
+            "code": "GE",
+            "z": 7.3,
+            "name_c": "格鲁吉亚"
+        }, {
+            "code": "DE",
+            "z": 28.4,
+            "name_c": "德国"
+        }, {
+            "code": "GH",
+            "z": 18.4,
+            "name_c": "加纳"
+        }, {
+            "code": "GR",
+            "z": 4.5,
+            "name_c": "希腊"
+        }, {
+            "code": "GN",
+            "z": 59.5,
+            "name_c": "几内亚"
+        }, {
+            "code": "GY",
+            "z": 7.5,
+            "name_c": "圭亚那"
+        }, {
+            "code": "HN",
+            "z": 1.5,
+            "name_c": "洪都拉斯"
+        }, {
+            "code": "HU",
+            "z": 27.5,
+            "name_c": "匈牙利"
+        }, {
+            "code": "IN",
+            "z": 32.5,
+            "name_c": "印度"
+        }, {
+            "code": "ID",
+            "z": 116.1,
+            "name_c": "印度尼西亚"
+        }, {
+            "code": "IR",
+            "z": 28.9,
+            "name_c": "伊朗"
+        }, {
+            "code": "IQ",
+            "z": 19.3,
+            "name_c": "伊拉克"
+        }, {
+            "code": "IL",
+            "z": 3.8,
+            "name_c": "以色列"
+        }, {
+            "code": "IT",
+            "z": 21.3,
+            "name_c": "意大利"
+        }, {
+            "code": "#N/A",
+            "z": 14.3,
+            "name_c": "象牙海岸"
+        }, {
+            "code": "JM",
+            "z": 6.1,
+            "name_c": "牙买加"
+        }, {
+            "code": "JP",
+            "z": 9.2,
+            "name_c": "日本"
+        }, {
+            "code": "JO",
+            "z": 12.5,
+            "name_c": "约旦"
+        }, {
+            "code": "KZ",
+            "z": 75.1,
+            "name_c": "哈萨克斯坦"
+        }, {
+            "code": "KE",
+            "z": 80.1,
+            "name_c": "肯尼亚"
+        }, {
+            "code": "KW",
+            "z": 5.1,
+            "name_c": "科威特"
+        }, {
+            "code": "LA",
+            "z": 22.3,
+            "name_c": "老挝"
+        }, {
+            "code": "MG",
+            "z": 1.5,
+            "name_c": "马达加斯加"
+        }, {
+            "code": "MW",
+            "z": 5,
+            "name_c": "马拉维"
+        }, {
+            "code": "MY",
+            "z": 95.9,
+            "name_c": "马来西亚"
+        }, {
+            "code": "MT",
+            "z": 2.6,
+            "name_c": "马耳他"
+        }, {
+            "code": "MU",
+            "z": 1.1,
+            "name_c": "毛里求斯"
+        }, {
+            "code": "MX",
+            "z": 2.2,
+            "name_c": "墨西哥"
+        }, {
+            "code": "MA",
+            "z": 3.6,
+            "name_c": "摩洛哥"
+        }, {
+            "code": "MZ",
+            "z": 69.8,
+            "name_c": "莫桑比克"
+        }, {
+            "code": "NP",
+            "z": 17.3,
+            "name_c": "尼泊尔"
+        }, {
+            "code": "NZ",
+            "z": 12,
+            "name_c": "新西兰"
+        }, {
+            "code": "NI",
+            "z": 5.3,
+            "name_c": "尼加拉瓜"
+        }, {
+            "code": "NG",
+            "z": 81.2,
+            "name_c": "尼日利亚"
+        }, {
+            "code": "PK",
+            "z": 45.3,
+            "name_c": "巴基斯坦"
+        }, {
+            "code": "PG",
+            "z": 4.3,
+            "name_c": "巴布亚新几内亚"
+        }, {
+            "code": "PE",
+            "z": 9,
+            "name_c": "秘鲁"
+        }, {
+            "code": "PH",
+            "z": 3.5,
+            "name_c": "菲律宾"
+        }, {
+            "code": "PL",
+            "z": 14,
+            "name_c": "波兰"
+        }, {
+            "code": "PT",
+            "z": 45.9,
+            "name_c": "葡萄牙"
+        }, {
+            "code": "QA",
+            "z": 8.5,
+            "name_c": "卡塔尔"
+        }, {
+            "code": "RO",
+            "z": 13,
+            "name_c": "罗马尼亚"
+        }, {
+            "code": "RU",
+            "z": 76.9,
+            "name_c": "俄罗斯联邦"
+        }, {
+            "code": "RW",
+            "z": 1.2,
+            "name_c": "卢旺达"
+        }, {
+            "code": "SA",
+            "z": 28,
+            "name_c": "沙特阿拉伯"
+        }, {
+            "code": "SN",
+            "z": 3.5,
+            "name_c": "塞内加尔"
+        }, {
+            "code": "RS",
+            "z": 11.8,
+            "name_c": "塞尔维亚"
+        }, {
+            "code": "SL",
+            "z": 24.9,
+            "name_c": "塞拉利昂"
+        }, {
+            "code": "SG",
+            "z": 13.9,
+            "name_c": "新加坡"
+        }, {
+            "code": "ZA",
+            "z": 7.3,
+            "name_c": "南非"
+        }, {
+            "code": "KR",
+            "z": 10.3,
+            "name_c": "韩国"
+        }, {
+            "code": "SS",
+            "z": 22.1,
+            "name_c": "南苏丹"
+        }, {
+            "code": "ES",
+            "z": 5.5,
+            "name_c": "西班牙"
+        }, {
+            "code": "LK",
+            "z": 34.2,
+            "name_c": "斯里兰卡"
+        }, {
+            "code": "SD",
+            "z": 3.2,
+            "name_c": "苏丹"
+        }, {
+            "code": "CH",
+            "z": 8.7,
+            "name_c": "瑞士"
+        }, {
+            "code": "TW",
+            "z": 1.4,
+            "name_c": "台湾"
+        }, {
+            "code": "TJ",
+            "z": 3,
+            "name_c": "塔吉克斯坦"
+        }, {
+            "code": "TZ",
+            "z": 32.2,
+            "name_c": "坦桑尼亚"
+        }, {
+            "code": "TH",
+            "z": 5.8,
+            "name_c": "泰国"
+        }, {
+            "code": "TG",
+            "z": 3.8,
+            "name_c": "多哥"
+        }, {
+            "code": "TT",
+            "z": 10.1,
+            "name_c": "特立尼达和多巴哥"
+        }, {
+            "code": "TR",
+            "z": 51.9,
+            "name_c": "土耳其"
+        }, {
+            "code": "AE",
+            "z": 34.3,
+            "name_c": "阿拉伯联合酋长国"
+        }, {
+            "code": "UG",
+            "z": 65.2,
+            "name_c": "乌干达"
+        }, {
+            "code": "UA",
+            "z": 4.1,
+            "name_c": "乌克兰"
+        }, {
+            "code": "US",
+            "z": 243,
+            "name_c": "美国"
+        }, {
+            "code": "UZ",
+            "z": 4.6,
+            "name_c": "乌兹别克斯坦"
+        }, {
+            "code": "VE",
+            "z": 53.9,
+            "name_c": "委内瑞拉"
+        }, {
+            "code": "VN",
+            "z": 27.6,
+            "name_c": "越南"
+        }, {
+            "code": "ZM",
+            "z": 25.9,
+            "name_c": "赞比亚"
+        }, {
+            "code": "ZW",
+            "z": 18.4,
+            "name_c": "津巴布韦"
+        }];
     var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
     $('#' + gChartId).highcharts('Map', {
         chart: {
@@ -1771,8 +2091,7 @@ function mapWorldBefore() {
             mapData: mapData,
             color: '#E0E0E0',
             enableMouseTracking: false
-        },
-         {
+        }, {
             type: 'mapbubble',
             mapData: mapData,
             name: '中国投资金额',
@@ -1793,485 +2112,388 @@ function mapWorldBefore() {
 
 function mapWorldAfter() {
     addNote('');
-    var data = 
-[
-  {
-    "code": "DZ",
-    "name_c": "阿尔及利亚",
-    "z": 35.3
-  },
-  {
-    "code": "AO",
-    "name_c": "安哥拉",
-    "z": 37.6
-  },
-  {
-    "code": "AG",
-    "name_c": "安提瓜和巴布达",
-    "z": 10
-  },
-  {
-    "code": "AR",
-    "name_c": "阿根廷",
-    "z": 67.3
-  },
-  {
-    "code": "AU",
-    "name_c": "澳大利亚",
-    "z": 137.3
-  },
-  {
-    "code": "BD",
-    "name_c": "孟加拉",
-    "z": 37.7
-  },
-  {
-    "code": "BE",
-    "name_c": "比利时",
-    "z": 5.8
-  },
-  {
-    "code": "BO",
-    "name_c": "玻利维亚",
-    "z": 12.3
-  },
-  {
-    "code": "BA",
-    "name_c": "波斯尼亚和黑塞哥维那",
-    "z": 10.6
-  },
-  {
-    "code": "BR",
-    "name_c": "巴西",
-    "z": 52.3
-  },
-  {
-    "code": "GB",
-    "name_c": "英国",
-    "z": 108.9
-  },
-  {
-    "code": "BN",
-    "name_c": "汶莱",
-    "z": 2
-  },
-  {
-    "code": "KH",
-    "name_c": "柬埔寨",
-    "z": 19.1
-  },
-  {
-    "code": "CM",
-    "name_c": "喀麦隆",
-    "z": 12.2
-  },
-  {
-    "code": "CA",
-    "name_c": "加拿大",
-    "z": 41.1
-  },
-  {
-    "code": "CG",
-    "name_c": "刚果",
-    "z": 22.3
-  },
-  {
-    "code": "HR",
-    "name_c": "克罗地亚",
-    "z": 1.3
-  },
-  {
-    "code": "CU",
-    "name_c": "古巴",
-    "z": 1
-  },
-  {
-    "code": "CD",
-    "name_c": "刚果",
-    "z": 3
-  },
-  {
-    "code": "DK",
-    "name_c": "丹麦",
-    "z": 7
-  },
-  {
-    "code": "DJ",
-    "name_c": "吉布提",
-    "z": 10.2
-  },
-  {
-    "code": "EC",
-    "name_c": "厄瓜多尔",
-    "z": 32.4
-  },
-  {
-    "code": "EG",
-    "name_c": "埃及",
-    "z": 36.9
-  },
-  {
-    "code": "GQ",
-    "name_c": "赤道几内亚",
-    "z": 3.4
-  },
-  {
-    "code": "ER",
-    "name_c": "厄立特里亚国",
-    "z": 4
-  },
-  {
-    "code": "ET",
-    "name_c": "埃塞俄比亚",
-    "z": 44.1
-  },
-  {
-    "code": "FR",
-    "name_c": "法国",
-    "z": 46.5
-  },
-  {
-    "code": "DE",
-    "name_c": "德国",
-    "z": 20.7
-  },
-  {
-    "code": "GH",
-    "name_c": "加纳",
-    "z": 19.2
-  },
-  {
-    "code": "GR",
-    "name_c": "希腊",
-    "z": 2
-  },
-  {
-    "code": "GN",
-    "name_c": "几内亚",
-    "z": 23.1
-  },
-  {
-    "code": "IN",
-    "name_c": "印度",
-    "z": 36.1
-  },
-  {
-    "code": "ID",
-    "name_c": "印度尼西亚",
-    "z": 73.3
-  },
-  {
-    "code": "IR",
-    "name_c": "伊朗",
-    "z": 6.9
-  },
-  {
-    "code": "IQ",
-    "name_c": "伊拉克",
-    "z": 28.6
-  },
-  {
-    "code": "IL",
-    "name_c": "以色列",
-    "z": 54.7
-  },
-  {
-    "code": "IT",
-    "name_c": "意大利",
-    "z": 154.6
-  },
-  {
-    "code": "JP",
-    "name_c": "日本",
-    "z": 11.3
-  },
-  {
-    "code": "JO",
-    "name_c": "约旦",
-    "z": 6.2
-  },
-  {
-    "code": "KZ",
-    "name_c": "哈萨克斯坦",
-    "z": 38
-  },
-  {
-    "code": "KE",
-    "name_c": "肯尼亚",
-    "z": 14.2
-  },
-  {
-    "code": "KW",
-    "name_c": "科威特",
-    "z": 4.6
-  },
-  {
-    "code": "KG",
-    "name_c": "吉尔吉斯斯坦",
-    "z": 38
-  },
-  {
-    "code": "LU",
-    "name_c": "卢森堡",
-    "z": 2.2
-  },
-  {
-    "code": "MK",
-    "name_c": "马其顿",
-    "z": 4
-  },
-  {
-    "code": "MW",
-    "name_c": "马拉维",
-    "z": 2.1
-  },
-  {
-    "code": "MY",
-    "name_c": "马来西亚",
-    "z": 64.5
-  },
-  {
-    "code": "MX",
-    "name_c": "墨西哥",
-    "z": 9.9
-  },
-  {
-    "code": "ME",
-    "name_c": "黑山",
-    "z": 11.2
-  },
-  {
-    "code": "MZ",
-    "name_c": "莫桑比克",
-    "z": 19.3
-  },
-  {
-    "code": "MM",
-    "name_c": "缅甸",
-    "z": 3
-  },
-  {
-    "code": "NA",
-    "name_c": "納米比亞",
-    "z": 28.5
-  },
-  {
-    "code": "NP",
-    "name_c": "尼泊尔",
-    "z": 17.4
-  },
-  {
-    "code": "NL",
-    "name_c": "荷兰",
-    "z": 61.7
-  },
-  {
-    "code": "NZ",
-    "name_c": "新西兰",
-    "z": 11.1
-  },
-  {
-    "code": "NG",
-    "name_c": "尼日利亚",
-    "z": 139.7
-  },
-  {
-    "code": "NO",
-    "name_c": "挪威",
-    "z": 7.7
-  },
-  {
-    "code": "OM",
-    "name_c": "阿曼",
-    "z": 3
-  },
-  {
-    "code": "PK",
-    "name_c": "巴基斯坦",
-    "z": 143.2
-  },
-  {
-    "code": "PG",
-    "name_c": "巴布亚新几内亚",
-    "z": 7.2
-  },
-  {
-    "code": "PE",
-    "name_c": "秘鲁",
-    "z": 98.8
-  },
-  {
-    "code": "PH",
-    "name_c": "菲律宾",
-    "z": 10
-  },
-  {
-    "code": "PL",
-    "name_c": "波兰",
-    "z": 3.9
-  },
-  {
-    "code": "PT",
-    "name_c": "葡萄牙",
-    "z": 24.2
-  },
-  {
-    "code": "QA",
-    "name_c": "卡塔尔",
-    "z": 1.7
-  },
-  {
-    "code": "RO",
-    "name_c": "罗马尼亚",
-    "z": 5.4
-  },
-  {
-    "code": "RU",
-    "name_c": "俄罗斯联邦",
-    "z": 103
-  },
-  {
-    "code": "RW",
-    "name_c": "卢旺达",
-    "z": 1.2
-  },
-  {
-    "code": "ST",
-    "name_c": "圣多美和普林西比",
-    "z": 1.5
-  },
-  {
-    "code": "SA",
-    "name_c": "沙特阿拉伯",
-    "z": 47.2
-  },
-  {
-    "code": "RS",
-    "name_c": "塞尔维亚",
-    "z": 19.2
-  },
-  {
-    "code": "SL",
-    "name_c": "塞拉利昂",
-    "z": 7.7
-  },
-  {
-    "code": "SG",
-    "name_c": "新加坡",
-    "z": 37.3
-  },
-  {
-    "code": "ZA",
-    "name_c": "南非",
-    "z": 3.3
-  },
-  {
-    "code": "KR",
-    "name_c": "韩国",
-    "z": 68.3
-  },
-  {
-    "code": "SS",
-    "name_c": "南苏丹",
-    "z": 1
-  },
-  {
-    "code": "ES",
-    "name_c": "西班牙",
-    "z": 5.4
-  },
-  {
-    "code": "LK",
-    "name_c": "斯里兰卡",
-    "z": 37.1
-  },
-  {
-    "code": "SD",
-    "name_c": "苏丹",
-    "z": 28.3
-  },
-  {
-    "code": "CH",
-    "name_c": "瑞士",
-    "z": 15.9
-  },
-  {
-    "code": "TW",
-    "name_c": "台湾",
-    "z": 9.9
-  },
-  {
-    "code": "TJ",
-    "name_c": "塔吉克斯坦",
-    "z": 2.5
-  },
-  {
-    "code": "TZ",
-    "name_c": "坦桑尼亚",
-    "z": 32.8
-  },
-  {
-    "code": "TH",
-    "name_c": "泰国",
-    "z": 11.6
-  },
-  {
-    "code": "TT",
-    "name_c": "特立尼达和多巴哥",
-    "z": 5.9
-  },
-  {
-    "code": "TR",
-    "name_c": "土耳其",
-    "z": 4.8
-  },
-  {
-    "code": "TM",
-    "name_c": "土库曼斯坦",
-    "z": 6
-  },
-  {
-    "code": "AE",
-    "name_c": "阿拉伯联合酋长国",
-    "z": 13.8
-  },
-  {
-    "code": "UG",
-    "name_c": "乌干达",
-    "z": 21.2
-  },
-  {
-    "code": "US",
-    "name_c": "美国",
-    "z": 332.6
-  },
-  {
-    "code": "UZ",
-    "name_c": "乌兹别克斯坦",
-    "z": 4.4
-  },
-  {
-    "code": "VE",
-    "name_c": "委内瑞拉",
-    "z": 49.7
-  },
-  {
-    "code": "YE",
-    "name_c": "也门",
-    "z": 5.1
-  },
-  {
-    "code": "ZM",
-    "name_c": "赞比亚",
-    "z": 1.1
-  },
-  {
-    "code": "ZW",
-    "name_c": "津巴布韦",
-    "z": 49.8
-  }
-]
- 
+    var data = [{
+        "code": "DZ",
+        "name_c": "阿尔及利亚",
+        "z": 35.3
+    }, {
+        "code": "AO",
+        "name_c": "安哥拉",
+        "z": 37.6
+    }, {
+        "code": "AG",
+        "name_c": "安提瓜和巴布达",
+        "z": 10
+    }, {
+        "code": "AR",
+        "name_c": "阿根廷",
+        "z": 67.3
+    }, {
+        "code": "AU",
+        "name_c": "澳大利亚",
+        "z": 137.3
+    }, {
+        "code": "BD",
+        "name_c": "孟加拉",
+        "z": 37.7
+    }, {
+        "code": "BE",
+        "name_c": "比利时",
+        "z": 5.8
+    }, {
+        "code": "BO",
+        "name_c": "玻利维亚",
+        "z": 12.3
+    }, {
+        "code": "BA",
+        "name_c": "波斯尼亚和黑塞哥维那",
+        "z": 10.6
+    }, {
+        "code": "BR",
+        "name_c": "巴西",
+        "z": 52.3
+    }, {
+        "code": "GB",
+        "name_c": "英国",
+        "z": 108.9
+    }, {
+        "code": "BN",
+        "name_c": "汶莱",
+        "z": 2
+    }, {
+        "code": "KH",
+        "name_c": "柬埔寨",
+        "z": 19.1
+    }, {
+        "code": "CM",
+        "name_c": "喀麦隆",
+        "z": 12.2
+    }, {
+        "code": "CA",
+        "name_c": "加拿大",
+        "z": 41.1
+    }, {
+        "code": "CG",
+        "name_c": "刚果",
+        "z": 22.3
+    }, {
+        "code": "HR",
+        "name_c": "克罗地亚",
+        "z": 1.3
+    }, {
+        "code": "CU",
+        "name_c": "古巴",
+        "z": 1
+    }, {
+        "code": "CD",
+        "name_c": "刚果",
+        "z": 3
+    }, {
+        "code": "DK",
+        "name_c": "丹麦",
+        "z": 7
+    }, {
+        "code": "DJ",
+        "name_c": "吉布提",
+        "z": 10.2
+    }, {
+        "code": "EC",
+        "name_c": "厄瓜多尔",
+        "z": 32.4
+    }, {
+        "code": "EG",
+        "name_c": "埃及",
+        "z": 36.9
+    }, {
+        "code": "GQ",
+        "name_c": "赤道几内亚",
+        "z": 3.4
+    }, {
+        "code": "ER",
+        "name_c": "厄立特里亚国",
+        "z": 4
+    }, {
+        "code": "ET",
+        "name_c": "埃塞俄比亚",
+        "z": 44.1
+    }, {
+        "code": "FR",
+        "name_c": "法国",
+        "z": 46.5
+    }, {
+        "code": "DE",
+        "name_c": "德国",
+        "z": 20.7
+    }, {
+        "code": "GH",
+        "name_c": "加纳",
+        "z": 19.2
+    }, {
+        "code": "GR",
+        "name_c": "希腊",
+        "z": 2
+    }, {
+        "code": "GN",
+        "name_c": "几内亚",
+        "z": 23.1
+    }, {
+        "code": "IN",
+        "name_c": "印度",
+        "z": 36.1
+    }, {
+        "code": "ID",
+        "name_c": "印度尼西亚",
+        "z": 73.3
+    }, {
+        "code": "IR",
+        "name_c": "伊朗",
+        "z": 6.9
+    }, {
+        "code": "IQ",
+        "name_c": "伊拉克",
+        "z": 28.6
+    }, {
+        "code": "IL",
+        "name_c": "以色列",
+        "z": 54.7
+    }, {
+        "code": "IT",
+        "name_c": "意大利",
+        "z": 154.6
+    }, {
+        "code": "JP",
+        "name_c": "日本",
+        "z": 11.3
+    }, {
+        "code": "JO",
+        "name_c": "约旦",
+        "z": 6.2
+    }, {
+        "code": "KZ",
+        "name_c": "哈萨克斯坦",
+        "z": 38
+    }, {
+        "code": "KE",
+        "name_c": "肯尼亚",
+        "z": 14.2
+    }, {
+        "code": "KW",
+        "name_c": "科威特",
+        "z": 4.6
+    }, {
+        "code": "KG",
+        "name_c": "吉尔吉斯斯坦",
+        "z": 38
+    }, {
+        "code": "LU",
+        "name_c": "卢森堡",
+        "z": 2.2
+    }, {
+        "code": "MK",
+        "name_c": "马其顿",
+        "z": 4
+    }, {
+        "code": "MW",
+        "name_c": "马拉维",
+        "z": 2.1
+    }, {
+        "code": "MY",
+        "name_c": "马来西亚",
+        "z": 64.5
+    }, {
+        "code": "MX",
+        "name_c": "墨西哥",
+        "z": 9.9
+    }, {
+        "code": "ME",
+        "name_c": "黑山",
+        "z": 11.2
+    }, {
+        "code": "MZ",
+        "name_c": "莫桑比克",
+        "z": 19.3
+    }, {
+        "code": "MM",
+        "name_c": "缅甸",
+        "z": 3
+    }, {
+        "code": "NA",
+        "name_c": "納米比亞",
+        "z": 28.5
+    }, {
+        "code": "NP",
+        "name_c": "尼泊尔",
+        "z": 17.4
+    }, {
+        "code": "NL",
+        "name_c": "荷兰",
+        "z": 61.7
+    }, {
+        "code": "NZ",
+        "name_c": "新西兰",
+        "z": 11.1
+    }, {
+        "code": "NG",
+        "name_c": "尼日利亚",
+        "z": 139.7
+    }, {
+        "code": "NO",
+        "name_c": "挪威",
+        "z": 7.7
+    }, {
+        "code": "OM",
+        "name_c": "阿曼",
+        "z": 3
+    }, {
+        "code": "PK",
+        "name_c": "巴基斯坦",
+        "z": 143.2
+    }, {
+        "code": "PG",
+        "name_c": "巴布亚新几内亚",
+        "z": 7.2
+    }, {
+        "code": "PE",
+        "name_c": "秘鲁",
+        "z": 98.8
+    }, {
+        "code": "PH",
+        "name_c": "菲律宾",
+        "z": 10
+    }, {
+        "code": "PL",
+        "name_c": "波兰",
+        "z": 3.9
+    }, {
+        "code": "PT",
+        "name_c": "葡萄牙",
+        "z": 24.2
+    }, {
+        "code": "QA",
+        "name_c": "卡塔尔",
+        "z": 1.7
+    }, {
+        "code": "RO",
+        "name_c": "罗马尼亚",
+        "z": 5.4
+    }, {
+        "code": "RU",
+        "name_c": "俄罗斯联邦",
+        "z": 103
+    }, {
+        "code": "RW",
+        "name_c": "卢旺达",
+        "z": 1.2
+    }, {
+        "code": "ST",
+        "name_c": "圣多美和普林西比",
+        "z": 1.5
+    }, {
+        "code": "SA",
+        "name_c": "沙特阿拉伯",
+        "z": 47.2
+    }, {
+        "code": "RS",
+        "name_c": "塞尔维亚",
+        "z": 19.2
+    }, {
+        "code": "SL",
+        "name_c": "塞拉利昂",
+        "z": 7.7
+    }, {
+        "code": "SG",
+        "name_c": "新加坡",
+        "z": 37.3
+    }, {
+        "code": "ZA",
+        "name_c": "南非",
+        "z": 3.3
+    }, {
+        "code": "KR",
+        "name_c": "韩国",
+        "z": 68.3
+    }, {
+        "code": "SS",
+        "name_c": "南苏丹",
+        "z": 1
+    }, {
+        "code": "ES",
+        "name_c": "西班牙",
+        "z": 5.4
+    }, {
+        "code": "LK",
+        "name_c": "斯里兰卡",
+        "z": 37.1
+    }, {
+        "code": "SD",
+        "name_c": "苏丹",
+        "z": 28.3
+    }, {
+        "code": "CH",
+        "name_c": "瑞士",
+        "z": 15.9
+    }, {
+        "code": "TW",
+        "name_c": "台湾",
+        "z": 9.9
+    }, {
+        "code": "TJ",
+        "name_c": "塔吉克斯坦",
+        "z": 2.5
+    }, {
+        "code": "TZ",
+        "name_c": "坦桑尼亚",
+        "z": 32.8
+    }, {
+        "code": "TH",
+        "name_c": "泰国",
+        "z": 11.6
+    }, {
+        "code": "TT",
+        "name_c": "特立尼达和多巴哥",
+        "z": 5.9
+    }, {
+        "code": "TR",
+        "name_c": "土耳其",
+        "z": 4.8
+    }, {
+        "code": "TM",
+        "name_c": "土库曼斯坦",
+        "z": 6
+    }, {
+        "code": "AE",
+        "name_c": "阿拉伯联合酋长国",
+        "z": 13.8
+    }, {
+        "code": "UG",
+        "name_c": "乌干达",
+        "z": 21.2
+    }, {
+        "code": "US",
+        "name_c": "美国",
+        "z": 332.6
+    }, {
+        "code": "UZ",
+        "name_c": "乌兹别克斯坦",
+        "z": 4.4
+    }, {
+        "code": "VE",
+        "name_c": "委内瑞拉",
+        "z": 49.7
+    }, {
+        "code": "YE",
+        "name_c": "也门",
+        "z": 5.1
+    }, {
+        "code": "ZM",
+        "name_c": "赞比亚",
+        "z": 1.1
+    }, {
+        "code": "ZW",
+        "name_c": "津巴布韦",
+        "z": 49.8
+    }]
+
     ;
     var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
     $('#' + gChartId).highcharts('Map', {
