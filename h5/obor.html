@@ -181,7 +181,7 @@ if (isIE() === true) {
 }
 </script> <script>
 document.getElementById("startbar").style.width = "5%";
-</script> <script src=scripts/demo.js></script> <script src=http://s.ftimg.net/h5/map/AsiaAfricaEurope.js></script> <script src=http://code.highcharts.com/mapdata/custom/world.js></script> <script language=javascript>
+</script> <script src=scripts/demo.js></script> <script src=http://s.ftimg.net/h5/map/AsiaAfricaEurope.js?2></script> <script language=javascript>
 $(function() {
     /*
     var firstImage = $('#allcontent .slide').eq(0).css('background-image') || '';
@@ -264,11 +264,11 @@ function playFunction(thefunction) {
 
 /*---------------中国出口熄火--------*/
 function obor_linechart() {
-    addNote('');
+    addNote('和GDP放缓相比，中国出口更显疲弱', 'top');
 
     $('#' + gChartId).highcharts({
         title: {
-            text: '和GDP放缓相比，中国出口更显疲弱',
+            text: '',
             x: -20 //center
         },
         subtitle: {
@@ -344,11 +344,11 @@ function obor_linechart() {
 
 /*---------------中国对外投资力道不足--------*/
 function obor_linechart2() {
-    addNote('');
+    addNote('其次，中国对外投资也同时减缓', 'top');
 
     $('#' + gChartId).highcharts({
         title: {
-            text: '其次，中国对外投资也同时减缓',
+            text: '',
             x: -20 //center
         },
         subtitle: {
@@ -774,7 +774,7 @@ function oborSparkline() {
 /*----------------Zoom-in map----------*/
 
 function oborZoom() {
-    addNote('');
+    addNote('2013年至今中国对一带一路国家的投资概况', top);
 
     var data =
 
@@ -981,13 +981,13 @@ function oborZoom() {
         }];
 
     var mapData = Highcharts.geojson(AsiaAfricaEurope);
-    console.log(mapData);
+    //console.log(mapData);
 
     // Initiate the chart
     $('#' + gChartId).highcharts('Map', {
 
         title: {
-            text: '2013年至今中国对一带一路国家的投资概况'
+            text: ''
         },
 
         mapNavigation: {
@@ -1032,10 +1032,8 @@ function oborZoom() {
 /*-----------start of mapOBOR------------*/
 
 function mapOBOR() {
-    addNote('');
-    var data =
-
-        [{
+    addNote('2013年至今中国对一带一路国家的投资概况', 'top');
+    var data = [{
             "name_c": "阿富汗",
             "code": "AF",
             "z": 0
@@ -1235,22 +1233,21 @@ function mapOBOR() {
             "name_c": "也门",
             "code": "YE",
             "z": 5.1
-        }]
+        }];
 
-
-
-    ;
     //Highcharts.maps["custom/world"] = AsiaAfricaEurope;
     //var mapData = Highcharts.geojson(Highcharts.maps['custom/AsiaAfricaEurope']);
+    //alert (typeof AsiaAfricaEurope);
     var mapData = Highcharts.geojson(AsiaAfricaEurope);
-    console.log(mapData);
+    //console.log(mapData);
+    
     $('#' + gChartId).highcharts('Map', {
         chart: {
             borderWidth: 0
         },
 
         title: {
-            text: '2013年至今中国对一带一路国家的投资概况'
+            text: ''
         },
 
         subtitle: {
