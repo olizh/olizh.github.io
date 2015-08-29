@@ -873,8 +873,8 @@ function oborSparkline() {
                     pointStart: 1
                 }],
                 tooltip: {
-                    headerFormat: '<span style="font-size: 10px">' + '201{point.x}:</span><br/>',
-                    pointFormat: '投资<b>{point.y}</b>亿美元'
+                    headerFormat: '<span style="font-size: 10px">' + '201{point.x}年:</span><br/>',
+                    pointFormat: (typeof chart.type === 'undefined') ? '投资：'  + '<b>{point.y}</b>亿美元': '投资变化：' + '<b>{point.y}</b>亿美元'
                 },
                 chart: chart
             });
