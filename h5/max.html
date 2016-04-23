@@ -1,0 +1,97 @@
+<!--如果您是制作新的HTML 5沉浸式报道，请直接跳到“所有内容开始”--> <!DOCTYPE html> <html> <head> <meta http-equiv=Content-Type content="text/html; charset=utf-8"> <title>特别报道</title> <meta name=apple-mobile-web-app-capable content=yes> <meta name=apple-mobile-web-app-status-bar-style content=black> <link rel=apple-touch-icon-precomposed href=img/fticon.png> <meta name=viewport content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> <link rel=stylesheet href=styles/main-demo.css> <!--Google Analytics--> <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','http://m.ftchinese.com/index.php/jsapi/analytics','ga');
+ga('create', 'UA-1608715-1');
+ga('send', 'pageview');
+</script> <!--End Google Analytics--> </head> <body> <div id=share-icon><img src=http://s.ftimg.net/img/friend-share-icon.jpg></div> <div id=o-rotate-note><div>旋转屏幕，查看精彩内容！</div></div> <div id=screenstart class=opening ontouchmove=event.preventDefault();><span><p class=booklead id=startstatus>FT中文网特别报道</p><div class="progresscontainer instartscreen"><div id=startbar class="progressbar standardprogressbar uses3d progressbg structureprogress"></div></div><p class=booklead id=loadstatus>&nbsp;</p></span> <div class=backuplinks><a onclick=javascript:window.location.reload()>重新加载</a></div> </div> <!--如果要出目录，就必须用到FTScroller--> <div class="fullbody fruit landscapeImage" id=game> <div id=swipe> <div id=gamecontent> </div> </div> <div class="tap pagedots"></div> <div class="tap pagetitle"></div> <div id=contentRail> <div class=-bg-checkered> <div id=toolRail> <div class=nutmeg-content> <div class=nutmeg-content_left><button onclick="jumptostory('contentpage')" class=button-menu><span id=index-title>目录</span></button></div> <div class=nutmeg-content_right><button onclick=setting() class=nutmeg_settings-btn aria-label=Settings></button></div> <div class="nutmeg-content_right rightmargin"><button onclick=setFontSize() class=nutmeg_fontsize-btn aria-label=Settings></button></div> </div> </div> </div> <div id=imageRail> <div id=imageRailInner></div> </div> </div> <div id=fontsetting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"><button onclick=closeFontSize() aria-label=Settings>确定</button></div> 设置字号 </div> <div class="fontpreferences overlay-content"> <div id=extra-small class=extra-small>最小<span class=tickbg></span></div> <div id=small class=small>小<span class=tickbg></span></div> <div id=medium class=medium>适中<span class=tickbg></span></div> <div id=big class=big>大<span class=tickbg></span></div> <div id=extra-big class=extra-big>特大<span class=tickbg></span></div> </div> </div> </div> </div> </div> <div id=setting class=overlay> <div class=overlayBG></div> <div class=inner> <div class=cell> <div class=settingbox> <div class=overlay-header> <div class="nutmeg-content_right rightmargin"><button onclick=closeSetting() class=overlay_close-btn aria-label=Settings></button></div> 设置与帮助 </div> <div class=nightreading> <strong>夜间模式</strong> <span class=displayvalue onclick=switchNightReading()> <span class=ui-toggle> <span class=ui-toggle-button></span> <span class="ui-toggle-label ui-toggle-label-on">开</span> <span class="ui-toggle-label ui-toggle-label-off">关</span> </span> </span> <span class=description>在晚上切换为夜间阅读模式，可以减小对眼睛的压力，并节约电池</span> </div> <div class="bgpreferences overlay-content"> <strong>自选背景</strong> <div id=pink>粉色<span class=tickbg></span></div> <div id=white>白色<span class=tickbg></span></div> </div> <div class=standalonebutton><a href="mailto:ftchinese.feedback@gmail.com?subject=Feedback on FT HTML 5 Story" id=feedbackEmail><button class=ui-light-btn>反馈问题</button></a></div> <div id=testMessage></div> </div> </div> </div> </div> <div id=largepic class=overlay> <div class=overlayBG></div> <div class=inner> <button class=cherry_button></button> <div class=cell> </div> </div> </div> <div id=allcontent style=display:none;> <!--所有内容开始--> <div class="slide layout-5 o-bg-style-dark" title=封面 topic=封面 style="background-image: url(http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky-4-hr_kgpjdpm.png);"> <div class=page> <h1 class="story-title text-inner normal" style=line-height:1.2em;>商务酒店报告</h1> <h2 class="story-heading text-inner small">FT中文网2015年商务酒店报告。</h2> <div class="o-text-block o-bottom o-right o-credit"> <p>作者：阴东升</p> <p>张佳文</p> </div> </div> </div> <div class=slide storyid=woz topic=文章 title=沃茨> <div class="page article"> <div class=articleviewport><div class=articletarget></div></div> <div class=fixedContent> <div class=articleinfo> <div class=headline> 前言 </div> <div class=lead>说明</div> <div class=datestamp>2016年3月9日</div> <!--large代表这个图片可以点击放大--> <!--headshot代表这个图片放置在第二栏的底部--> </div> </div> <!--flowedContent中的内容会自动分页分栏排版，适应各种屏幕--> <div class=flowedContent> <p>Hickory Pit烧烤店位于加州圣何塞市的一个不起眼的街区，看上去不像一个适合推心置腹的好地方。餐厅外立面是混凝土外壳，里面别有洞天，颇有上世纪50年代的风格：一排排的小摊点装饰着糖果粉和蓝色的塑料，贴面台面，荧光灯。</p> <p>斯蒂夫•沃兹尼亚克(Steve Wozniak)看上去很自在。这并不奇怪，因为他最近在这里逗留了很长时间。这儿不大好找人，一不小心就会错过这位硅谷传奇工程师。一位服务员指着大厅的后面，但是我只看见两个男人弯着腰，摆弄着两个连在一起的手持设备。他们刚刚用完的聚苯乙烯餐盒放在桌子上，里面还有吃剩的肋条。</p> </div> </div> </div> <div class=slide topic=图表 thumbnail=http://i.ftimg.net/picture/6/000053176_piclink.jpg title=美国预算> <div class=animation function=cityTiers></div> </div> <div class=slide>4</div> <!--所有内容结束--> </div> <!--在固定在页面的元素--> <div class="wheel-container animated running fadeInUpToggle"><div id=o-wheel class="wheel rotate"></div></div> <script>var wheelObject = document.getElementById("o-wheel");</script> <!--在固定在页面的元素--> <div id=allads> <div id=fullpageads startpage=0 everypage=5> <!--全屏广告素材--> <!--全屏广告素材结束--> </div> <div id=mpuads> <!--MPU广告素材--> <!--MPU广告素材结束--> </div> </div> </div></body> <script>
+function isIE() { return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));}
+
+//如果是IE，不管是什么版本，都中止程序
+if (isIE() === true) {
+    document.body.innerHTML = '<h1>亲爱的用户，我们发现您使用了IE浏览器！这会给您带来严重的安全隐患！请改用Chrome或FireFox等现代浏览器来浏览FT中文网的精彩内容！</h1>';
+}
+</script> <script>document.getElementById("startbar").style.width="5%";</script> <script src=scripts/demo.js></script> <script language=javascript>
+$(function(){
+    var firstImage = $('#allcontent .slide').eq(0).css('background-image') || '';
+    var img = new Image();
+    firstImage =firstImage.replace(/^url\(/g,'').replace(/\)$/g,'');
+    // if (firstImage !== '' && firstImage !== 'none') {
+    //     img.src = firstImage;
+    //     img.onload = function() { 
+    //         openbook();
+    //     };
+    // } else {
+    //     openbook();
+    // }
+    openbook();
+    new FastClick(document.body);
+});
+</script> <script>
+function playFunction(thefunction) {
+  switch(thefunction) {
+    case 'cityTiers': cityTiers(); break;
+    case 'houseandstock': houseandstock(); break;
+    case 'combinationChart001': combinationChart001(); break;
+    case 'worldPopulation': worldPopulation(); break;
+    case 'oborSparkline': oborSparkline(); break;
+  }
+}
+
+
+function cityTiers() {
+  addNote('城市分布大约是。。。');
+  var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: gChartId,//写到gChartId这个Dom里面
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '城市分布'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '一级城市',
+                y: 35.1
+            }, {
+                name: '二级城市',
+                y: 34.0
+            }, {
+                name: '三级城市',
+                y: 30
+            }]
+        }]
+    });
+
+
+}
+
+
+
+
+
+
+
+</script> </html>
