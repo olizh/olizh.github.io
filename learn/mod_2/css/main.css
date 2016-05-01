@@ -17,7 +17,7 @@ body {
 }
 /* basic styles: mobile first */
 .menus-container {
-	max-width: 1200px;
+	max-width: 1600px;
 	padding: 0 15px;
 	margin: auto;
 }
