@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ad</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="http://dolphin.ftimg.net" />
+<style type="text/css">
+*{margin:0;padding: 0;overflow:hidden;}
+html, body{background: #F6E9D8;margin:0 auto;width:100%;height:100%;overflow:hidden;}
+.ad{
+	width:100%;
+	overflow:visible;
+	position: relative;
+}
+.ad>div {
+    margin: auto!important;
+    overflow:visible;
+    max-width: 100%!important;
+    width:100%;
+}
+.ad>div>div {
+	margin: auto!important;
+}
+
+img {
+	max-width: 100%!important;
+}
+.top-left {
+    float: left;
+}
+.top-right {
+    float: right;
+}
+</style>
+
+</head>
+<body>
+<div class="ad"><div>
+<script>
+
+function removeAd() {
+    //alert ('removeAd');
+}
+
+function loaded() {
+    //alert ('loaded');
+}
+
+var k=window.location.href;
+var c = k.replace(/^.*adid=([0-9A-Za-z\-]+).*$/,"$1");
+var d;
+if (/^[0-9]{4}0001$/.test(c)) {
+    d = c.replace(/([0-9]{4})0001/g,'$10002');
+} else {
+    d='';
+}
+var slotStr = window.parent.slotStr;
+var parentId = k.replace(/^.*pid=([0-9A-Za-z\-]+).*$/,"$1");
+var adP = '';
+try {
+    adP = parent.adReachability();
+} catch (ignore) {
+
+}
+document.write ('<scr'+'ipt src="http://dolphin.ftimg.net/s?z=ft&c=' + c + slotStr + adP + '" charset="gbk" onerror="removeAd()" onload="loaded()"></scr'+'ipt>');
+//var adBGColor = 'white';
+</script>
+</div></div>
+<div id="ad-bottom"></div>
+
+<script type="text/javascript">
+function findTop(obj) {
+var curtop = 0;
+if (obj.offsetParent) {
+  do {
+    curtop += obj.offsetTop;
+  } while ((obj = obj.offsetParent));
+  return curtop;
+}
+}
+
+var adContainerHeight;
+var parentIframe;
+var adBottom = document.getElementById('ad-bottom');
+var adHeight = findTop(adBottom)
+//console.log (findTop(adBottom));
+
+
+/*
+var adText = document.querySelector('.ad>div').innerHTML;
+
+if (/icbc|Justerini/.test(adText)) {
+    window.adBGColor = 'white';
+} else if (/201602\/590\-90\.gif/.test(adText)) {
+    window.adBGColor = '#F6E9D8';
+} else if (/000058905_piclink\.jpg|201602\/336\-60\-ribbonAD\.gif/.test(adText)){
+    window.adBGColor = '#F6E9D8';
+} else if (/20160308housead969901\.gif/.test(adText)) {
+    window.adBGColor = '#333';
+} else if (/201603\/590-90.gif/.test(adText)) {
+    window.adBGColor = '#e3dfca';
+} else {
+    window.adBGColor = '#F6E9D8';
+}
+
+
+if (typeof adBGColor === 'string' && adBGColor !== '') {
+    document.body.style.backgroundColor = adBGColor;
+}
+*/
+
+if ( window.parent.document.getElementById(parentId)) {
+    parentIframe = window.parent.document.getElementById(parentId)
+    adContainerHeight = parentIframe.offsetHeight || 0;
+    // if (parentIframe.parentNode && parentIframe.parentNode.className==='banner-content') {
+    //     parentIframe.parentNode.style.backgroundColor = adBGColor;
+    // }
+    //adHeight = 600;
+    if (adHeight > 0 && adHeight - adContainerHeight > 30) {
+        parentIframe.style.height = adHeight + 'px';
+        if (parentIframe.className.indexOf('ad-hidden')>=0) {
+            parentIframe.className = parentIframe.className.replace('ad-hidden', '');
+        }
+        try {
+            window.parent.stickyBottomPrepare();            
+        } catch (err) {
+            setTimeout (function(){
+                window.parent.stickyBottomPrepare(); 
+            }, 3000);
+        }
+    }
+}
+
+if (parentId === 'banner3') {
+var stickyHeight = 0;
+}
+
+if (window.parent && parentId !== '' && typeof stickyHeight === 'number' && stickyHeight > 0) {
+    if (typeof window.parent.stickyAds !== 'object') {
+        window.parent.stickyAds = [];
+    }
+    window.parent.stickyAds.push({
+        'BannerId': parentId,
+        'stickyHeight': stickyHeight
+    });
+    try {
+        window.parent.stickyAdsPrepare();
+        window.parent.stickyBottomPrepare();
+    } catch (ignore) {
+        
+    }
+}
+
+</script>
+</body>
+</html>
