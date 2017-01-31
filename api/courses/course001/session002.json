@@ -9,19 +9,19 @@
     {
       "title": "填写",
       "pageType": "input",
-      "inputType": "text",
-      "question": "填空题的题干，请写上“我懂了”三个字？",
-      "rightanswer": "我懂了",
-      "value": "2",
+      "inputType": "number",
+      "question": "填空题的题干，请写上“192”三个字？",
+      "rightanswer": "192",
+      "value": "3",
       "point": "填空题要注意的点"
     },
     {
       "title": "填写",
       "pageType": "input",
-      "inputType": "number",
-      "question": "填空题的题干，请写上“192”三个字？",
-      "rightanswer": "192",
-      "value": "3",
+      "inputType": "text",
+      "question": "填空题的题干，请写上“我懂了”三个字？",
+      "rightanswer": "我懂了",
+      "value": "2",
       "point": "填空题要注意的点"
     },
     {
