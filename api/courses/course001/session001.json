@@ -7,12 +7,20 @@
   "course": "001",
   "content": [
     {
-      "pageType": "trueOrFalse",
-      "question": "时间是一项稀缺资源",
-      "rightanswer": true,
-      "point": "时间是最为特殊的资源",
-      "explain": "时间是最为特殊的资源，他的供给完全不会增加，而且也完全没有替代品。",
-      "value": 1
+      "title": "",
+      "pageType": "quiz",
+      "question": "时间是最为特殊的资源，下列哪种关于时间的说法是正确的？",
+      "rightanswer": [
+        "时间是一项稀缺资源",
+        "时间的供给完全不会增加",
+        "时间完全没有替代品"
+      ],
+      "value": "2",
+      "wronganswer": [
+        "时间的供给是不受限制的"
+      ],
+      "explain": "时间是最为特殊的资源，它的供给完全不会增加，也完全没有替代品",
+      "point": "第一个要注意的点"
     },
     {
       "pageType": "trueOrFalse",
