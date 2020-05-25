@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+  <script>
+    var zone = 'home';
+    var adProps = {};
+    var k=window.location.href;
+    var c = k.replace(/^.*adid=([0-9A-Za-z\-]+).*$/,'$1');
+    var p = k.replace(/^.*pos=([0-9A-Za-z\-]+).*$/,'$1');
+    var adDeviceId;
+    var adChannelId;
+    var adPositionId;
+    var adSize;
+    var parentId = k.replace(/^.*pid=([0-9A-Za-z\-]+).*$/,'$1');
+    var pos;
+    var format;
+    var name;
+    var adFormats = {
+        "FtcLeaderboard": [[1200, 120], [1200, 400], [1200, 250], [969, 90], [969, 400], [969, 250]],
+        "FtcBanner": [[1200, 120], [969, 90]],
+        "FtcMobileBanner": [[414, 104]],
+        "FtcMobileMpu": [[300, 250]],
+        "FtcMpu":[[300, 250], [300, 600], [300,1050]],
+        "FtcInfoFlow":[[400, 300]],
+        "FtcMobileFullscreen": [[414, 736]],
+        "FtcPcFullscreen":[[700, 520]],
+        "FtcPaidpost":[[280, 350]],
+        "FtcRibbon":[[300, 60]],
+        "FtcMembertext":[[300, 47]]
+    };
+    if (/^[0-9]{12}$/.test(c)) {
+        adChannelId = c.substring(4,8);
+        adPositionId = c.substring(8,12);
+        adDeviceId = c.substring(0,4);
+        if (adChannelId !== '1000') {
+            zone = '';
+        }
+        // MARK: Map the legacy dolphine ad position id to GAM. This is not accurate but no need to put additional time. 
+        if (/^01/.test(adPositionId)) {
+            pos = 'fullscreen';
+        } else if (/^0[23]/.test(adPositionId)) {
+            pos = 'top1';
+        } else if (/^0[4]/.test(adPositionId)) {
+            pos = 'middle1';
+        } else if (/^0[8]/.test(adPositionId)) {
+            pos = 'info1';
+        } else {
+            pos = 'middle1';
+        }
+    } else {
+        pos = p;
+    }
+    switch(pos) {
+        case 'top1':
+            format = adFormats.FtcMobileBanner;
+            name = 'banner1';
+            break;
+        case 'top2':
+            format = adFormats.FtcMobileBanner;
+            name = 'banner2';
+            break;
+        case 'middle1':
+            format = adFormats['FtcMpu'];
+            name = 'mpu-middle1';
+            break;
+        case 'middle2':
+            format = adFormats['FtcMpu'];
+            name = 'mpu-middle2';
+            break;
+        case 'right1':
+            format = adFormats['FtcMpu'];
+            name = 'mpu-right1';
+            break;
+        case 'right2':
+            format = adFormats['FtcMpu'];
+            name = 'mpu-right2';
+            break;
+        case 'info1':
+            format = adFormats['FtcInfoFlow'];
+            name = 'infoflow1';
+            break;
+        case 'info2':
+            format = adFormats['FtcInfoFlow'];
+            name = 'infoflow2';
+            break;
+        case 'fullscreen':
+            format = adFormats['FtcMobileFullscreen'];
+            name = 'fullscreen-mobile';
+            break;
+        default:
+        format = adFormats['FtcMobileBanner'];
+        name = 'banner1'; 
+    }
+    adProps = {
+        pos: pos,
+        name: name,
+        format: format
+    };
+ </script>
+ <script>
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/21753042392/FtChinese/' + zone, adProps.format , adProps.name).addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().setTargeting('cnpos',[adProps.pos]);
+      googletag.enableServices();
+    });
+</script>
+</head>
+<body style="width:100%;margin: 0px;padding: 0px;background-color:#fff1e0;">
+  <script>
+    if(adProps.pos) {
+      var dbCode = '<div id="'+ adProps.name +'" style="padding-top:0;"><scr' + 'ipt>googletag.cmd.push(function() { googletag.display("'+ adProps.name +'")})</scr' + 'ipt></div>';
+      document.write(dbCode);
+    }
+  </script>
+</body>
+</html>
